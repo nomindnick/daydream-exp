@@ -174,6 +174,9 @@ def main():
         else:
             r = chat(a.model, messages, opts, a.stop, a.keep_alive)
             text = r["message"]["content"]
+            thinking = r["message"].get("thinking")
+            if thinking:
+                log({"ev": "thinking", "turn": turn, "text": thinking})
             messages.append({"role": "assistant", "content": text})
             ctx_used = r.get("prompt_eval_count", 0) + r.get("eval_count", 0)
         dt = time.time() - t0

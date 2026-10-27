@@ -1,0 +1,28 @@
+{
+  "model": "mistral-medium-3.5:128b",
+  "mode": "raw",
+  "seed": "seeds/solar-surplus.md",
+  "system": null,
+  "turns": 8,
+  "max_tokens": 250,
+  "num_ctx": 16384,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0,
+  "open_marker": "<subconscious>",
+  "continue_marker": "<subconscious continues>",
+  "stop": [
+    "</subconscious>"
+  ],
+  "noise": "words",
+  "noise_every": 2,
+  "noise_n": 5,
+  "noise_source": "concrete",
+  "noise_model": "qwen3.5:4b",
+  "noise_marker": "<subconscious noise>",
+  "name": "g2-mistral-medium-3_5_128b-raw-words",
+  "keep_alive": "20m",
+  "quiet": true,
+  "started": "20261027-104854"
+}
