@@ -131,9 +131,9 @@ def main():
     # transcript is what the user reads; doc is the raw-mode growing document
     transcript = [f"# {name}\n", f"`{a.model}` · {a.mode} · noise={a.noise} · T={a.temperature} · stop={a.stop}\n",
                   "## seed\n", seed_text, ""]
-    doc = seed_text + a.open_marker + "\n"
+    doc = seed_text + (a.open_marker + "\n" if a.open_marker else "")
     messages = ([{"role": "system", "content": system_text}] if system_text else []) + \
-               [{"role": "user", "content": seed_text + "\n" + a.open_marker}]
+               [{"role": "user", "content": seed_text + ("\n" + a.open_marker if a.open_marker else "")}]
     log({"ev": "seed", "text": seed_text, "system": system_text})
 
     def say(s):
@@ -149,7 +149,8 @@ def main():
                 items = [word_to_sentence(a.noise_model, w, a.keep_alive) for w in drawn]
             else:
                 items = drawn
-            noise_text = a.noise_marker + " " + ("  ".join(items) if a.noise == "words" else "\n".join(items))
+            body = "  ".join(items) if a.noise == "words" else "\n".join(items)
+            noise_text = (a.noise_marker + " " + body) if a.noise_marker else body
             doc += "\n" + noise_text + "\n"
             messages.append({"role": "user", "content": noise_text})
             transcript += [f"### noise (before turn {turn})\n", "> " + noise_text.replace("\n", "\n> "), ""]
@@ -158,10 +159,10 @@ def main():
 
         # ---- continuation cue ----
         if turn > 1:
-            doc += "\n" + a.continue_marker + "\n"
+            doc += ("\n" + a.continue_marker + "\n") if a.continue_marker else "\n"
             if messages[-1]["role"] != "user":
-                messages.append({"role": "user", "content": a.continue_marker})
-            elif a.noise == "none" or (turn - 1) % a.noise_every != 0:
+                messages.append({"role": "user", "content": a.continue_marker or "(continue)"})
+            elif a.continue_marker and (a.noise == "none" or (turn - 1) % a.noise_every != 0):
                 messages[-1]["content"] += "\n" + a.continue_marker
 
         # ---- generate ----
