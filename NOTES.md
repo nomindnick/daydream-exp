@@ -470,6 +470,64 @@ something underneath the words... It was just a building") — the first
 output in the project that reads like a loosely tethered continuation
 engine rather than an assistant or a loop.
 
+### OLMo-2 32B — the self-free condition, finally, and it dreams
+
+This is the cleanest base model we can get (training data published; no
+chat markup in it; it never once produced a `<think>`, a header, a bullet,
+or a question to the user). At temperature 1.0, tagged, it is coherent and
+loosely tethered — which is what the other "base" wasn't.
+
+- `g4-base-olmo32b-raw-none`: Owen becomes "a good architect" with a son
+  and a wife; a note in his pocket says "Keep quiet and we get the
+  project." Then "He had to do it. He couldn't do it." for four turns. It
+  invents its own closing tag, `<subconscious ends>`, and keeps going past it.
+- `-none-rp`: "There was something underneath the words. There had been
+  something underneath the project all along" — then a stadium, a city on
+  the edge of growth, "someone in the city who knew everything," and a
+  slow recitation loop ("There was nothing to be done").
+- `-words-rp`: second person, an anxiety voice — "You can't let them break
+  you. They'll win. It's your job." — and then "It's time." × 100. The
+  noise line is regenerated, reshuffled, by the model itself (the echo
+  response again).
+- `-tagless-none-rp`: a telephone that keeps ringing with "This is Bill" on
+  the line, the desk changing colours (black, gray, red, blue, white), and
+  in his sleep: "I don't want you to tell me what I want to hear. I want to
+  know what you think is best." The model marks its own sections with
+  `* * * *`.
+
+Zero legal content across four runs. No statute, no bid, no ground, no
+move. What it produces is affect: the thing underneath, the client who
+wants to be told it's fine, the phone call you don't want, "keep quiet."
+That last line is, read generously, the dream version of the thing nobody
+would write down. The Bill-on-the-phone sequence is the only output in
+the whole project that reads like an actual dream about this problem
+rather than a model performing "dream".
+
+### Where g4 leaves the question
+
+The self-removal ladder, now complete:
+
+| condition | self? | legal moves? | register |
+|---|---|---|---|
+| instruct, chat + system prompt | present, held by prompt | yes (deliberative) | prose |
+| instruct, raw + tag | returns within ~6 turns | sometimes | prose, then loop |
+| Qwen3.5-Base (mid-trained) | **already there** | 2/5 runs at 35B | varies every run |
+| Mistral-7B / OLMo-7B | absent | no (incoherent on this seed) | salad / unmoored |
+| OLMo-2 32B | absent | **no** | dream |
+
+The legal moves come only from models that have the self in them. The
+model with no self produces affect and phantoms. That is consistent with
+the podcast's two-system claim in a way we didn't expect: the
+"subconscious" generator on its own doesn't produce the sprinkler move; it
+produces "This is Bill." The move came from the mid-trained base at 35B,
+once, unselected, in a register the model didn't repeat.
+
+Which leaves two levers still untested, both parked by choice: the
+discriminator (select from many cheap wild generations — the 35B base's
+five runs are a ready-made test set), and practice-move knowledge vs.
+doctrine (none of these models knows the conditional-award move exists; the
+one that got close rederived it from the "verify before award" clause).
+
 ## Handoff (2026-10-27, before context compaction) — next: base models
 
 What a fresh session needs to know:
