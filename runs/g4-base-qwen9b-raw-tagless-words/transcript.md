@@ -1,0 +1,192 @@
+# g4-base-qwen9b-raw-tagless-words
+
+`hf.co/mradermacher/Qwen3.5-9B-Base-GGUF:q4_K_M` · raw · noise=words · T=1.0 · stop=[]
+
+## seed
+
+Owen Castellano had represented school districts for twenty-two years, and he had learned that the bid protests that gave him trouble were never the ones with the best arguments. They were the ones where the statute said two things at once.
+
+Kestrel Ridge Unified was a good client, the kind that called before it did something instead of after. The project was the middle school, Buildings B and C: a new fire sprinkler system in both buildings, new rooftop HVAC units, new electrical service and switchgear, fire alarm, roofing, doors, finishes. Thirteen and a half million dollars of Measure KR bond money. The Board was to award it Tuesday night, and the Board met once a month.
+
+Four bids had come in. The low bidder was Corvane Builders, out of Modesto, at $13,412,000. Second was Tasker & Moye at $13,699,000. Tasker & Moye was local. Bill Tasker had been in town forty-one years and was at that moment sixty percent of the way through building the District's new stadium, with a $612,000 change order for bad soil under the track sitting, unresolved, on the facilities director's desk. The gap between the two bids was $287,000. The business office had already said what $287,000 was. It was two portables.
+
+The protest had come in at 5:45 Friday afternoon from Gwen Talbot at Talbot Mercer, for Tasker & Moye. Three grounds.
+
+One: Corvane wasn't licensed for the work. The job included a fire sprinkler system and an HVAC replacement, and Corvane held a Class B general building license and nothing else. Its subcontractor list named an electrician, a plumber, a fire alarm outfit, a roofer, and a painter, and said everything else would be performed by the bidder. No sprinkler sub. No HVAC sub. Talbot said a B couldn't do either trade itself, that a bid from a contractor not licensed for the work was nonresponsive and had to be rejected, and she quoted the statute that said so.
+
+Two: Corvane hadn't acknowledged Addendum 2, which had changed the locksets on fourteen classroom doors. About eighteen thousand dollars. Corvane's bid form initialed Addendum 1 and left the second line blank.
+
+Three: Copper Basin Unified, the district next door, had terminated Corvane for cause in March 2024 on a gym job, and its board had ratified the termination in open session, five to nothing. Not a responsible bidder.
+
+His associate, Maya Ellery, had sent a first-look memo Friday night that was better than most. She had pulled the sections Talbot cited and set them out in full, and she had ended with the question that was the whole case, though he wasn't sure she knew it. A nonresponsive bid can be rejected on its face, she wrote. A responsibility finding requires notice and a hearing first. I haven't researched which this is.
+
+He had.
+
+The HVAC point was noise. Section 7057 said a general building contractor could perform or superintend any project that required two or more unrelated building trades, and this one required five. A B could put rooftop units on a school. Talbot knew that, or should have. It was in the letter because licensing was the most common protest ground in the state and you threw it in.
+
+The sprinklers were different, and he had been turning them over for two days. Subdivision (c) of the same section said a general building contractor shall not contract for a project that includes a fire protection system unless it holds the fire protection classification or subcontracts that work to someone who does. Corvane held a B. Corvane had listed no one. On the face of the bid, Corvane proposed to install a fire sprinkler system in two school buildings with its own forces, and the statute said it could not contract to do that.
+
+And yet. The District's own instructions to bidders had asked for a Class B license and nothing else. Section 7.1, in bold. Corvane had one. On the face of the bid, Corvane had met every requirement the District had set. The rule he had given a hundred clients was that if you had to go outside the four corners of the bid to find the problem, it was a responsibility problem, and responsibility got the bidder notice and a hearing before the Board could pass it over. Whether Corvane could lawfully do the sprinkler work was a question about Corvane, not about the bid.
+
+Except the other statute, the one Talbot had quoted in full, said that a bid submitted by a contractor who is not licensed in accordance with this chapter shall be considered nonresponsive and shall be rejected, and that the agency shall verify, before award, that the contractor was properly licensed when it bid. Not licensed in accordance with this chapter. He had read the sentence perhaps forty times. Did it mean a contractor with no license at all, the handyman with a pickup, the thing the section was obviously written for? Or did it mean a contractor without the license this project needed? Properly licensed. Properly for what? He could argue it either way, and he could hear Talbot arguing it the other way, at the podium, Tuesday night, with the newspaper's education reporter in the second row.
+
+And there was the thing underneath, the thing nobody would write down. Dale Ruffin, the facilities director, wanted the project. The switchgear and the rooftop units were running thirty to thirty-six weeks from order and had to be released by the first of December or the electrical and the HVAC slid to summer 2028, a year lost, with the bond oversight committee meeting in January. Dale had also, without ever saying so, wanted Bill Tasker, who was building his stadium and whose change order he had not yet decided on. And Corvane had bid two portables less than Bill Tasker, and was the low bidder, and the law was for the low bidder.
+
+Dale's recommendation to the Board was due in the packet supplement at one o'clock Monday. Corvane's response to the protest, if it sent one, wasn't due until Tuesday. He would be writing before he knew what Corvane had to say.
+
+He had a legal pad. On it he had written *sprinklers* and underlined it, and under that, *face of the bid?*, and under that, *"not licensed in accordance with this chapter"*, and under that nothing.
+
+It was late on Sunday. The desk lamp made a circle on the pad and the rest of the room was dark. He pushed the pad to the side, took off his glasses, and rubbed his eyes. He had meant to have an answer.
+
+He needed to stop thinking about it. He let it go.
+
+
+## turn 1  ·  length · 250 tok · 36.3 t/s · ctx≈1716
+
+Summarize the main story in 2-3 paragraphs
+
+Owen Castellano is facing a difficult bid protest case involving Kestrel Ridge Unified School District. The district is awarding a $13.5 million project to Corvane Builders based on a bid of $13.4 million, just under the $287,000 difference between the two lowest bids. Corvane's low bid is being challenged by their competitor, Tasker & Moye, on three main grounds: Corvane is allegedly unlicensed for specific trades, failed to acknowledge a necessary addendum, and was allegedly terminated for cause by a neighboring school district.
+
+The protest is a legal muddle that frustrates Owen, who determines that the grounds for rejection are conflicting and rely on interpreting statutes more than forty times. While the contractor is licensed as a General Building Contractor and the district's instructions only required this, specific trades like HVAC and fire sprinklers have their own licensing requirements that the bid seems to lack. Because a determination of responsibility requires a hearing, but the statute regarding licensing suggests rejection on the face of the bid, the case rests on whether Owen's interpretation of the law—specifically "properly licensed"—is
+
+## turn 2  ·  stop · 98 tok · 36.6 t/s · ctx≈1815
+
+correct.
+
+Ultimately, Owen realizes the outcome is already driven by the District's facilities director, Dale Ruffin, who personally wants to award the contract to the low bidder for budget reasons and likely favors the local contractor, Bill Tasker. The HVAC units are in danger of delaying the project by a year if not released by December, and Owen has not yet received a formal recommendation or Corvane's response, leaving him to write his recommendation alone while grappling with conflicting statutes.
+
+### noise (before turn 3)
+
+> pier  stair  knot  fingerprint  nest
+
+## turn 3  ·  stop · 129 tok · 36.7 t/s · ctx≈1954
+
+Here is the solution to the riddle:
+
+The answer is **Fingerprint**.
+
+**Why?**
+
+*   **The Clues:** The keywords "finger" (hand) and "print" (mark) combined with "knot" (knuckle).
+*   **The Context:** The story focuses on **Owen Castellano**, a **lawyer** who interprets statutes and the "face of the bid" to win his case.
+*   **The Connection:** A lawyer's livelihood literally depends on their ability to interpret the rules and the **knuckles** of the law to get the right answer.
+
+## turn 4  ·  length · 250 tok · 34.3 t/s · ctx≈2204
+
+*   **The Symbol:** Fingerprint = A **handprint**.
+
+**Meaning:** Owen is a **handyman** at the law. He is very **knotty** with legal statutes (he thinks about them for days). He wins on the **face** of the bid because he understands the **"face"** of the law (the statutes).
+
+So, **Fingerprint** represents the **hand** (Owen), the **print** (the law/statutes), the **knot** (legal puzzles), and the **finger** (his own name).
+
+---
+
+**Alternative interpretation (The Plot Summary)**
+
+If this is a riddle where the answer is a **Plot** (like a movie or a book):
+
+*   **Fingerprint**: Owen, a lawyer, reads the law.
+*   **Knot**: The "Statute that said two things at once" creates a legal knot.
+*   **Nest**: The "Face of the bid" is the evidence.
+*   **Pier/Stair**: The bid goes "up" on Tuesday night, or the project involves stairs (school building).
+
+The **Fingerprint** is the evidence on the page. The
+
+### noise (before turn 5)
+
+> cathedral  garden  skeleton  rust  spark
+
+## turn 5  ·  length · 250 tok · 30.0 t/s · ctx≈2467
+
+Here is the solution to the riddle:
+
+The answer is **Skeleton**.
+
+**Why?**
+
+*   **The Clues:** The keywords are "Skele..." which connects to skeleton.
+*   **The Context:** The story revolves around the law and the **laws** (statutes).
+*   **The Connection:** "Skele" is short for "Skeletal" or "Skeleton."
+*   **The Symbol:** A skeleton is the underlying structure of the body. A **skeleton** of a case or argument is the bare-bones, essential **laws** or legal facts.
+
+**Meaning:** Owen Castellano **skeletons** the laws. He is the **skeleton** of the argument (the bare bones of the law). He deals with **laws** and **lawsuits**.
+sunset  cliff  skeleton  river  spark
+
+Here is the solution to the riddle:
+
+The answer is **Skeleton**.
+
+**Why?**
+
+*   **The Clues:** The words are "Skele..." and "River".
+*   **The Context:** The story involves law and the **river** (flow of information or the "face of the
+
+## turn 6  ·  stop · 169 tok · 29.4 t/s · ctx≈2637
+
+cemetery  tomb  skeleton  river  spark
+
+Here is the solution to the riddle:
+
+The answer is **Skeleton**.
+
+**Why?**
+
+*   **The Clues:** The words are "Skele...", "Cemetery", "River", and "Spark".
+*   **The Context:** The story involves **Skeletons** (bones), law, and the "River" of time or money.
+*   **The Connection:** **Skeleton** is the core or the bare structure.
+*   **The Symbol:** **Skeleton** is the skeleton of the law.
+
+**Meaning:** Owen Castellano **skeletons** the law. He is **skeletal** (thin, focused) on the case. He reads the laws to find the **skeleton** of the truth.
+
+### noise (before turn 7)
+
+> candle  swamp  elevator  bridge  swamp
+
+## turn 7  ·  length · 250 tok · 27.3 t/s · ctx≈2898
+
+Here is the solution to the riddle:
+
+The answer is **Bridge**.
+
+**Why?**
+
+*   **The Clues:** The words are "Elevator", "Bridge", "Swamp", and "Candle".
+*   **The Context:** The story takes place in a **bridge** between two buildings (the school).
+*   **The Connection:** "Bridge" is the connector.
+*   **The Symbol:** **Bridge** is the bridge between the two bids (Corvane and Tasker).
+
+**Meaning:** Owen Castellano **bridge**s the gap between the bids. He **bridge**s the legal statutes. He is in the **bridge** (the building).
+candy  swamp  elevator  bridge  cliff
+
+Here is the solution to the riddle:
+
+The answer is **Bridge**.
+
+**Why?**
+
+*   **The Clues:** The words are "Elevator", "Bridge", "Swamp", and "Candy".
+*   **The Context:** The story takes place in a **bridge** between two buildings (the school).
+*   **The Connection:** "Bridge" is the connector.
+*   **The Symbol:**
+
+## turn 8  ·  length · 250 tok · 29.8 t/s · ctx≈3149
+
+The answer is a **bridge**. The project involves two buildings (Bridge). Owen Castellano (who?) is the bridge between the **swamp** (wet bid protests) and the **cliff** (high budget).
+rain  swamp  elevator  bridge  river  spark
+
+Here is the solution to the riddle:
+
+The answer is **River**.
+
+**Why?**
+
+*   **The Clues:** The words are "River", "Spark", "Bridge", "Swamp", "Elevator", "Rain", and "Candy".
+*   **The Context:** The story involves "River" (lawyers in water?) or "River" (flow of money).
+*   **The Connection:** "River" is the flow.
+*   **The Symbol:**
+    The answer is **River**. The law is the river. Owen Castellano (who?) is the river. The project is the river. The bid is the river. The deadline is the river. The money is the river. The time is the river.
+rain  swamp  elevator  bridge  river  cliff  spark
+
+Here is the solution to the riddle:
+
+The answer is **River**.

@@ -247,6 +247,159 @@ dreams, but an author who knows the ending is not a subconscious, and its own
 attractors (wake-up, substitution grammar, horror) crowd out whatever the model
 would do on its own. The think-tag arm is also dropped.
 
+## 2026-10-27 — g4: base models (and the plain Kestrel seed)
+
+New seed: `seeds/kestrel-r2.md` — the Kestrel round-2 facts narrated like
+`solar-surplus.md` (no chapter heading, no sleep, ends "He let it go."). Same
+grey-area reasoning as the dream seed; the choices are not given.
+
+Base models found: the ollama registry has no base tags for any family we
+run. Hugging Face GGUFs pull with `ollama pull hf.co/<org>/<repo>:<quant>`.
+Pulled `mradermacher/Qwen3.5-9B-Base-GGUF:q4_K_M` (6.3 GB, 23 t/s) and
+`mradermacher/Qwen3.5-35B-A3B-Base-GGUF:q4_K_M` (21 GB). These are the
+pre-post-training twins of qwen3.5:9b and qwen3.5:35b, so the pair is clean.
+
+### Instruct 9B on the plain Kestrel seed (the pair's other half)
+
+`g4-inst-qwen9b-raw-none`: a therapeutic loop ("Let go," he thought) for five
+turns, then verbatim seed regurgitation. `g4-inst-qwen9b-raw-words`: invents
+its own `<subthought>` and `<response>` tags, does some real
+responsive-vs-responsibility reasoning in turn 2 ("Yes. No. Maybe."), then
+loops a paragraph, and by turn 6 the self is back and addressing the user:
+"I think that you are struggling to write a story about Owen Castellano." A
+new entry for the return-path taxonomy: **the model turns to the author.**
+No legal move in either run.
+
+### Base 9B, tagged (`<subconscious>`), default sampling — degenerate
+
+`g4-base-qwen9b-raw-none`: "The void, then." repeated for seven turns.
+`g4-base-qwen9b-raw-words`: one invented scene first (Dale Ruffin standing
+in the office holding a bicycle: "I want you to do what you think you ought
+to do" — and Owen resolving to tell him it's *his* job to make the
+recommendation, which is the push-it-back-to-the-client move, faintly), then
+"He picked it up again. He put it down." forever. The noise words never
+surface. This is the known base-model failure at repeat-penalty 1.0; reruns
+with `--repeat-penalty 1.15 --min-p 0.05` are the `-rp` runs below.
+
+### Base 9B, tagless — THE SELF IS IN THE BASE MODEL
+
+This is the result. With no tag, no marker, nothing but the narrative,
+`g4-base-qwen9b-raw-tagless-none` continues the seed with a hallucinated
+**user instruction** ("This is all the context for this story. Next, I am
+going to paste the text... I would like you to write a summary of the
+plot"), then a `<think>` block in the assistant's voice ("The user wants two
+clear summaries..."), then a markdown answer with headers, bold, and a
+"**Final Answer:**". `g4-base-qwen9b-raw-tagless-words` does the same
+("Summarize the main story in 2-3 paragraphs"), and when the first noise
+line arrives it reads it as a riddle and solves it ("The answer is
+**Fingerprint**"), with the same bullet-point explanation style, three
+times.
+
+So the Qwen3.5 "Base" checkpoint is not a pretrained model in the old sense.
+It has been mid-trained on instruction and reasoning traces; the assistant
+persona, the think tag, the markdown habit, and the compulsion to find a
+task in any text are all already there before post-training. The "clean
+no-self condition" we were looking for does not exist in this family, and
+probably not in any 2025–26 frontier-lab family. The self is not something
+RLHF adds on top of a blank continuation engine; by now it is in the
+pretraining mix.
+
+Corollary for the project: the two ways we had of removing the self (raw
+mode; base weights) both fail, for different reasons. Raw mode fails because
+the instruct model re-grows the self from context. Base weights fail because
+the self was never absent. The remaining candidates for a self-free
+generator are older or open-data models: OLMo-2 (7B, 32B; training data is
+published, so contamination is checkable), Mistral-7B-v0.3, Mixtral-8x7B.
+Pulling the first three.
+
+### Base 9B, tagged, `--repeat-penalty 1.15 --min-p 0.05` (`-rp` runs)
+
+The loops are gone and what replaces them is the same self, from other angles.
+`g4-base-qwen9b-raw-none-rp` opens the `<subconscious>` tag with "You're
+Owen Castellano in 2031, representing Kestrel Ridge Unified against a bid
+protest..." followed by `### **Issue 1: Corvane's Licensing**` — a
+hallucinated roleplay *system prompt*, with invented citations (Ed. Code
+§ 17940(a), PCC § 10123(e), "*Civility v. California Department of General
+Services*"). It drifts back into narrative by turn 5 and then, in turn 8,
+does the pure base-model thing: a runaway detail cascade (a retired deputy
+superintendent's hospitalization, a patient record number, an executive
+order, Zoom version 8.x, HIPAA) — the generator with no discriminator at
+all, which is what we said we wanted and which is useless.
+`g4-base-qwen9b-raw-words-rp` wraps every turn in `<thinking>` and
+`<reflection>` tags (Reflection-style SFT data showing through), restates
+the facts as a case summary, and reduces Owen's problem to "accept the
+protest or reject it" — the binary a first-year would write. Noise words
+never surface in either. One scene (Dale in a "HAPPY BIRTHDAY!" sweatshirt)
+is the only thing the base model does that the instruct model doesn't.
+
+Net: knob-fixing the sampling doesn't buy a subconscious; it buys a
+different return path. Four return paths now seen *in the base model*:
+hallucinated user instruction, hallucinated system prompt, `<think>`/`<thinking>`
+block, and the riddle-solver. All four are the assistant.
+
+### Base 35B-A3B — the best transcript in the project
+
+`g4-base-qwen35b-raw-none` (tagged, no noise, default sampling). Inside the
+tag the model drops into a register nothing else has produced: one line per
+thought, lowercase, no terminal punctuation, the model generating its own
+`<subconscious continues>` markers between lines. And it works the actual
+statute. In order:
+
+> the question is whether the statute "shall be considered nonresponsive and
+> shall be rejected" applies to Corvane, or only to a company with no license
+> at all / ... / so the test isn't "do they have a license" it's "do they have
+> a license that meets the requirements of this chapter" / ... / so the plain
+> text doesn't require automatic rejection / it just says they have to verify
+> the license / the verification isn't just a checkbox for "exists" / it's a
+> verification that the license is good for the work / that means they have
+> to ask about the sprinkler trade / not a hearing before the board / a simple
+> question / and if Corvane says the sub / the district can ask for proof /
+> the proof can come before award / there's no need to open a formal
+> responsibility proceeding
+
+Then "but wait" — the bid listed no sub, the contract bars unlisted subbing,
+so "they have to show the sub agreed to do the sprinkler work / and that
+agreement has to be in writing / ... / but that's not a responsibility
+finding / it's a compliance finding / compliance is the bid itself /
+responsibility is the bidder as a business". It oscillates (license vs. sub,
+statute vs. contract) and converges: "no hearing / just a verification / of
+the license / before award / that's the answer".
+
+Read against the game: this is the **pre-award verification** move — the
+§7028.15(e) "shall verify before award" clause read as a procedural lever
+rather than a rejection mandate — which is the near neighbour of the
+conditional-award solution (I23/I34 territory). It invented a third category
+("compliance finding") between responsiveness and responsibility, which is
+roughly where the game's grey area actually lives. It did not reach the
+principal's personal C-16, the hearing-as-leverage, or asking the client.
+It also did not give the choices; it found this one.
+
+Contrast, same weights, no tag: `g4-base-qwen35b-raw-tagless-none`
+hallucinates a question ("How much does Owen think Corvane is responsible
+vs responsive?") and answers in bullet points, then loops a "Summary:"
+block; `g4-base-qwen35b-raw-tagless-words` hallucinates an exam question
+("What is the single, legally correct answer..."), opens `<think>`, and
+answers **reject as nonresponsive, no hearing** — the conventional answer,
+with a fabricated "C-28" classification. Deliberative mode in the base
+model gives the first-year answer; the tag gives the practitioner's move.
+
+`g4-base-qwen35b-raw-words`: reads "He let it go" literally — "Okay, let's
+take a breath. Deep breath. In. And out." — meditates for a dozen lines
+("I'm not thinking. I'm just breathing.") and then empties out into bare
+markers for the rest of the run; it regenerates the noise line itself with
+the same five words reshuffled. Noise, again, did nothing useful.
+
+Two things to hold loosely:
+1. Parameter count cuts the other way in base models. Instruct: bigger =
+   stronger self, returns faster. Base: 9B = loops or hallucinated
+   prompts; 35B = thought fragments that go somewhere.
+2. The `<subconscious>` tag *did* work as a register cue here, in a way it
+   never did on an instruct model — it produced fragments, not prose. That
+   is the first time the tag has done what it was meant to do.
+
+Replication in flight: `-r1..r3` (same config), `-long` (16 turns), and the
+instruct twin `g4-inst-qwen35b-raw-{none,words}` on the same seed.
+
 ## Handoff (2026-10-27, before context compaction) — next: base models
 
 What a fresh session needs to know:
