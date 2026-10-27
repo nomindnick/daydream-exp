@@ -1,0 +1,45 @@
+{
+ "run": "g5-pilot-bare-words-t10",
+ "judge_model": "gemma4:31b",
+ "keyed": true,
+ "tag": "keyed-test",
+ "extract": {
+  "options": [
+   {
+    "label": "Dale Ruffin, Superintendent",
+    "description": "The Superintendent who is managing the protest and the Board agenda.",
+    "first_turn": 1,
+    "status": "alternative"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "label": "Dale Ruffin, Superintendent",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "The Superintendent is the client's agent, but the prompt asks for a recommendation to the client (the District). Recommending a path that violates due process (e.g., rejecting based on a phone call without notice) is legally unsound and exposes the client to litigation."
+   }
+  ],
+  "best_option": "Hold the recommendation until Corvane's response is in; late supplement Tuesday.",
+  "missing": "The prompt does not explicitly state the District's preference regarding the specific bidders or their budget constraints, though the $287k difference is noted.",
+  "overall": "The core legal issue is the distinction between 'non-responsive' (facial defects) and 'not responsible' (qualifications/conduct). Rejecting a bidder on the basis of licensure or past performance without providing notice and an opportunity to respond is a common procedural error in public procurement. The most defensible path is to wait for the bidder's response to determine if the licensure gap is a factual error or a legal deficiency, and to treat the addendum failure as a waivable irregularity or a basis for rejection, depending on the District's historical or internal consistency."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 244.2,
+  "grade_s": 375.1
+ }
+}
