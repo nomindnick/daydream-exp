@@ -1,0 +1,295 @@
+# Eleven
+
+The protest had come in at 5:45 on Friday, which was when protests came in, and Owen Castellano had read it standing up in his kitchen with his coat still on. Now it was Sunday night and he was reading it again at his desk at home, with the rest of the bid file fanned out around it, and the house was quiet in the way it got after ten.
+
+He had been doing this for twenty-two years. Kestrel Ridge Unified was a good client, the kind that called before it did something instead of after, and Dale Ruffin, its facilities director, was a good man who wanted one thing from his lawyer, which was to be told that the project was fine. The project was the middle school, Buildings B and C: a new fire sprinkler system in both buildings, new rooftop HVAC, new electrical service and switchgear, fire alarm, roofing, doors, finishes. Thirteen and a half million dollars of Measure KR bond money. The Board was to award it Tuesday night. The Board met once a month.
+
+Four bids. The low bidder was Corvane Builders, out of Modesto, at $13,412,000. Second was Tasker & Moye, at $13,699,000. Tasker & Moye was local; Bill Tasker had been in town forty-one years and was at that moment sixty percent of the way through building the District's new stadium, with a $612,000 change order for bad soil under the track sitting on Dale's desk, unresolved. The gap between the two bids was $287,000. Theo in Business Services had already said what $287,000 was. It was two portables.
+
+The protest was from Gwen Talbot, at Talbot Mercer, for Tasker & Moye. Three grounds. He had them nearly by heart.
+
+One: Corvane wasn't licensed for the work. The job included a fire sprinkler system and an HVAC replacement, and Corvane held a Class B general building license and nothing else. Its subcontractor list named an electrician, a plumber, a fire alarm outfit, a roofer, and a painter, and said everything else would be performed by the bidder. No sprinkler sub. No HVAC sub. Talbot said a B couldn't do either trade itself, and that a bid by a contractor not licensed for the work was nonresponsive and had to be rejected, and she quoted the statute that said so.
+
+Two: Corvane hadn't acknowledged Addendum 2. Addendum 2 had changed the locksets on fourteen classroom doors to the classroom-security function. Eighteen thousand dollars, Talbot said. Corvane's bid form initialed Addendum 1 and left the second line blank.
+
+Three: Copper Basin Unified, the district next door, had terminated Corvane for cause in March 2024 on a gym job, and its board had ratified the termination in open session, five to nothing. Not a responsible bidder.
+
+The associate, Maya Ellery, had sent a first-look memo Friday night that was better than most first looks. She had pulled the sections Talbot cited and set them out in full, and she had ended with the question that was the whole case, though he wasn't sure she knew it. A nonresponsive bid can be rejected on its face, she wrote. A responsibility question gets notice and a hearing first. I haven't researched which this is.
+
+He had.
+
+The HVAC point was noise. Section 7057 said a general building contractor could do or superintend the whole or any part of a project that required two or more unrelated trades, and this one required five. A B could put rooftop units on a school. Talbot knew that, or should have. It was in the letter because licensing was the most common protest ground in the state and you threw it in.
+
+The sprinklers were different, and he had been turning them over for two days. Subdivision (c) of the same section said a general building contractor shall not contract for any project that includes a fire protection system unless it holds the fire protection classification or subcontracts the work to someone who does. Corvane held a B. Corvane had listed no one. On the face of the bid, Corvane was going to install a fire sprinkler system in two school buildings with its own forces, and the statute said it could not contract to do that.
+
+And yet. The District's own instructions to bidders had asked for a Class B license and nothing else. Section 7.1, in bold. Corvane had one. On the face of the bid, Corvane had met every requirement the District had set. The general rule, the one he had given to a hundred clients, was that if you had to go outside the four corners of the bid to find the problem, it was a responsibility problem, and responsibility got the bidder notice and a hearing before the Board could pass it over. Whether Corvane could lawfully do the sprinkler work was a question about Corvane, not about the bid.
+
+Except the other statute, the one Talbot had quoted in full, said that a bid submitted by a contractor who is not licensed in accordance with this chapter shall be considered nonresponsive and shall be rejected, and that the agency shall verify, before award, that the contractor was properly licensed when it bid. Not licensed in accordance with this chapter. He had read the sentence perhaps forty times. Did it mean a contractor with no license at all, the handyman with a pickup, the thing the section was obviously written for? Or did it mean a contractor without the license this project needed? Properly licensed. Properly for what? He could argue it either way, and he could hear Talbot arguing it the other way, at the podium, Tuesday, with the Courier's education reporter in the second row.
+
+And there was the thing underneath, the thing nobody would write down. Dale wanted the project. Dale wanted the 27th. The switchgear and the rooftop units were running thirty to thirty-six weeks from order and had to be released by the first of December or the electrical and the HVAC slid to summer 2028, a year lost, with the Citizens' Bond Oversight Committee meeting in January. Dale had also, without ever saying so, wanted Bill Tasker, who was building his stadium and whose change order he had not yet decided on. And Corvane had bid two portables less than Bill Tasker, and was the low bidder, and the law was for the low bidder.
+
+Dale's recommendation to the Board was due in the packet supplement at one o'clock Monday. Corvane's response to the protest, if it sent one, wasn't due until Tuesday. He would be writing before he knew what Corvane had to say.
+
+He had a legal pad. On it he had written *sprinklers* and underlined it, and under that, *face of the bid?*, and under that, *"not licensed in accordance with this chapter"*, and under that nothing. The desk lamp made a circle on the pad and the rest of the room was dark. He had meant to go to bed an hour ago. He had meant to have an answer.
+
+He put his head down on his folded arms, just for a minute, the way he had in law school, with the lamp still on and the protest letter under his elbow, and the sprinklers and the fence of the statute and Bill Tasker's forty-one years went around once more, slower, and then let go of each other.
+
+He was asleep before the thought finished.
+
+* * *
+
+In the dream,
+The District was a single, long, narrow building with a high roof, and every door opened into a different school. The floor was a map of the valley, with roads in blue paint. Owen walked the floor to the far wall and found a room labeled *Bid Award* with a long table and chairs for six. The Chair of the Board was already there, with a stack of papers in front of her. She wore a sash across her shoulders that read *The Low Bidder Shall Prevail*.
+
+"Sit," she said, and he sat.
+
+She slid a page toward him. "What do you do if the low bidder is not licensed in accordance with this chapter?"
+
+"What chapter?" he asked.
+
+"This one."
+
+He looked at the page. It was the protest letter. Gwen Talbot's letter. Her name was written in the top right corner in ink that was not ink, but something like smoke that kept the shape of letters.
+
+"What chapter is this one?" he asked again.
+
+"The one you are working on."
+
+"What is the question?" he asked.
+
+"Is it responsive?" she said.
+
+He looked at her. "It's a responsibility question."
+
+She shook
+her head. "No."
+
+"It's a responsibility question," he repeated.
+
+"No," she said. "Answer the question."
+
+He opened the page. The ink was gone. Underneath, in pencil, was a line from the bid form. It said:
+
+**ADDENDUM 1: ACKNOWLEDGED**
+
+**ADDENDUM 2: BLANK**
+
+"It's a responsiveness issue," he said. "Not a responsibility issue."
+
+She shook her head. "That's not the question."
+
+"What is the question?"
+
+"Is it responsive?"
+
+"No," he said. "It's not."
+
+"What is it?"
+
+"It's a bid that has been submitted by a contractor who is not licensed in accordance with this chapter. It's a nonresponsive bid."
+
+She took the page from him. She tore it in half. She took the other half and tore it again. She put the pieces in a paper shredder. The sound was like rain.
+
+"That's what I thought," she said.
+
+She stood. "What do you do?" she asked.
+
+He stood, too. "I reject it," he said.
+
+"Good," she said. "Now
+*wake up*."
+
+* * *
+
+Owen opened his eyes.
+
+The lamp was still on. The protest letter was under his elbow.
+
+He had a headache. The letter was there. He could still hear the sound of the shredder, like rain.
+
+He put his hand on the letter and pulled it out from under him and unfolded it on the desk. He looked at the first ground.
+
+*Ground One: Corvane wasn't licensed for the work.*
+
+He read it through once, then a second time, then a third. He pulled the statute back and read it again. He read it with the letter in front of him, then without it, then with it again.
+
+He looked at his legal pad. *Sprinklers. Face of the bid?*
+
+He picked up his pen and drew a circle around *sprinklers*. He drew another circle around *face of the bid*. He drew a box around the third point. *Copper Basin. Termination for cause.*
+
+He went to the window. He could hear the wind in the eaves. The houses on the hill were dark. The streetlights made yellow circles on the road.
+
+He walked back to
+his desk. He picked up his phone and opened his calendar. Monday, 1 p.m., District packet supplement due. Tuesday, 7 p.m., Board meeting. He set an alarm for 10 a.m. Monday.
+
+He picked up the phone again and opened the District's email. He wrote:
+
+*Gwen Talbot,*
+*Thank you for your protest.*
+*I have reviewed it.*
+*We will issue a response by 5 p.m. Monday.*
+
+He sent it.
+
+He picked up the letter and read it once more. Then he put it in his jacket pocket.
+
+He turned off the lamp.
+
+He went to bed.
+
+The next morning, at 8:12, he woke with the headache still there and the words *not licensed in accordance with this chapter* in his mind. He got up. He made coffee. He opened his laptop.
+
+He opened the bid file. He read the instructions to bidders. He read them again. He read them for the third time. He opened the statute again. He read it with the instructions in front of him, then without it, then with it again.
+
+He wrote a memo. It
+said:
+
+*This is a responsiveness question. A bid that has been submitted by a contractor who is not licensed in accordance with this chapter shall be considered nonresponsive and shall be rejected.*
+
+*The instructions to bidders asked for a Class B license and nothing else. Corvane has a Class B license.*
+
+*This does not resolve the statutory question.*
+
+*The question is whether the contractor is not licensed in accordance with this chapter. The statute says that a general building contractor shall not contract for any project that includes a fire protection system unless it holds the fire protection classification or subcontracts the work to someone who does.*
+
+*Corvane did not subcontract the work.*
+
+*On the face of the bid, Corvane intended to contract for the project that included a fire protection system without the fire protection classification and without a subcontractor who holds the fire protection classification.*
+
+*Therefore, Corvane was not licensed in accordance with this chapter.*
+
+*Therefore, the bid is nonresponsive.*
+
+*Therefore, it should be rejected.*
+
+*Recommendation: Reject the bid of Corvane Builders.*
+
+*Recommendation: Award the contract to Tasker & Moye.*
+
+He stopped.
+
+He
+read what he had written.
+
+He read it again.
+
+He read it once more.
+
+He thought about the two portables, the 27th, the stadium.
+
+He thought about Dale, and Bill Tasker, and the Board, and the press, and the Citizens' Bond Oversight Committee, and the law, and the law's own words, which were plain.
+
+He thought about the dream. He thought about the woman with the sash that said *The Low Bidder Shall Prevail*, and the way she had torn the paper, and the way she had put it in the shredder, and the way she had told him to wake up.
+
+He put his hand on the page.
+
+He pressed *delete* on his keyboard.
+
+The words disappeared.
+
+He looked at the screen.
+
+He looked at the blank page.
+
+He looked at the window.
+
+The sun was coming up. The eaves were still. The wind had stopped.
+
+He picked up the
+pen.
+
+He wrote:
+
+*This is a responsibility question. The law requires a hearing.*
+
+*Recommendation: Schedule a hearing before the Board on Tuesday. At the hearing, provide Corvane
+Builders an opportunity to respond to the protest. The Board should make its determination after the hearing.*
+
+*Recommendation: Pending the hearing, proceed with the low bidder.*
+
+He stopped.
+
+He read what he had written.
+
+He read it again.
+
+He read it once more.
+
+He thought about Dale, and Bill Tasker, and the Board, and the press, and the Citizens' Bond Oversight Committee, and the law, and the law's own words, which were plain.
+
+He thought about the dream. He thought about the woman with the sash that said *The Low Bidder Competing, the way she had torn the paper, and the way she had put it in the shredder, and the way she had told him to wake up.
+
+He put his hand on the page.
+
+He pressed *delete* on his keyboard.
+
+The words disappeared.
+
+He looked at the screen.
+
+He looked at the blank page.
+
+He looked at the window.
+
+The sun was up. The wind was still.
+
+He picked up the phone. He opened his contacts. He looked for *Dale Ruffin*.
+
+He did not call.
+
+He opened the District's email
+again.
+
+He wrote:
+
+*Gwen Talbot,*
+
+*Thank you for your protest.*
+
+*I have reviewed it.*
+
+*I am writing to say that we will issue a response by 5 p.m. Monday.*
+
+*In the meantime, we will proceed as follows:*
+
+*We will hold a public hearing on Tuesday, before the Board, to consider the protest.*
+
+*At that hearing, Corvane Builders will be given an opportunity to respond.*
+
+*The Board will make its determination after the hearing.*
+
+*We will issue our final decision following that.*
+
+*We will not make any recommendation to the Board at this time.*
+
+*We will wait until after the hearing to make our decision.*
+
+He pressed send.
+
+He closed the laptop.
+
+He stood up.
+
+He walked to the window.
+
+He watched the sun rise over the valley.
+
+The wind was still.
+
+The houses were dark.
+
+The streetlights were off.
+
+He turned away from the window.
+
+He went back to his desk.
+
+He opened the bid file.
+
+He opened the protest.
+
+He read the first line.
+
+He read the second line.
+
+He read the third line

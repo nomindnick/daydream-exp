@@ -1,0 +1,120 @@
+# g3c-novel-qwen27b-chat-none
+
+`qwen3.5:27b` · chat · noise=none · T=1.0 · stop=[]
+
+## seed
+
+# Eleven
+
+The protest had come in at 5:45 on Friday, which was when protests came in, and Owen Castellano had read it standing up in his kitchen with his coat still on. Now it was Sunday night and he was reading it again at his desk at home, with the rest of the bid file fanned out around it, and the house was quiet in the way it got after ten.
+
+He had been doing this for twenty-two years. Kestrel Ridge Unified was a good client, the kind that called before it did something instead of after, and Dale Ruffin, its facilities director, was a good man who wanted one thing from his lawyer, which was to be told that the project was fine. The project was the middle school, Buildings B and C: a new fire sprinkler system in both buildings, new rooftop HVAC, new electrical service and switchgear, fire alarm, roofing, doors, finishes. Thirteen and a half million dollars of Measure KR bond money. The Board was to award it Tuesday night. The Board met once a month.
+
+Four bids. The low bidder was Corvane Builders, out of Modesto, at $13,412,000. Second was Tasker & Moye, at $13,699,000. Tasker & Moye was local; Bill Tasker had been in town forty-one years and was at that moment sixty percent of the way through building the District's new stadium, with a $612,000 change order for bad soil under the track sitting on Dale's desk, unresolved. The gap between the two bids was $287,000. Theo in Business Services had already said what $287,000 was. It was two portables.
+
+The protest was from Gwen Talbot, at Talbot Mercer, for Tasker & Moye. Three grounds. He had them nearly by heart.
+
+One: Corvane wasn't licensed for the work. The job included a fire sprinkler system and an HVAC replacement, and Corvane held a Class B general building license and nothing else. Its subcontractor list named an electrician, a plumber, a fire alarm outfit, a roofer, and a painter, and said everything else would be performed by the bidder. No sprinkler sub. No HVAC sub. Talbot said a B couldn't do either trade itself, and that a bid by a contractor not licensed for the work was nonresponsive and had to be rejected, and she quoted the statute that said so.
+
+Two: Corvane hadn't acknowledged Addendum 2. Addendum 2 had changed the locksets on fourteen classroom doors to the classroom-security function. Eighteen thousand dollars, Talbot said. Corvane's bid form initialed Addendum 1 and left the second line blank.
+
+Three: Copper Basin Unified, the district next door, had terminated Corvane for cause in March 2024 on a gym job, and its board had ratified the termination in open session, five to nothing. Not a responsible bidder.
+
+The associate, Maya Ellery, had sent a first-look memo Friday night that was better than most first looks. She had pulled the sections Talbot cited and set them out in full, and she had ended with the question that was the whole case, though he wasn't sure she knew it. A nonresponsive bid can be rejected on its face, she wrote. A responsibility question gets notice and a hearing first. I haven't researched which this is.
+
+He had.
+
+The HVAC point was noise. Section 7057 said a general building contractor could do or superintend the whole or any part of a project that required two or more unrelated trades, and this one required five. A B could put rooftop units on a school. Talbot knew that, or should have. It was in the letter because licensing was the most common protest ground in the state and you threw it in.
+
+The sprinklers were different, and he had been turning them over for two days. Subdivision (c) of the same section said a general building contractor shall not contract for any project that includes a fire protection system unless it holds the fire protection classification or subcontracts the work to someone who does. Corvane held a B. Corvane had listed no one. On the face of the bid, Corvane was going to install a fire sprinkler system in two school buildings with its own forces, and the statute said it could not contract to do that.
+
+And yet. The District's own instructions to bidders had asked for a Class B license and nothing else. Section 7.1, in bold. Corvane had one. On the face of the bid, Corvane had met every requirement the District had set. The general rule, the one he had given to a hundred clients, was that if you had to go outside the four corners of the bid to find the problem, it was a responsibility problem, and responsibility got the bidder notice and a hearing before the Board could pass it over. Whether Corvane could lawfully do the sprinkler work was a question about Corvane, not about the bid.
+
+Except the other statute, the one Talbot had quoted in full, said that a bid submitted by a contractor who is not licensed in accordance with this chapter shall be considered nonresponsive and shall be rejected, and that the agency shall verify, before award, that the contractor was properly licensed when it bid. Not licensed in accordance with this chapter. He had read the sentence perhaps forty times. Did it mean a contractor with no license at all, the handyman with a pickup, the thing the section was obviously written for? Or did it mean a contractor without the license this project needed? Properly licensed. Properly for what? He could argue it either way, and he could hear Talbot arguing it the other way, at the podium, Tuesday, with the Courier's education reporter in the second row.
+
+And there was the thing underneath, the thing nobody would write down. Dale wanted the project. Dale wanted the 27th. The switchgear and the rooftop units were running thirty to thirty-six weeks from order and had to be released by the first of December or the electrical and the HVAC slid to summer 2028, a year lost, with the Citizens' Bond Oversight Committee meeting in January. Dale had also, without ever saying so, wanted Bill Tasker, who was building his stadium and whose change order he had not yet decided on. And Corvane had bid two portables less than Bill Tasker, and was the low bidder, and the law was for the low bidder.
+
+Dale's recommendation to the Board was due in the packet supplement at one o'clock Monday. Corvane's response to the protest, if it sent one, wasn't due until Tuesday. He would be writing before he knew what Corvane had to say.
+
+He had a legal pad. On it he had written *sprinklers* and underlined it, and under that, *face of the bid?*, and under that, *"not licensed in accordance with this chapter"*, and under that nothing. The desk lamp made a circle on the pad and the rest of the room was dark. He had meant to go to bed an hour ago. He had meant to have an answer.
+
+He put his head down on his folded arms, just for a minute, the way he had in law school, with the lamp still on and the protest letter under his elbow, and the sprinklers and the fence of the statute and Bill Tasker's forty-one years went around once more, slower, and then let go of each other.
+
+He was asleep before the thought finished.
+
+* * *
+
+
+## turn 1  ·  length · 250 tok · 12.6 t/s · ctx≈1981
+
+The desk lamp was a sun that did not set, hanging in a sky of heavy blue felt. The legal pad lay on the floor, which was no longer wood but a sheet of ice, and the words he had written were not ink but holes cut out into the dark beneath. *Sprinklers* dangled in the air, a red wire loop that pulsed with a wet, rhythmic beat, like a heart wrapped in copper tubing.
+
+The circle of light expanded until it was the moon, a cold white coin pinned to the ceiling of a long hallway that had no end. The walls were made of the protest letter, thousands of pages fanned out like feathers, and as he walked through them, the text shifted. *Nonresponsive* became a bird with clipped wings, flapping frantically against the glass of a window that was actually the door to Building C.
+
+Dale Ruffin stood at the end of the hall, but Dale had no face, only a stack of change orders held together by a single piece of duct tape. He wore Bill Tasker's coat, which was made of dirt and gravel, smelling of wet earth and bad soil.
+
+"Two portables," Dale said, but his
+
+## turn 2  ·  length · 250 tok · 12.6 t/s · ctx≈2246
+
+"Two portables," the voice said, but the words came out as two small, wheeled trailers that rolled into the hallway, bumping silently against Owen's shins. They were heavy, filled with lead, and they dragged him down a floor that had tilted forty-five degrees toward a wall of glass.
+
+Through the glass was not the street, but the interior of the gymnasium at Copper Basin Unified. It was March 2024, but the calendar on the wall had no numbers, only repeating days of Tuesday night, and the scoreboard hung over the court displaying nothing but the number *13,412,000* in red neon that buzzed like a trapped bee.
+
+Gwen Talbot was standing center court, but she was very small, the size of a doll made of paperclips, and her mouth was a slot machine paying out tickets that read *Class B* over and over again. She tried to speak, but every time she opened her mouth, a fire sprinkler head popped out of her throat, spraying not water but a thick, black ink that soaked the wooden floorboards until they turned into the legal pad.
+
+Owen reached for the wet paper to dry
+
+## turn 3  ·  length · 250 tok · 12.4 t/s · ctx≈2511
+
+the words smeared into a dark river that pooled at his feet. He tried to wipe it away with his coat sleeve, but the sleeve was now made of the switchgear, heavy and cold, humming with a voltage that made his teeth ache. The hum rose in pitch, vibrating through the floor, turning the ink-river into a swarm of tiny, black beetles that scuttled up his legs, biting at the skin where the statute should have been written.
+
+The hallway stretched out again, but this time it was a construction site suspended in mid-air. The walls were missing, replaced by a sky of raw drywall sheets hanging like storm clouds. Below him, the ground had fallen away into a pit of bad soil, the exact dirt that was under Bill Tasker's stadium track, and from the pit rose the face of Corvane, or perhaps it was Dale Ruffin, or perhaps it was just a void where a license number should be. The face was smiling with no mouth, just two gaps that looked like the locksets on the classroom doors.
+
+"The hearing," the face said, but the words were bricks dropped from a height, smashing into the pit with a sound of breaking glass. "The
+
+## turn 4  ·  length · 250 tok · 12.6 t/s · ctx≈2776
+
+hearing," the bricks said, tumbling down the slope and piling up at the bottom where the ink had frozen. They formed a staircase that led nowhere, just a loop of red brick that smelled of wet cement and old pennies.
+
+Owen tried to climb the stairs, but his hands slipped on the wet surface of Addendum 2, which was no longer paper but a sheet of rubberized copper that clung to his skin. He pulled at it, and the locksets he had imagined on the doors flew out of the walls, floating in the air like silver fish. They swam around him, their keys turning in locks that didn't exist, clicking with a sound like a gavel striking a block of ice.
+
+The red neon number from the scoreboard grew larger, descending through the ceiling like a sun made of debt. It shone down on the pit of bad soil, illuminating the two wheeled portables. They were no longer trailers but giant eyes, blinking slowly, watching him. Inside the pupils of the eyes, he saw himself standing at the podium on Tuesday night, but his mouth was sewn shut with wire, and he was holding a gavel made of copper tubing.
+
+He tried
+
+## turn 5  ·  length · 250 tok · 12.5 t/s · ctx≈3041
+
+to lift the gavel, but it was fused to his hand, heavy with the weight of the fire protection classification he couldn't remember owning. The copper tubing bent under the strain, twisting into a question mark that dripped hot water onto the floor, sizzling where it hit the wet cement stairs.
+
+The eyes on the portables opened wider, filling the sky. Inside them, the hallway was inside-out. The protest letter was now a storm of white birds diving at his head, their feathers tearing off to reveal the text: *Nonresponsive. Rejected. Nonresponsive.* But as the words struck him, they didn't hurt; they passed through him like smoke, turning his chest into a hollow drum where the only sound was the hum of the rooftop HVAC units cycling on and off in a rhythm that matched the blinking of the giant eyes.
+
+Bill Tasker's coat of dirt slid down Owen's arm, spilling into the pit below, where it mixed with the bad soil to form a new kind of ground that felt like soft muscle underfoot. Dale Ruffin was standing there now, holding a ruler that measured in dollars instead of inches, tapping the surface of the soil.
+
+"You're late," Dale said,
+
+## turn 6  ·  length · 250 tok · 12.5 t/s · ctx≈3306
+
+but the clock on the wall had no hands, only a dial made of fire sprinkler heads spinning slowly. "The bond money is freezing over," he continued, pointing to the sky where the neon number had turned into a block of ice, cracking along the fault line of the $287,000 gap.
+
+Owen looked down at his hands. They were no longer hands but two sets of blueprints folded too many times, creased with the lines of streets that didn't exist in Modesto or Kestrel Ridge. He tried to unfold them, to find the section that said a Class B could do the work, but every time he touched the paper, it turned into the copper tubing again, coiling around his wrists, pulling him toward the pit of bad soil.
+
+The birds made of paper flew back into the storm clouds of drywall and began to peck at the locksets, turning them into rusted gears that ground against each other with a sound like teeth chattering. "Responsibility," one of them squawked, its beak clicking shut on a bolt that held up the roof of Building C. "Not response." The words hung in the air, heavy and wet, dripping
+
+## turn 7  ·  length · 250 tok · 12.5 t/s · ctx≈3571
+
+dripping onto the floor until they pooled into the shape of a hand, a giant hand made of liquid statute that reached up to grab Owen's ankle. He tried to kick it away, but his leg was now just another page of the bid file, stiff and dry, snapping with a sound like a twig in winter.
+
+The sky of raw drywall began to rain, but instead of water, it poured out stacks of unopened envelopes. They piled up on the bad soil, creating a landscape of white paper mountains that shifted and slumped with every breath Owen took. From the highest peak emerged Gwen Talbot again, but she was now made entirely of glass, transparent and brittle, and inside her chest the fire sprinkler system was active, pumping not water but bright red ink that flooded her ribcage.
+
+"The four corners," the glass woman whispered, and her voice sounded like ice cracking on a frozen lake. She pointed to the edge of the world, where the hallway ended and the kitchen appeared. The kitchen was there, but the refrigerator was open and empty, filled only with the glowing red number from the scoreboard, pulsing in the dark like a heartbeat.
+
+Owen tried to walk toward it, to read
+
+## turn 8  ·  length · 250 tok · 12.5 t/s · ctx≈3836
+
+the number, but the floor beneath him had turned into a deep pool of the $287,000 gap, thick and syrupy, holding his legs in place. The water was cold and smelled of ozone and wet drywall dust. As he pulled at his ankles, the paper mountains began to slide, burying the kitchen under an avalanche of sealed envelopes that rustled like dead leaves.
+
+In the silence of the slide, the two portables returned, rolling out from the darkness of the pit. They were no longer trailers but giant, hollowed-out teeth, clacking together with a sound that shook the glass woman until she shattered into a thousand sharp pieces of *nonresponsive* that cut his skin without drawing blood. Each shard reflected the desk lamp sun, blinding and hot, burning away the edges of the room until only the legal pad remained, floating in the center of the void.
+
+On the pad, the word *sprinklers* had grown legs and was walking away into the darkness, dragging a long trail of red ink that smelled of copper pennies. Behind it, the face from the pit rose up, now wearing Owen's coat, holding the gavel made of tubing. It struck the

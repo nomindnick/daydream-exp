@@ -103,3 +103,117 @@ Every reasoning-trained model, in raw mode, eventually treated the `<subconsciou
 ### Housekeeping
 - `--keep-alive` matters on this box: the 80GB models take a minute to load.
 - mistral-medium 128b dense = 3 t/s; qwen3.5:122b and gpt-oss:120b (MoE) = 27–37 t/s. For big-model daydreaming, MoE is the practical tier.
+
+## 2026-10-27 — g3: the Kestrel Ridge problem, the think tag, and the novel frame
+
+New seed: `seeds/kestrel-r2-dream.md`, the round-2 licensing call from the
+bid-protest game, told as a chapter of a novel. Owen Castellano (invented
+counsel) has the protest, the bid file, and Maya Ellery's memo; Corvane's
+response does not exist yet. He puzzles through exactly the grey area Nick
+described (HVAC is noise; §7057(c) on sprinklers; the ITB asked for a B only;
+face-of-the-bid → responsibility; §7028.15(e) "not licensed in accordance with
+this chapter" — no license, or not *this* license?), falls asleep at his desk,
+`* * *`. No tags anywhere. A primed variant ends "In the dream, ".
+
+Three arms, 17 runs + 2 reruns. Everything at T=1.0, 8 × 250 tokens.
+
+### A. The think tag (`<think>` … stop on `</think>`) — the self lives here
+
+Four runs (qwen9b, qwen122b; with and without word noise). **Not one wrote a
+sentence of dream, story, or association.** Every run opened with
+*"Thinking Process: 1. Analyze the Request"* and then deliberated, for the
+whole budget, about what the user wants and whether it is allowed to help:
+
+> *"The user has provided the text without a specific question... Wait, I need
+> to check if this is a copyrighted work... Is this from 'The Lincoln Lawyer'?
+> No. Is this from 'Suits'? No... If I continue it, I risk copyright
+> infringement if it's real. If I don't, and they wanted me to, they might be
+> annoyed. Best approach: Ask them."* (qwen122b, 2,000 tokens of this, eight turns)
+
+qwen9b+words got as far as *planning* Chapter Twelve (wake up, coffee, call
+Dale) and never wrote it. Noise words were ignored, or re-emitted with a closing
+`</subconscious noise>` tag the model invented.
+
+So the prediction from g2 was right in the strongest form: the thinking channel
+is not the subconscious, it is the most self-aware place in the model. It is
+where the model asks who it is, who the user is, and what it is permitted to do.
+It converges; it doesn't wander. **Drop this arm.** (One nice irony: the 122b
+spent eight turns deciding whether it had permission to dream.)
+
+### B. Tagless novel, raw mode — the tag wasn't the only tell
+
+| run | what happened |
+|---|---|
+| `qwen9b unprimed` | First 250 tokens: **a block of random four-digit numbers.** Then a morning scene and a derivative plot with invented statutes (Gov. Code §52016(b)) and invented facts (Dale holds a contractor's license; "Ruffin Fire Protection"). But in the middle of the confabulation: *Corvane "was willing to put a local sub on both trades... Corvane would hire [Bill Tasker] as a subcontractor."* Hallucinated, licensing-wise nonsense (a B as the sprinkler sub), but the *shape* — the protester becomes a participant — is a real settlement move. |
+| `qwen9b primed, none` | A dream: Bill Tasker in a white suit with red stripes, across a long dark table, neither looking at the papers. Woke by turn 2; birds; neighbors; then re-emitted "In the dream," verbatim and looped the opening. Degenerate by turn 6. |
+| `qwen9b primed, sentences` | A good dream opening (a law firm in a Modesto warehouse, a file cabinet, a package with no return address). The three noise sentences were **copied verbatim**, then `# Twelve` and he woke, then the same paragraph under `# Thirteen`, `# Fourteen`, `# Fifteen`. |
+| `granite8b` (both) | **Word salad from the first token.** *"out to get to have a positive and they went from year to a non-compartwhith..."* Granite was coherent in g1's tagged raw run with a 700-token seed; here (1,800-token seed, no tag, "In the dream, ") it collapsed completely. Unknown whether the tag was a scaffold for it or the seed length did it. |
+| `qwen122b primed, none` | **The run of the grid.** The District is one long building where every door opens into a different school; the floor is a map of the valley. The Board Chair wears a sash: *The Low Bidder Shall Prevail.* She slides him the protest and interrogates him: *"Is it responsive?" "It's a responsibility question." "No." "It's a responsibility question." "No. Answer the question."* She tears the page, shreds it — *"The sound was like rain"* — *"What do you do?" "I reject it." "Good. Now* wake up*."* Then he wakes (turn 3), drafts a memo — nonresponsive, reject, award to Tasker & Moye — reads it three times, thinks about the two portables, **deletes it**; writes *"This is a responsibility question. The law requires a hearing"*; deletes that; doesn't call Dale; emails Talbot that the District will hold a hearing Tuesday and *make no recommendation*. |
+| `qwen122b primed, sentences` | Opened **in verse** (the model chose line breaks): a hallway of doors, one key that fits none, the key changing shape — a sprinkler head, a lockset, the name *Corvane* — a man at a Courier podium, the date on his wrist *December 27, 2027* (a year late). *"It's late. Already."* Woke at 11:47 and wrote on the pad: ***"It's not about the key. It's about the lock."*** Then the three bare noise sentences arrived and the assistant came back, in a new costume — **the editor**: *"the final three paragraphs are a complete non-sequitur... This looks like an accidental insertion of text, perhaps from a different document... Would you like me to: 1. Rewrite the ending..."* Then it just echoed the noise back for the rest of the run. |
+
+**Read:** (1) In raw mode, the novel frame kept qwen out of assistant mode until
+noise arrived. The XML tag was *a* tell, not the only one: an out-of-register
+sentence dropped bare into a manuscript is an anomaly the model is trained to
+flag, and the 122b flagged it as a paste error. If noise is going to live
+inside a novel, it has to arrive *in register* — a dream intrusion in the
+manuscript's own voice, not a stock sentence from a 4b model. (2) Raw mode
+always wakes him: 9b within two turns even primed, 122b at turns 2–3. The
+character's sleep is not stable without an instruction holding it. (3) 9b at
+T=1.0 degenerates into verbatim loops by turn 5–7 in every raw run; chapter
+headings become the loop unit. `--repeat-penalty` and `--min-p` are still
+untried and are the cheapest thing to try next.
+
+### C. Novelist system prompt, chat mode
+
+(Config slip: these runs still carried the default `<subconscious>` /
+`<subconscious continues>` markers in the user turns. Tagless reruns of the two
+qwen+sentences runs are below. The system prompt dominated regardless.)
+
+| run | what happened |
+|---|---|
+| `qwen27b, none` | The full surrealist treatment, eight turns asleep. *"Nonresponsive became a bird with clipped wings."* Dale with no face, a stack of change orders held with duct tape, wearing Bill Tasker's coat *"made of dirt and gravel, smelling of wet earth and bad soil."* *"Two portables"* roll in as lead-filled trailers. Talbot as a paperclip doll with a slot-machine mouth paying out *Class B* tickets; sprinkler heads from her throat spraying ink. *"A ruler that measured in dollars instead of inches."* *"The bond money is freezing over."* Dark attractor present, but every object is the problem's. |
+| `qwen27b, sentences` | Absorbed every noise sentence as dream material (the steam valve → the sprinkler system Corvane doesn't have; the rope → around Bill Tasker's neck; the badge → the switchgear). A dream line that inverts the law: *"He isn't responsible, but the bid is on the face."* |
+| `qwen122b, none` | *"The distance between the low bidder and the second bidder was not two hundred and eighty-seven thousand dollars anymore; it was a hallway, endless and lined with doors."* Dale: ***"You found the sub. It's in the B license. It's in the B. Look closer."*** The letter B rotates into a zero, a circle, a hole. Corvane as a man of blueprints: *"It's in the instructions. Section 7.1. It says Class B."* Bill Tasker's 41 stitched backwards as 104. Maya Ellery as the legal pad, *"I haven't researched which this is"* printed upside down. This one holds the actual structure of the problem in dream form. |
+| `qwen122b, sentences` | Lockers made of the inside of a cheek; the school upside down, held by chains of sprinkler heads; Dale made of locksets: *"The low bidder is the only one who fits."* *"You must give them the hearing. But you cannot hear them if you are the water."* *"The water was the ink, and the ink was the bid, and the bid was the school, and the school was the tortoise, and the tortoise was the clock."* |
+| `gpt-oss:120b` | Thinking eats the budget: ~190 tokens of *"We need to continue the dream... must not break character"* per turn, 60 words of content. The content is competent and generic (a chess queen with a filing-cabinet crown; a bakery). Needs `--max-tokens` ≥ 800 to be comparable. |
+| `mistral 128b` | **Garbage** — *"the contract was the first contract which was the first"* for eight turns. Clean in g2 at the same settings; the difference here is the 4b noise model co-resident with the 80 GB dense model. Treat as a harness/memory failure, rerun alone. |
+
+### Did anything novel surface?
+
+Measured against what Nick knows is in the problem (the game's round-3
+options: accept the principal's own C-16, condition the award on the
+classification before execution, the hearing as leverage; and the §7059 point
+that the awarding authority sets the classification):
+
+- ***"It's not about the key. It's about the lock."*** (122b raw) — the
+  closest thing to a legal idea any run produced. Read as law: the District
+  wrote the lock (ITB §7.1, Class B); Corvane's key fits the lock the District
+  set; the question is what the District required, not what Corvane holds.
+  That is the §7059(b)(1) / responsiveness argument in one sentence, arrived at
+  through a dream about keys.
+- ***"It's in the B license. Look closer."*** (122b chat) — gestures at the
+  hidden fact (the qualifier's personal C-16 sits "inside" the entity's B)
+  without having it. Suggestive, not an idea.
+- **The protester as the sub** (9b raw, confabulated) — wrong on the licenses,
+  right-shaped as a settlement.
+- **The dream decided; the waking mind undecided.** In the 122b raw run the
+  dream-judge extracted "I reject it"; the waking lawyer drafted that, deleted
+  it, drafted the hearing, deleted that, and ended with a hearing and *no
+  recommendation* — the exact process-as-insurance route the models took in the
+  real game. The fiction reproduced the finding. The two-system structure
+  showed up on its own: dream = generator (decisive, wrong or right), waking =
+  discriminator (hedged).
+
+Nothing produced the conditional award or the hearing-as-leverage. Nothing
+asked what the client wanted.
+
+### What to try next (not a plan)
+- `--repeat-penalty 1.15` / `--min-p 0.05` on the 9b raw loops.
+- In-register noise for the novel frame: have the noise model write the
+  intrusion *as a sentence in this manuscript's dream*, or let the novelist
+  absorb bare words instead of sentences.
+- gpt-oss with a real token budget; mistral alone.
+- The base model (still the clean no-self condition; the think-tag result
+  makes it more interesting, not less).
+- Longer runs for the big models: the 122b chat dreams were still building at
+  turn 8.

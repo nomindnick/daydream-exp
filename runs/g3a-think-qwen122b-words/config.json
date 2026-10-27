@@ -1,0 +1,28 @@
+{
+  "model": "qwen3.5:122b",
+  "mode": "raw",
+  "seed": "seeds/kestrel-r2-dream.md",
+  "system": null,
+  "turns": 8,
+  "max_tokens": 250,
+  "num_ctx": 16384,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0,
+  "open_marker": "<think>",
+  "continue_marker": "",
+  "stop": [
+    "</think>"
+  ],
+  "noise": "words",
+  "noise_every": 2,
+  "noise_n": 5,
+  "noise_source": "concrete",
+  "noise_model": "qwen3.5:4b",
+  "noise_marker": "<subconscious noise>",
+  "name": "g3a-think-qwen122b-words",
+  "keep_alive": "20m",
+  "quiet": true,
+  "started": "20261027-130155"
+}
