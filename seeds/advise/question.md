@@ -1,0 +1,1 @@
+As the District's counsel, advise the client. What does the law say about each ground of the protest, and how should the District proceed? Give the advice you would give Dale on this call, and the recommendation you would put in writing for the Board.

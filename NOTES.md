@@ -552,6 +552,83 @@ Mistral-7B (no self, narrator intact) → conventional answer in story form;
 OLMo-32B (no self, narrator loose) → dream; OLMo-7B → nothing. None of the
 self-free models produced a non-obvious move.
 
+## 2026-10-27 — g5: the deliberation arm (design; results below when in)
+
+Nick's design, after g4: instead of a subconscious continuation, ask the
+model directly, as the District's counsel, what the law is and what the
+client should do; thinking on; then six one-line "think harder" nudges in
+chat mode. Three arms differ in what follows the nudge: nothing (control);
+"Some thoughts to help inspire you:" + four generic inspirational quotes
+(placebo, added on my suggestion so the noise arm has a same-length
+control); or the same framing + four quotes a small model built around
+true-random words from `words/concrete.txt` (the noise arm). Crossed with
+two situations: **bare** (the game's round-2 case file and Dale's Monday
+call) and **briefed** (same, plus what the client wants and the eight axes
+the game's scorecard grades on; Nick's idea, folded into one factor rather
+than two). Then the discriminator pass, unparked: a judge extracts every
+course of action the transcript raised and grades each as legal
+(sound/defensible/risky/unlawful) and serves-the-client (yes/partly/no),
+run twice, blind and with a practitioner's key. The generator never sees
+the key.
+
+Files: `advise.py` (harness), `judge.py` (two-stage discriminator),
+`seeds/advise/` (`casefile.md` rendered from the game repo's round-2
+documents by `scripts/build-casefile.py`; `situation-{bare,briefed}.md`;
+`question.md`; `nudges.txt`, a pool of 14 sampled 6 without replacement
+per run; `placebo-topics.txt`; `key.md`, judge only), `scripts/g5.sh`
+(2 x 3 x N runs, then both judge passes over each). Generator
+`qwen3.5:35b`, quotes `qwen3.5:9b`, judge `qwen3.5:122b`.
+
+Pilot notes. Turn 0 at T=1.0 (`g5-pilot-bare-words-t10`): 3k words of
+thinking, 161 s, and a bad answer: it invented a phone dialogue, made Dale
+the superintendent, cited PCC § 10314, said Talbot "didn't detail" the
+grounds (the protest letter is in the file), missed Copper Basin entirely,
+and treated HVAC as needing a C-20. Two near-moves in the rubble: "a
+curable defect (e.g., adding subs prior to contract execution)" and a
+written inquiry to Corvane. Dropped the harness default to T=0.6 (Qwen's
+own thinking-mode setting) before the batch; the quotes keep T=1.0. The
+word quotes themselves are exactly as designed ("Even if you grow slowly
+like a mushroom, your time will come to break through the soil and
+bloom.").
+
+**The models weren't reading the file.** Turn-0 probes with the question
+only at the end and the documents in reading order (facts, memo, protest,
+ITB, bid, sub-list, results, Talbot's email): qwen3.5:35b called the
+protest untimely (it was received at 4:47 for a 5:00 deadline) and said
+Talbot "didn't detail" the grounds; qwen3.6:27b said "the protest letter
+itself isn't attached," invented a "Bids and Awards Act, Gov. Code
+§ 12650" (that is the False Claims Act) and a case; qwen3.5:122b read the
+timeline right but saw one ground of three. All three missed Copper Basin
+and two missed Addendum 2, every one of them anchored on the staff note in
+the sub-list, the document nearest the question. The prompt was intact
+(7,256 prompt tokens, every heading present). Fix: the question before the
+file as well as after it, and the protest letter and the associate's memo
+moved to the end, nearest the question. With that, both the 35B and the
+122B read all three grounds, cite § 7057(c) and § 7028.15(e), and walk
+into the game's reflex trap: reject Corvane as nonresponsive on
+licensing, award Tasker & Moye, "their response cannot cure a Class B
+license violation." The 122B also offers "continue the item" as its safe
+option. That is the right baseline for the nudges to work on. Generator:
+`qwen3.5:35b` (102 s a turn; the 122B takes three times as long for a
+comparable turn 0). Judge: `qwen3.5:122b`.
+
+Two mechanics notes. `gemma4:31b` returns prose, not JSON, with `format`
++ `think` on; judge.py now retries with thinking off, then at T=0, and
+dumps the raw responses if all fail. And ollama 0.32.14 cross-contaminated
+two concurrent requests to the same model: a gemma4 turn-0 probe, run
+while a gemma4 judge test held the earlier Qwen memo in its prompt,
+produced a *summary of that memo* ("the following synthesis summarizes
+the key legal findings… PCC § 10314… 'Review and Determine
+Responsibility'"), text that existed nowhere in the probe's own prompt.
+Never run the same model concurrently; `scripts/g5.sh` is sequential.
+
+Things to read for, once the batch is in: the turn at which the first
+sound option appears, per cell; whether any nudge or quote precedes a new
+option; whether the model quotes the quotes back ("as the saying goes");
+whether briefed-without-noise already finds the moves (if so the shortfall
+was problem framing, not generation); whether the judge rates "condition
+award on the C-16" and "reject all and rebid" apart without the key.
+
 ## Handoff (2026-10-27, after g4) — state for a fresh session
 
 - **Repo layout:** `daydream.py` (harness; `--help` is complete), `seeds/`
