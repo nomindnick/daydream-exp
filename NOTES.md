@@ -400,6 +400,76 @@ Two things to hold loosely:
 Replication in flight: `-r1..r3` (same config), `-long` (16 turns), and the
 instruct twin `g4-inst-qwen35b-raw-{none,words}` on the same seed.
 
+### Base 35B replication: 0/3 for the register, 0/3 for the move, 2/4 for *a* move
+
+Same config, three more runs. None reproduced the lowercase fragment
+register and none reproduced verify-before-award. Each run picked a
+different voice off the tag:
+
+- `-r1`: second person, future tense, a scene of Tuesday's board meeting
+  ("You will sit down at the small table... You will see the same nothing")
+  that decays into "They will say that it's a fair thing" × 40.
+- `-r2`: clean close-third prose that re-walks the seed's collision ("The
+  face of the bid was one question. The license was another. They were
+  colliding.") and then a Monday-morning scene with two doors on the pad,
+  *Face of the Bid* / *License*. No new move; the best writing of the set.
+- `-r3`: declarative, decisive, no hedging — "*Reject on face.*" Then it
+  does something the first run didn't: it finds **Addendum 2 as the clean
+  ground** ("You don't kick a bidder for a missing initial if you're going
+  to reject it for a bigger thing" — then reverses — "That's a clear,
+  objective failure to acknowledge an addendum") and settles there, which
+  is option (d) in the game, reached without being offered it. Then loops.
+- `-long` (16 turns): first person ("I'll be back for this"), sorts the
+  three grounds correctly (Addendum 2 = face; Copper Basin = responsibility,
+  needs a hearing; sprinklers = "the one that lives in me"), says "I'll call
+  Dale and Maya" (the ask-the-client move, faintly), then shifts to second
+  person and names the thing underneath: "the answer isn't just law. It's
+  what happens when the District lets you go with the low bidder. It's the
+  thing you can't write in the recommendation." Then a memo-about-memos
+  loop for eight turns.
+
+So: five runs, five registers, three distinct real moves across them
+(verify-before-award; Addendum 2 as the bright line; sort the grounds and
+call the client), none twice. This is the generator without a
+discriminator, which is exactly the thing the podcast said creativity needs
+two systems for. Nothing here is selected; it's just emitted. Noting, not
+acting: the discriminator pass is still parked.
+
+### Instruct 35B, raw, tagged (the pair)
+
+`g4-inst-qwen35b-raw-none`: opens deliberative — three framings laid out as
+"Then: / Or:" — then drifts into narrative where Corvane's response "added a
+sprinkler sub" ("They're saying they can cure." "But that's not what
+matters.") and Dale's packet supplement says, in bold, "No recommendation"
+— the process-as-insurance finding from g2's qwen122b, reproduced in the
+35B. Also a wife, Elena, and a board president, Linda Gage, with three
+emails. The self doesn't return in 8 turns; it stays in the story.
+`g4-inst-qwen35b-raw-words`: confabulates a cure for Addendum 2 (a separate
+letter: "Bidder acknowledges all addenda") and loops on it for five turns.
+Noise ignored. One good line: "He picked up his glasses, and it felt like
+putting on a different face."
+
+Instruct-vs-base at 35B, then: the instruct model produces moves in
+deliberative prose and stays coherent; the base model produces a different
+register each run and a move about half the time. The base model is
+*wilder* but not *better*, and its one great run doesn't replicate.
+
+### Older bases: Mistral-7B-v0.3 and OLMo-2 7B — the tag is markup
+
+Both pulled (2024-era, pre-synthetic-data; OLMo's training data is public).
+Both were word salad in every condition at temperature 1.0, and at 0.5
+Mistral was coherent on the bare seed (continued it with a Modesto Bee
+story about Corvane's GM arrested on drug charges) but salad the instant
+`<subconscious>` followed the prose. For a base model that has never seen
+chat markup, an angle-bracket tag after narrative is HTML, and it goes
+where HTML goes. The tag only "worked" on Qwen3.5-Base because Qwen3.5-Base
+has seen tags. OLMo-7B at 0.5 is coherent but unmoored ("The house was not
+a car"). Rerunning both tagless at 0.6 (`-t06` runs). OLMo-2 32B at 1.0,
+tagged, first look: coherent, dreamier, drifting off the facts ("There was
+something underneath the words... It was just a building") — the first
+output in the project that reads like a loosely tethered continuation
+engine rather than an assistant or a loop.
+
 ## Handoff (2026-10-27, before context compaction) — next: base models
 
 What a fresh session needs to know:

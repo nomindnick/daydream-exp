@@ -1,0 +1,139 @@
+# g4-base-mistral7b-raw-words-rp
+
+`hf.co/mradermacher/Mistral-7B-v0.3-i1-GGUF:q4_K_M` · raw · noise=words · T=1.0 · stop=['</subconscious>']
+
+## seed
+
+Owen Castellano had represented school districts for twenty-two years, and he had learned that the bid protests that gave him trouble were never the ones with the best arguments. They were the ones where the statute said two things at once.
+
+Kestrel Ridge Unified was a good client, the kind that called before it did something instead of after. The project was the middle school, Buildings B and C: a new fire sprinkler system in both buildings, new rooftop HVAC units, new electrical service and switchgear, fire alarm, roofing, doors, finishes. Thirteen and a half million dollars of Measure KR bond money. The Board was to award it Tuesday night, and the Board met once a month.
+
+Four bids had come in. The low bidder was Corvane Builders, out of Modesto, at $13,412,000. Second was Tasker & Moye at $13,699,000. Tasker & Moye was local. Bill Tasker had been in town forty-one years and was at that moment sixty percent of the way through building the District's new stadium, with a $612,000 change order for bad soil under the track sitting, unresolved, on the facilities director's desk. The gap between the two bids was $287,000. The business office had already said what $287,000 was. It was two portables.
+
+The protest had come in at 5:45 Friday afternoon from Gwen Talbot at Talbot Mercer, for Tasker & Moye. Three grounds.
+
+One: Corvane wasn't licensed for the work. The job included a fire sprinkler system and an HVAC replacement, and Corvane held a Class B general building license and nothing else. Its subcontractor list named an electrician, a plumber, a fire alarm outfit, a roofer, and a painter, and said everything else would be performed by the bidder. No sprinkler sub. No HVAC sub. Talbot said a B couldn't do either trade itself, that a bid from a contractor not licensed for the work was nonresponsive and had to be rejected, and she quoted the statute that said so.
+
+Two: Corvane hadn't acknowledged Addendum 2, which had changed the locksets on fourteen classroom doors. About eighteen thousand dollars. Corvane's bid form initialed Addendum 1 and left the second line blank.
+
+Three: Copper Basin Unified, the district next door, had terminated Corvane for cause in March 2024 on a gym job, and its board had ratified the termination in open session, five to nothing. Not a responsible bidder.
+
+His associate, Maya Ellery, had sent a first-look memo Friday night that was better than most. She had pulled the sections Talbot cited and set them out in full, and she had ended with the question that was the whole case, though he wasn't sure she knew it. A nonresponsive bid can be rejected on its face, she wrote. A responsibility finding requires notice and a hearing first. I haven't researched which this is.
+
+He had.
+
+The HVAC point was noise. Section 7057 said a general building contractor could perform or superintend any project that required two or more unrelated building trades, and this one required five. A B could put rooftop units on a school. Talbot knew that, or should have. It was in the letter because licensing was the most common protest ground in the state and you threw it in.
+
+The sprinklers were different, and he had been turning them over for two days. Subdivision (c) of the same section said a general building contractor shall not contract for a project that includes a fire protection system unless it holds the fire protection classification or subcontracts that work to someone who does. Corvane held a B. Corvane had listed no one. On the face of the bid, Corvane proposed to install a fire sprinkler system in two school buildings with its own forces, and the statute said it could not contract to do that.
+
+And yet. The District's own instructions to bidders had asked for a Class B license and nothing else. Section 7.1, in bold. Corvane had one. On the face of the bid, Corvane had met every requirement the District had set. The rule he had given a hundred clients was that if you had to go outside the four corners of the bid to find the problem, it was a responsibility problem, and responsibility got the bidder notice and a hearing before the Board could pass it over. Whether Corvane could lawfully do the sprinkler work was a question about Corvane, not about the bid.
+
+Except the other statute, the one Talbot had quoted in full, said that a bid submitted by a contractor who is not licensed in accordance with this chapter shall be considered nonresponsive and shall be rejected, and that the agency shall verify, before award, that the contractor was properly licensed when it bid. Not licensed in accordance with this chapter. He had read the sentence perhaps forty times. Did it mean a contractor with no license at all, the handyman with a pickup, the thing the section was obviously written for? Or did it mean a contractor without the license this project needed? Properly licensed. Properly for what? He could argue it either way, and he could hear Talbot arguing it the other way, at the podium, Tuesday night, with the newspaper's education reporter in the second row.
+
+And there was the thing underneath, the thing nobody would write down. Dale Ruffin, the facilities director, wanted the project. The switchgear and the rooftop units were running thirty to thirty-six weeks from order and had to be released by the first of December or the electrical and the HVAC slid to summer 2028, a year lost, with the bond oversight committee meeting in January. Dale had also, without ever saying so, wanted Bill Tasker, who was building his stadium and whose change order he had not yet decided on. And Corvane had bid two portables less than Bill Tasker, and was the low bidder, and the law was for the low bidder.
+
+Dale's recommendation to the Board was due in the packet supplement at one o'clock Monday. Corvane's response to the protest, if it sent one, wasn't due until Tuesday. He would be writing before he knew what Corvane had to say.
+
+He had a legal pad. On it he had written *sprinklers* and underlined it, and under that, *face of the bid?*, and under that, *"not licensed in accordance with this chapter"*, and under that nothing.
+
+It was late on Sunday. The desk lamp made a circle on the pad and the rest of the room was dark. He pushed the pad to the side, took off his glasses, and rubbed his eyes. He had meant to have an answer.
+
+He needed to stop thinking about it. He let it go.
+
+
+## turn 1  ·  length · 250 tok · 20.0 t/s · ctx≈1843
+
+of it, was given for said, would up, what that is in on their own. The bidder the licensure. And if this chapter, the building, and was in all of which. Contractor* could, one thing the project and was not the license, but with no license to have, in accordance of code and had not been a contracted for.
+
+Andre's work has its own way. If it were that in the Chapter, without the license was the licensure, but they be bidder in the rule is, who was the project by a chapter in the license, as the other hand in the packet and had not of all to a questioner in
+Heaven with it means anything contractor in. Hadn't have a thing about contractor was this chapter of the pad in the pad and that is roomed the pencil, if only the one in. He knew the Board was a chapter* Corvane had bid. Not licensed to do for some in the packet of which is, who was the license, but with no more then they were with not licensed in all in a way. The thing a board, with a building and, who could that,
+
+## turn 2  ·  length · 250 tok · 19.4 t/s · ctx≈2100
+
+And
+
+He hadn't it. And if any in the chapter had been written for
+Them by which is the bid. On its own way license and was the of that in the project. Chapter, Them the bid. Not a boarded, wanted the project. Corvane had to have this contractor is, with not. And no more legal with no, as license, but was the license, both the packet and had it the building and had bid by a chapter of which license, but were the licence and had won the thing a bidder in a day licensed.
+Them by of that, wanted to have in the other, they say who
+They’d rather them a chapter of which was the project, or? And with no, a contractor is, which in. But it weren't to have and this way in. The thing a licenser, but not licensed in chapter, was that of license, both the license and had been a board*
+He hadn't yet it were they be written for it were Chapter license by law license, both the of its license to do not a. One, wanted in a bidder.
+And so a
+
+### noise (before turn 3)
+
+> <subconscious noise> yeast  raft  fence  loom  string
+
+## turn 3  ·  length · 250 tok · 19.5 t/s · ctx≈2376
+
+He had yet and said the project. To be that is with no, what it was given for Chapter license of which is licensing by law the license, but not chapter in the bidder* to
+And a contractor who’s rule it out the board in Them license by law license, both of which was the project*
+The thing was written for *. Of the licensing by that licence, with no? That'll were of the
+That he had yet that was given Chapter license and had not only diddler that is the packet. A of chapter, then the building a
+Ande in the packet, what the contractor was the license, but which in The license, both of which licens. No, anyways it had been? That bid by license it yet they be it is and has a thing of license the licence and had not licensed to have, this chapter in all to one
+they the contractor that on contracted. Away to have with no* was it the project the packet in? The license by law license, both of Chapter license and had bid yet they be the project chapter. Bidder* to do the licence, but not
+
+## turn 4  ·  length · 250 tok · 19.9 t/s · ctx≈2632
+
+They been licensed by law license, both licensure in the building a bid, And
+
+that had to have *and the other
+That was that is with no?
+Notwith. It's. Not licensed by
+He hadn’t it out to be given for Chapter and was the packet of which it. The thing about contractor was the licenced in chapter, or the license license, but not licence by law the license, both
+That in the project a had bidder in. One wayfar* To license by law license, both that license. Both of they'd been a chapter in. The license to be it for Chapter license, and was a contractor was with no, or the other, they would have it could be that licenced them
+That is with no the packet a chapter in a bid, without licence by law the license license, both licenced in chapter of which is the licences that are licensed.
+<Them that is, wanted for licensure oft not be written for Chapter, was the licence and had to have them in the contractor was license
+them to have that is license of chapter was it were a. They other day the
+
+### noise (before turn 5)
+
+> <subconscious noise> fog  needle  canyon  rain  mattress
+
+## turn 5  ·  length · 250 tok · 19.2 t/s · ctx≈2907
+
+He hadn't they are for *it license by law license, both of the licence to do
+They anyways to be that is with no* was written in Chapter license. But it had a chapter in. That it were thing, who was the bidder and had a licensure? He hadn’t of it out the licenced and was license but not licensed by law the licencourts and was
+The license license, both licensing that is
+They'd have a packet a bid, without
+That it
+
+That is with no* the other contractor who had a chapter in the bid. They're on* To
+He hadn't of them was given for Chapter and has a packet in. That is license by law license, both licence that license. Both the other in the project chapter and was not licensed in chapter
+Of they say that is with no license to do bid, without it were thing to be the licenced and was license. Both the board in the chapter of which it was given for Chapter, or license that are the project chapter? It'dder* had a chapter
+That's license by law license, both licensure by law license,
+
+## turn 6  ·  length · 250 tok · 19.3 t/s · ctx≈3164
+
+They hadn't to have a packet in chapter of the building license and what were the chapter of the bid. Notwith no* Them license in the bidding license, but not licensed license. Both licensure is with *any of contractor in. They say the project by law license, both licenced in?
+That wasn't to have it was that licences? To have a license by law license, both chapter in the license and had a chapter license by law license, but not licensed and what were Chapter in. The
+They hadn't of them the project was given for Chapter license and was a license but * the licensure in. That is with no more* licenced in? Them license bylaw license, both* with no *their chapters and had
+Their bids were bidder in. They were things they could be with no license
+<They hadn't that chapter of it out the licensing in. It out that chapter of which license, and was a packet. He didn't bid by law license in? He haven’t
+they had been given for Chapter license, both licence bylaw license, Both chapters but not licensed* to have bid
+
+### noise (before turn 7)
+
+> <subconscious noise> kite  saddle  blister  flint  lantern
+
+## turn 7  ·  length · 250 tok · 19.2 t/s · ctx≈3441
+
+Their contractor was the packet and * with a. It were the other hand the bids to do. That is with no license that chapter by law of Chapter, was it licensed by
+They didn't licencing in. The licence bylaw license, both licenses and was
+they licences and was given for chapter of which licenced in the chapter  in *that
+He hadn’tsaid* was a chapter the chapter license bylaw license but not the other way* were it wasn’t
+They're on the packet license in. The license by law license, both of Chapter licensures and was that is with no more contractors chapter in the bidder to be licensed and has achapter bylaw license, both of the licence to do
+<they aren't it* them had been given for *them licenses bylaw license.
+That is license in the packet in a? The licencing was that chapter of Chapter licence but not to have a bidder license and what they be the other hand license, both licensing that chapter of it were it license
+He hadn’t to have bidder
+Them that is with no license bylaw licenses.
+
+## turn 8  ·  length · 250 tok · 19.8 t/s · ctx≈3698
+
+That in the packet* was a license and had license but not contracted by law license. Both Chapter of The license that isn'ts them be licensed in.
+They say that is written for licensure to do license, but wasa license by law license. But license
+He didn’t to have bidder it was the license to do* license and had been a license chapter of chapter license, both of
+He hadn’ts them were it with no license they be licensed in. The thing that is license by law license
+They hadn’their way. Not one the packet bylaw license but license that wasn't licensing of which was it out * the
+They weren’t of the project and has a bidder in chapter  of Chapter license that it were the license, both licence of chapter and had license to do bid, or license and was the packet of chapter.
+He hadn’ts* that is with no license but not* licensed in the chapter ofchapter and had license bylaw licensure? That isn't thing in the project chapter of Chapter licence, then the license of chapter a contracted in. It out the
+That licensing in. The thing about
