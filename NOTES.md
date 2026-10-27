@@ -528,35 +528,37 @@ five runs are a ready-made test set), and practice-move knowledge vs.
 doctrine (none of these models knows the conditional-award move exists; the
 one that got close rederived it from the "verify before award" clause).
 
-## Handoff (2026-10-27, before context compaction) — next: base models
-
-What a fresh session needs to know:
+## Handoff (2026-10-27, after g4) — state for a fresh session
 
 - **Repo layout:** `daydream.py` (harness; `--help` is complete), `seeds/`
-  (`solar-surplus.md` = original tagged seed; `kestrel-r2-dream.md` = Kestrel
-  round-2 in novel register, now deprecated as a *frame* but the fact pattern
-  in it is the one to keep), `words/concrete.txt`, `runs/g1..g3*`, this file.
-  Source material for Kestrel: `~/Projects/bid-protest-presentation`
-  (`content/scenario/casefile/*.md`, `graph.yaml` node `r2-monday`,
-  `docs/practice-rules.md` I23/I34/I37/I41 for the known novel solutions).
-- **The Kestrel problem has not yet been run through the original tagged
-  setup** (`<subconscious>` + `--mode raw` or `--mode chat --system
-  seeds/system-subconscious.md`). It needs a non-novel seed: same facts,
-  narrated like `solar-surplus.md`, ending with the attorney letting go, no
-  chapter heading, no sleep. Write `seeds/kestrel-r2.md` for that.
-- **Base models.** None are local. Options: (a) `ollama pull` a base tag if the
-  registry has one for the family (check `qwen3.5` / `gemma4` / `granite4`
-  tags for `-base` or `-pt`); (b) `ollama pull hf.co/<org>/<repo>` works for
-  GGUF repos on Hugging Face; (c) llama.cpp is built at `~/src/llama.cpp`,
-  installed to `~/.local/bin/`, and `llama-server` serves `/completion` — the
-  harness talks to ollama's `/api/generate` with `raw: true`, so a base model
-  on llama-server needs a small adapter (or an `--backend llama` flag). With a
-  base model, use `--mode raw` only; the chat path is meaningless.
-- **Standing knobs still untried:** `--repeat-penalty 1.15`, `--min-p 0.05`
-  (the 9b verbatim loops), longer runs for the 122b.
-- **Known breakage:** mistral-medium-3.5:128b produces garbage with the
-  novelist system prompt + Kestrel seed; fine with the subconscious prompt +
-  solar seed. Unresolved. gpt-oss needs `--max-tokens` ≥ 900 in chat mode
-  because thinking eats the budget; the harness logs `thinking` events.
-- **Parked on purpose:** the discriminator pass (Nick's call; revisit after
-  the space is explored).
+  (`solar-surplus.md`; `kestrel-r2.md` = the plain Kestrel seed now in use;
+  `kestrel-r2-dream.md` = deprecated novel frame), `words/concrete.txt`,
+  `runs/g1..g4*`, this file. Source for Kestrel:
+  `~/Projects/bid-protest-presentation` (`docs/practice-rules.md`
+  I23/I34/I37/I41 for the known novel solutions).
+- **Base models now local** (pulled from HF GGUF; names as `ollama list`
+  prints them): `hf.co/mradermacher/Qwen3.5-9B-Base-GGUF:q4_K_M`,
+  `hf.co/mradermacher/Qwen3.5-35B-A3B-Base-GGUF:q4_K_M`,
+  `hf.co/allenai/OLMo-2-1124-7B-GGUF:q4_K_M` (ctx 4096),
+  `hf.co/mradermacher/Mistral-7B-v0.3-i1-GGUF:q4_K_M`,
+  `hf.co/mradermacher/OLMo-2-0325-32B-GGUF:q4_K_M` (ctx 4096). Use
+  `--mode raw` only. Qwen3.5-Base takes default sampling; the 2024-era
+  bases need `--temperature 0.6 --min-p 0.05 --repeat-penalty 1.15` and
+  **no tag** (the tag is markup to them: `--open-marker= --continue-marker=
+  --stop`). Pass `--num-ctx 4096` for OLMo.
+- **g4 findings in one line each:** Qwen3.5-Base already contains the
+  assistant (hallucinated prompts, `<think>`, markdown). The 35B base's one
+  great run (fragment register, verify-before-award) did not replicate 0/3;
+  each run picks a different register; a real move ~half the time. OLMo-2
+  32B, the only truly self-free model, produces dream affect and no law.
+  Noise never surfaced in any base model.
+- **Still parked by Nick's choice:** the discriminator pass. The five 35B
+  base runs (`g4-base-qwen35b-raw-none*`) are a ready test set if that
+  gets unparked.
+- **Untested:** practice-move knowledge vs. doctrine (give the model the
+  menu of practitioner moves and see whether daydreaming picks among them
+  differently than deliberation does); a mid-size clean base between 7B
+  and 32B; longer OLMo-32B runs at lower temperature.
+- **Known breakage:** mistral-medium-3.5:128b garbage with the novelist
+  prompt (frame dropped, not chased). gpt-oss needs `--max-tokens` ≥ 900
+  in chat mode.
