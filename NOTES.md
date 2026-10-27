@@ -231,3 +231,18 @@ things, literally — but it is one-to-one *substitution*, not recombination.
 Each intrusion gets mapped onto the problem and absorbed; nothing new comes
 out the other side. If the noise is supposed to open a door, this is the
 model closing it politely.
+
+**Housekeeping reruns.** `mistral alone, word noise`: still garbage (numbers,
+dates, *"the case was transferred in 5514"*), so it was not memory pressure —
+mistral + the novelist system prompt + this seed breaks, where mistral + the
+subconscious prompt + the solar seed was coherent in g2. Unresolved; not
+chasing it since the novel frame is being dropped. `gpt-oss, 900 tokens`:
+works, and it's the most elaborate dream of any model — lockers flickering
+between 13 412 000 and 13 699 000, board members in masks made of schoolbooks,
+*"Locksets shall be the key to the doors you cannot open"* — and the most
+generic: every law-word becomes a prop, nothing becomes an idea.
+
+**Decision (Nick, 2026-10-27 evening): drop the novel frame.** It gave legible
+dreams, but an author who knows the ending is not a subconscious, and its own
+attractors (wake-up, substitution grammar, horror) crowd out whatever the model
+would do on its own. The think-tag arm is also dropped.
