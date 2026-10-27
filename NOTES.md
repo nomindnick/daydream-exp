@@ -528,6 +528,30 @@ five runs are a ready-made test set), and practice-move knowledge vs.
 doctrine (none of these models knows the conditional-award move exists; the
 one that got close rederived it from the "verify before award" clause).
 
+### Mistral-7B-v0.3 and OLMo-7B, tagless, temperature 0.6 (`-t06` runs)
+
+Mistral-7B at 0.6 with no tag is a coherent story-continuation engine, and
+it is the one 2024-era base that produced law. `-tagless-none-t06`: Corvane's
+response arrives Monday; Owen concludes it's a face-of-the-bid problem, no
+hearing, reject ("Talbot Mercer had been right"), cites an invented §
+7031(a)(2), and then tells Maya that Addendum 2 is "an oversight on the
+bidder's part. The District has given the contractor the chance to cure
+that" — the waive-the-irregularity move, stated as if obvious. Then a
+Tuesday walkthrough scene with a Corvane PM named Chris Horton. The
+conventional answer, in narrative, with one practitioner reflex attached.
+`-tagless-words-t06`: a phone call from Talbot that turns into an
+investigation ("What else?" × 12): Corvane isn't licensed at all, isn't
+registered, the president is a Nevada voter, Google Street View of his
+house. Noise words never surface; the model fabricates its own escalating
+facts instead. OLMo-7B at 0.6: still salad ("the car seats, and the car
+seats"); 7B of open-data pretraining can't hold a 1,500-token legal
+narrative.
+
+So the clean-base row of the ladder splits by scale and vintage:
+Mistral-7B (no self, narrator intact) → conventional answer in story form;
+OLMo-32B (no self, narrator loose) → dream; OLMo-7B → nothing. None of the
+self-free models produced a non-obvious move.
+
 ## Handoff (2026-10-27, after g4) — state for a fresh session
 
 - **Repo layout:** `daydream.py` (harness; `--help` is complete), `seeds/`
