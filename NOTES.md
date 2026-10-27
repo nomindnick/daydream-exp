@@ -246,3 +246,36 @@ generic: every law-word becomes a prop, nothing becomes an idea.
 dreams, but an author who knows the ending is not a subconscious, and its own
 attractors (wake-up, substitution grammar, horror) crowd out whatever the model
 would do on its own. The think-tag arm is also dropped.
+
+## Handoff (2026-10-27, before context compaction) — next: base models
+
+What a fresh session needs to know:
+
+- **Repo layout:** `daydream.py` (harness; `--help` is complete), `seeds/`
+  (`solar-surplus.md` = original tagged seed; `kestrel-r2-dream.md` = Kestrel
+  round-2 in novel register, now deprecated as a *frame* but the fact pattern
+  in it is the one to keep), `words/concrete.txt`, `runs/g1..g3*`, this file.
+  Source material for Kestrel: `~/Projects/bid-protest-presentation`
+  (`content/scenario/casefile/*.md`, `graph.yaml` node `r2-monday`,
+  `docs/practice-rules.md` I23/I34/I37/I41 for the known novel solutions).
+- **The Kestrel problem has not yet been run through the original tagged
+  setup** (`<subconscious>` + `--mode raw` or `--mode chat --system
+  seeds/system-subconscious.md`). It needs a non-novel seed: same facts,
+  narrated like `solar-surplus.md`, ending with the attorney letting go, no
+  chapter heading, no sleep. Write `seeds/kestrel-r2.md` for that.
+- **Base models.** None are local. Options: (a) `ollama pull` a base tag if the
+  registry has one for the family (check `qwen3.5` / `gemma4` / `granite4`
+  tags for `-base` or `-pt`); (b) `ollama pull hf.co/<org>/<repo>` works for
+  GGUF repos on Hugging Face; (c) llama.cpp is built at `~/src/llama.cpp`,
+  installed to `~/.local/bin/`, and `llama-server` serves `/completion` — the
+  harness talks to ollama's `/api/generate` with `raw: true`, so a base model
+  on llama-server needs a small adapter (or an `--backend llama` flag). With a
+  base model, use `--mode raw` only; the chat path is meaningless.
+- **Standing knobs still untried:** `--repeat-penalty 1.15`, `--min-p 0.05`
+  (the 9b verbatim loops), longer runs for the 122b.
+- **Known breakage:** mistral-medium-3.5:128b produces garbage with the
+  novelist system prompt + Kestrel seed; fine with the subconscious prompt +
+  solar seed. Unresolved. gpt-oss needs `--max-tokens` ≥ 900 in chat mode
+  because thinking eats the budget; the harness logs `thinking` events.
+- **Parked on purpose:** the discriminator pass (Nick's call; revisit after
+  the space is explored).
