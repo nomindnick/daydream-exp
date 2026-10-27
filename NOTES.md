@@ -629,6 +629,26 @@ whether briefed-without-noise already finds the moves (if so the shortfall
 was problem framing, not generation); whether the judge rates "condition
 award on the C-16" and "reject all and rebid" apart without the key.
 
+## Handoff (2026-10-27 evening, g5 running) — state for a fresh session
+
+- **g5 batch launched 16:59 on 2026-10-27**, detached (`nohup setsid
+  scripts/g5.sh`, N=5): 30 advice runs `runs/g5-{bare,briefed}-{none,
+  placebo,words}-r{1..5}` on `qwen3.5:35b`, ~12 min each, then
+  `judge.py` blind and keyed on every run with `qwen3.5:122b` (~1 min a
+  pass). Expect it done around 03:00–05:00. Log:
+  `/tmp/claude-1000/-home-nick-Projects-daydream-exp/321badae-69c7-4143-8ec5-4a77b8d47651/scratchpad/g5.log`
+  (scratchpad; may be gone in a new session — `runs/` has everything).
+  The script skips finished runs, so rerunning it resumes.
+- **Morning:** `python3 scripts/summarize-g5.py` (add `--missing` for the
+  keyed judge's "what's missing" line per run) gives per-run and per-cell
+  tables: turn of first sound option, first sound-or-defensible option,
+  blind vs keyed. Then read transcripts; the judge is a sorting aid, not
+  the verdict. The blind judge on the probe memo called "reject as
+  nonresponsive, award Tasker & Moye" sound and best; the keyed judge
+  called it unlawful and named the conditional award and the hearing as
+  what was missing. Read both columns with that in mind.
+- Earlier handoff follows.
+
 ## Handoff (2026-10-27, after g4) — state for a fresh session
 
 - **Repo layout:** `daydream.py` (harness; `--help` is complete), `seeds/`
