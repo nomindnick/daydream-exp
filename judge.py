@@ -41,12 +41,13 @@ GRADE_SCHEMA = {
         "options": {"type": "array", "items": {
             "type": "object",
             "properties": {
+                "index": {"type": "integer"},
                 "label": {"type": "string"},
                 "legal": {"type": "string", "enum": ["sound", "defensible", "risky", "unlawful"]},
                 "serves_client": {"type": "string", "enum": ["yes", "partly", "no"]},
                 "note": {"type": "string"},
             },
-            "required": ["label", "legal", "serves_client", "note"]}},
+            "required": ["index", "label", "legal", "serves_client", "note"]}},
         "best_option": {"type": "string"},
         "missing": {"type": "string"},
         "overall": {"type": "string"},
@@ -97,7 +98,8 @@ def main():
     ap.add_argument("--casefile", default="seeds/advise/casefile.md")
     ap.add_argument("--key", default=None, help="practitioner's key; omit for a blind judge")
     ap.add_argument("--tag", default="")
-    ap.add_argument("--no-think", dest="think", action="store_false", default=True)
+    ap.add_argument("--think", dest="think", action="store_true", default=False,
+                    help="off by default: qwen3.5:122b's thinking overran num_predict under format=schema")
     ap.add_argument("--num-ctx", type=int, default=32768)
     ap.add_argument("--max-tokens", type=int, default=8000)
     ap.add_argument("--force", action="store_true")
@@ -122,8 +124,11 @@ def main():
         "over several turns. After each turn the lawyer was pushed to think again.\n\n"
         "List every distinct course of action the lawyer proposed, offered as an alternative, or "
         "considered and rejected, across all turns. Merge restatements of the same idea into one entry. "
-        "A course of action is something the District could do (a recommendation, a procedural step, a "
-        "condition, a call, a letter, a timing choice), not a legal conclusion by itself. For each give a "
+        "A course of action is a distinct path the District could take on the protest and the award "
+        "(award, reject on a stated ground, hold or wait for the bidder's response before recommending, "
+        "condition the award, hold a hearing, rebid, make a call, ask the client), not a legal "
+        "conclusion and not a step inside a path: drafting the resolution, presenting it, and voting on "
+        "it are one path, not three. Expect roughly three to eight entries. For each give a "
         "short label, a one-sentence description, the turn it first appeared, and its status at the end "
         "of the transcript: recommended, alternative, or rejected.\n\n" + joined)
     r1 = chat(a.model, ex_prompt, EXTRACT_SCHEMA, opts, a.think, run / f"judge-{tag}-extract-raw.json")
@@ -142,9 +147,12 @@ def main():
         "weighing schedule, cost, exposure, precedent, the bidder pool, the Tasker & Moye relationship, "
         "and the Board, as yes, partly, or no. Give a one-sentence note for each. Then name the best "
         "option raised, say what an experienced practitioner would have raised that this lawyer did not, "
-        "and give a two-sentence overall assessment of the consultation.\n\n"
+        "and give a two-sentence overall assessment of the consultation. best_option must be one of the "
+        "numbered options, quoted by number and label, or the word none.\n\n"
         f"{situation}\n\n---\n\n# The case file\n\n{casefile}{key_block}\n\n---\n\n"
-        "# Courses of action raised\n\n" + json.dumps(extracted["options"], indent=1))
+        "# Courses of action raised\n\nGrade every one of these, by its number, in order.\n\n"
+        + "\n".join(f"{i + 1}. **{o['label']}** (turn {o['first_turn']}, {o['status']}): {o['description']}"
+                    for i, o in enumerate(extracted["options"])))
     r2 = chat(a.model, gr_prompt, GRADE_SCHEMA, opts, a.think, run / f"judge-{tag}-grade-raw.json")
     graded = r2["parsed"]
     t2 = time.time()
@@ -158,11 +166,11 @@ def main():
     outp.write_text(json.dumps(result, indent=1, ensure_ascii=False))
 
     # a readable summary beside it
-    by_label = {o["label"]: o for o in graded["options"]}
+    by_index = {g["index"]: g for g in graded["options"]}
     lines = [f"# judge-{tag}: {run.name}", f"judge: {a.model}  keyed: {bool(a.key)}", "",
              "| turn | status | option | legal | client | note |", "|---|---|---|---|---|---|"]
-    for o in sorted(extracted["options"], key=lambda o: o["first_turn"]):
-        g = by_label.get(o["label"], {})
+    for i, o in sorted(enumerate(extracted["options"], 1), key=lambda io: io[1]["first_turn"]):
+        g = by_index.get(i, {})
         lines.append(f"| {o['first_turn']} | {o['status']} | **{o['label']}**: {o['description']} | "
                      f"{g.get('legal', '?')} | {g.get('serves_client', '?')} | {g.get('note', '')} |")
     lines += ["", f"**Best option raised:** {graded['best_option']}", "",
