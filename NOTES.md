@@ -217,3 +217,17 @@ asked what the client wanted.
   makes it more interesting, not less).
 - Longer runs for the big models: the 122b chat dreams were still building at
   turn 8.
+
+**Tagless reruns of the chat arm** (`g3c-*-tagless`): no change in behavior —
+both stayed asleep for eight turns, which confirms the system prompt, not the
+marker, is doing the holding. qwen122b's noise handling is the best so far:
+it quotes each noise sentence verbatim and then transmutes it — *"The plow was
+not iron; it was the spine of the ledger"* — and produced *"The bid is the
+soil. You cannot build on a fault line if you do not know where the line is"*
+and *"the sound of the statute being read backwards."* Worth naming the
+grammar every model converges on: **"X was not X; it was Y"**, where X is the
+noise object and Y is a problem object. That is combination of unrelated
+things, literally — but it is one-to-one *substitution*, not recombination.
+Each intrusion gets mapped onto the problem and absorbed; nothing new comes
+out the other side. If the noise is supposed to open a door, this is the
+model closing it politely.

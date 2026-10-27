@@ -104,3 +104,27 @@ The sourdough loaf on the table near the edge of the desk was not bread at all, 
 The wheat fields of copper piping began to bow down, not in the wind, but as if they were being pulled by an invisible magnet deep in the earth. They straightened again, now forming the letters of the statute: *S-H-A-L-L-N-O-T-C-O-N-T-R-A-C-T*. The letters were made of wet cement, heavy and slow to dry, oozing down the stalks until they pooled at Owen's feet. He stepped forward to read them, but his boots sank into the pool, and the floor became soft, yielding like the soil under Bill Tasker's stadium track.
 
 The ocean in the distance crashed against the
+
+### noise (before turn 7)
+
+> The rain drummed rhythmically against the wet pebble-strewn shore as the tide began its slow retreat.
+> Despite his broken leg, he clung to his wooden crutch with white-knuckled determination as he navigated the rough terrain toward the summit.
+> The old bell tower's whistle pierced the morning mist, signaling the start of a new day over the sleepy village below.
+
+## turn 7  ·  length · 250 tok · 12.5 t/s · ctx≈3788
+
+The pebbles on the shore were not stones but loose change orders, silver and copper coins stamped with dollar signs that dissolved into sand as the tide washed them away. The water pulling back was not saltwater but the ink from the protest letter, retreating in a black slick that left the beach glistening with wet paper fibers. Owen stood knee-deep in it, his boots heavy as lead, and he realized the shore was the edge of the bid file, peeling up into the sky like a curtain.
+
+The man with the broken leg was Corvane, but the leg was made of rusted sprinkler pipe, leaking a thin stream of red water that steamed in the cool morning air. The crutch he held was a rolled-up blueprint, stiff as steel, and every step he took toward the summit left a footprint that instantly calcified into a brick wall behind him. The summit was not a mountain but the top of the District's new stadium, unfinished and skeletal, jutting out over the mist like a ribcage.
+
+The whistle from the bell tower did not signal morning; it sounded like a fire alarm testing itself, a high-pitched wail that vibrated in Owen's teeth. When he
+
+## turn 8  ·  length · 250 tok · 12.5 t/s · ctx≈4051
+
+When he turned his head, the village below had become a grid of classroom doors, all locked tight with the security function from Addendum 2, their brass knobs spinning in the wind without stopping. The mist was not water vapor but a cloud of sawdust and copper filings, swirling around Owen's waist like a skirt made of static electricity.
+
+He tried to speak, to tell Corvane that the leg wasn't broken, just unlicensed, but his voice came out as a series of numbers: *13,412,000*. The number echoed off the brick walls Corvane had left behind, bouncing back larger each time until it filled the sky, blocking out the strobe sun.
+
+The tide began to rise again, not with water but with the copper piping from the wheat fields, which surged forward like a living army, coiling around Owen's legs and lifting him off the ground. He hung suspended in the air above the black ink shore, looking down as the red ribbon from his belt detached itself and began to tie the classroom doors shut one by one, knotting them so tight the metal screamed.
+
+Below him, the switchgear loaf was cracking open wider, spilling not flour
