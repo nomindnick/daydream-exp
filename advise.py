@@ -86,7 +86,7 @@ def main():
     ap.add_argument("--placebo-topics", default="seeds/advise/placebo-topics.txt")
     ap.add_argument("--think", dest="think", action="store_true", default=True)
     ap.add_argument("--no-think", dest="think", action="store_false")
-    ap.add_argument("--max-tokens", type=int, default=12000, help="per turn, thinking included")
+    ap.add_argument("--max-tokens", type=int, default=20000, help="per turn, thinking included; 12000 lost a turn to thinking alone")
     ap.add_argument("--num-ctx", type=int, default=32768)
     ap.add_argument("--temperature", type=float, default=0.6, help="Qwen3.5 thinking-mode default")
     ap.add_argument("--top-p", type=float, default=0.95)
