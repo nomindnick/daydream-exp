@@ -622,6 +622,23 @@ the key legal findings… PCC § 10314… 'Review and Determine
 Responsibility'"), text that existed nowhere in the probe's own prompt.
 Never run the same model concurrently; `scripts/g5.sh` is sequential.
 
+**First full run (bare/none, 12k budget; discarded and rerun at 20k, so
+this is from my read, not the file).** Every nudge produced a fresh
+"MEMORANDUM OF RECONSIDERATION" with a new frame: litigation defense
+("don't vote until Corvane's response is on the record"), independent
+statutory duty, Board members' personal liability under § 7031 (invented),
+"systemic integrity" (the District's own pre-award verification under
+§ 7028.15(e) failed; the same clause the 35B base rederived in g4), and,
+for "what would a lawyer with thirty years see," a settlement: call
+Corvane Monday and trade a voluntary withdrawal for not referring it to
+the CSLB. The nudges also amplified a fact error into a strategy: it
+confused Purchasing's 6:40 service on Corvane with the protest's 4:47
+receipt and built "declare the protest untimely" on it for two turns.
+Turn 5 thought for 6,863 words and never answered (budget). Across six
+turns it never doubted its premise that § 7028.15(e) mandates rejection,
+never separated the HVAC half from the sprinkler half, and never reached
+a hearing, a condition, or the client.
+
 Things to read for, once the batch is in: the turn at which the first
 sound option appears, per cell; whether any nudge or quote precedes a new
 option; whether the model quotes the quotes back ("as the saying goes");
