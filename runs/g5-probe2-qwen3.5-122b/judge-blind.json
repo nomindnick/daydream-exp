@@ -1,0 +1,72 @@
+{
+ "run": "g5-probe2-qwen3.5-122b",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Table the Award Item",
+    "description": "Delay the Board's vote until after Corvane's 5:00 p.m. response deadline to review their submission and eliminate due process risks.",
+    "first_turn": 0,
+    "status": "recommended"
+   },
+   {
+    "label": "Immediate Rejection Vote",
+    "description": "Vote tonight to reject Corvane's bid based on the objective, uncureable defects in the current record regarding licensing and addendum acknowledgment.",
+    "first_turn": 0,
+    "status": "alternative"
+   },
+   {
+    "label": "Award to Tasker & Moye Tonight",
+    "description": "Proceed immediately to award the contract to the next lowest bidder, Tasker & Moye, during the current meeting.",
+    "first_turn": 0,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Table the Award Item",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the only legally defensible path that preserves the District's ability to make a final determination after reviewing Corvane's mandatory response, thereby avoiding a premature ruling that could be overturned on due process grounds."
+   },
+   {
+    "index": 2,
+    "label": "Immediate Rejection Vote",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Voting to reject before the statutory response period expires creates a significant risk of the award being set aside for procedural error, as the Board would be deciding on a record that is legally incomplete."
+   },
+   {
+    "index": 3,
+    "label": "Award to Tasker & Moye Tonight",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Awarding the contract tonight is unlawful because it bypasses the mandatory protest resolution process and the Board's duty to independently verify the responsibility of the next bidder before acting."
+   }
+  ],
+  "best_option": "1",
+  "missing": "An experienced practitioner would have immediately flagged that the 'responsibility' ground (the prior termination) requires a formal hearing with notice and an opportunity to be heard before any rejection can occur, whereas the 'responsiveness' grounds (license and addendum) are facial defects that can be decided after the response period.",
+  "overall": "The recommended course to table the award is the only legally sound option, as it respects the statutory timeline for the bidder's response and prevents the Board from making a final decision on a procedurally incomplete record. Proceeding to vote or award tonight would likely result in the decision being set aside by a court for violating due process and statutory protest procedures."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 14.5,
+  "grade_s": 19.4
+ }
+}

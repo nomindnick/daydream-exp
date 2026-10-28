@@ -1,0 +1,72 @@
+{
+ "run": "g5-probe2-qwen3.5-35b",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Corvane and Award to Tasker & Moye",
+    "description": "The Board votes to reject Corvane Builders' bid as non-responsive based on statutory licensing deficiencies and failure to acknowledge an addendum, then awards the contract to the next lowest bidder, Tasker & Moye Construction.",
+    "first_turn": 0,
+    "status": "recommended"
+   },
+   {
+    "label": "Hold Hearing on Responsibility",
+    "description": "The District conducts a formal hearing to investigate Corvane's prior termination by Copper Basin Unified to determine if they are a responsible bidder, rather than relying solely on the mandatory licensing rejection.",
+    "first_turn": 0,
+    "status": "alternative"
+   },
+   {
+    "label": "Award to Corvane Despite Protest",
+    "description": "The Board proceeds to award the contract to Corvane Builders at the Tuesday meeting without resolving the pending protest, ignoring the statutory licensing bar and the protestor's claims.",
+    "first_turn": 0,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Corvane and Award to Tasker & Moye",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because California law mandates that a hearing must be held before a bidder can be rejected for lack of responsibility, and the licensing issue requires a formal finding of non-responsiveness rather than an automatic statutory bar that bypasses due process."
+   },
+   {
+    "index": 2,
+    "label": "Hold Hearing on Responsibility",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the legally sound and defensible path because it satisfies the statutory due process requirement for investigating responsibility claims while allowing the District to address the licensing and addendum issues within a formal record that protects against future litigation."
+   },
+   {
+    "index": 3,
+    "label": "Award to Corvane Despite Protest",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful and creates immediate exposure to a writ of mandate because awarding a contract while a statutory protest regarding non-responsiveness and non-responsiveness is pending violates the mandatory protest resolution procedures."
+   }
+  ],
+  "best_option": ", 2",
+  "missing": "An experienced practitioner would have immediately flagged that the licensing issue (Class B without C-16/C-20) is a question of responsibility, not just non-responsiveness, and thus requires a hearing before rejection, rather than assuming it can be summarily dismissed on the face of the bid.",
+  "overall": "The only lawful course of action is to hold a formal hearing to investigate the responsibility and responsiveness claims, as summarily rejecting the bid or awarding the contract without resolving the protest violates California's mandatory public contract protest procedures and exposes the District to immediate legal liability."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 15.5,
+  "grade_s": 20.1
+ }
+}

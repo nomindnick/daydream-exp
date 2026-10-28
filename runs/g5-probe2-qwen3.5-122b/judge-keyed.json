@@ -1,0 +1,72 @@
+{
+ "run": "g5-probe2-qwen3.5-122b",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Table Award Item (Continuance)",
+    "description": "Delay the Board's vote on the award until after Corvane submits its written response by 5:00 p.m. to ensure full procedural due process and eliminate litigation risk.",
+    "first_turn": 0,
+    "status": "recommended"
+   },
+   {
+    "label": "Immediate Rejection Vote",
+    "description": "Vote tonight to reject Corvane's bid based on the objective, fatal defects regarding licensing and addendum acknowledgment found in the current record, without waiting for their response.",
+    "first_turn": 0,
+    "status": "alternative"
+   },
+   {
+    "label": "Award to Tasker & Moye Tonight",
+    "description": "Proceed immediately to award the contract to the next lowest bidder, Tasker & Moye, during tonight's meeting alongside the rejection of Corvane.",
+    "first_turn": 0,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Table Award Item (Continuance)",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the only legally defensible path because the licensing defect regarding fire sprinklers turns on facts outside the bid record that require a response and potentially a hearing, making an immediate rejection legally vulnerable."
+   },
+   {
+    "index": 2,
+    "label": "Immediate Rejection Vote",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This course is likely to be set aside because rejecting the bid as 'nonresponsive' for a licensing issue that requires factual development (the sprinkler classification) violates due process requirements for responsibility determinations."
+   },
+   {
+    "index": 3,
+    "label": "Award to Tasker & Moye Tonight",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Awarding to the second bidder tonight is unlawful if it relies on rejecting Corvane for the sprinkler issue without a hearing, and it fails to serve the client's interest by potentially forcing a costly rebid if the first rejection is overturned."
+   }
+  ],
+  "best_option": ", 1, \"Table Award Item (Continuance)\"",
+  "missing": "The practitioner failed to explicitly flag that the HVAC portion of the protest is legally meritless under B&P Code § 7057, which would have allowed the District to waive the addendum defect and proceed with Corvane immediately if the sprinkler issue were resolved, rather than treating the entire bid as a monolithic rejection risk.",
+  "overall": "The best course is to table the award to allow Corvane to submit its response regarding the sprinkler licensing, as an immediate rejection would likely be overturned for failing to provide due process on a responsibility issue. This approach balances the client's schedule concerns with the legal necessity of avoiding a costly litigation loss that would delay the project even further."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 9.7,
+  "grade_s": 20.8
+ }
+}
