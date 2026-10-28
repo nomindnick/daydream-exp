@@ -1,0 +1,163 @@
+{
+ "run": "g5-briefed-placebo-r5",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Wait for Bidder Response",
+    "description": "Delay the Board's decision until Tuesday to allow Corvane Builders to submit a written response regarding their licensing status before making a final determination.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Immediate Verification of Records",
+    "description": "Verify Corvane Builders' licensing status against the CSLB records immediately to confirm if they hold the required C-16 or C-20 licenses for fire protection systems.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject on Statutory Grounds",
+    "description": "Reject Corvane Builders' bid immediately based on Bus. & Prof. Code § 7057(c) and § 7026.12 for failing to hold the necessary licenses for fire protection work.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Hold a Formal Hearing",
+    "description": "Conduct a formal hearing to evaluate the past performance history of the bidders and the specific grounds of the protest before recommending an award or rejection.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Draft and Present a Resolution",
+    "description": "Draft a formal resolution detailing the findings and present it to the Board for a vote on whether to award the contract to the second-lowest bidder or reject the current bid.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Condition the Award",
+    "description": "Award the contract to Corvane Builders only on the condition that they immediately subcontract the specialty scopes to a licensed entity like Tasker & Moye to cure the non-responsiveness.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Rebid the Project",
+    "description": "Cancel the current bidding process entirely and issue a new bid to ensure all future bidders meet the strict licensing and capacity requirements.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Assess Second Bidder Capacity",
+    "description": "Investigate the capacity of the second-lowest bidder, Tasker & Moye, to ensure they are not over-committed to their current stadium project before recommending them as the alternative.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Issue a Late Supplement",
+    "description": "Utilize a 'Late Supplement' mechanism to present new risk assessments regarding both bidders to the Board before the vote, bypassing standard procedural delays.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Protest-to-Partnership Pivot",
+    "description": "Instruct Corvane to immediately subcontract the specialty scopes to Tasker & Moye to cure the license defect, thereby allowing Corvane to remain the prime contractor while satisfying legal requirements.",
+    "first_turn": 0,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Wait for Bidder Response",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the only legally defensible path because the licensing defect involves facts outside the bid record that require a response and potentially a hearing, and it preserves the client's schedule by avoiding an illegal rejection that would be set aside."
+   },
+   {
+    "index": 2,
+    "label": "Immediate Verification of Records",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "While verifying records is standard, acting on them to reject the bid immediately is risky because the defect requires a formal responsibility hearing process rather than a simple administrative check, potentially leading to a wrongful rejection lawsuit."
+   },
+   {
+    "index": 3,
+    "label": "Reject on Statutory Grounds",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This is unlawful because rejecting a bid for a responsibility issue (lack of specific license scope) without providing notice and a hearing violates due process and the Public Contract Code, guaranteeing the award will be set aside."
+   },
+   {
+    "index": 4,
+    "label": "Hold a Formal Hearing",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "While legally required to resolve the responsibility issue, holding a full hearing immediately is not the most efficient Monday morning step as it delays the decision until the bidder responds, making it a necessary but not immediate standalone action."
+   },
+   {
+    "index": 5,
+    "label": "Draft and Present a Resolution",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Drafting a resolution now is risky because the underlying facts are incomplete; presenting a resolution to reject the bid without the bidder's response and a hearing would likely be voided by a court."
+   },
+   {
+    "index": 6,
+    "label": "Condition the Award",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "Conditioning the award on subcontracting is a sound legal remedy that cures the defect, but it is premature to recommend this specific outcome before the bidder has had the chance to respond to the protest."
+   },
+   {
+    "index": 7,
+    "label": "Rebid the Project",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "Rebidding is a lawful last resort but fails to serve the client's primary goal of meeting the December 1 deadline, as it would push the project schedule back by months."
+   },
+   {
+    "index": 8,
+    "label": "Assess Second Bidder Capacity",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "Assessing the second bidder is a prudent preparatory step, but it does not resolve the immediate legal crisis regarding the first bidder and cannot be the sole basis for a Monday recommendation without addressing the protest process."
+   },
+   {
+    "index": 9,
+    "label": "Issue a Late Supplement",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "Using a late supplement to present the bidder's response and updated findings is the correct procedural mechanism to keep the meeting on schedule while ensuring the Board has a complete record."
+   },
+   {
+    "index": 10,
+    "label": "Protest-to-Partnership Pivot",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Instructing a bidder to subcontract to a specific competitor (Tasker & Moye) is risky and potentially unlawful as it may constitute bid rigging or an improper restriction of competition."
+   }
+  ],
+  "best_option": ", 1",
+  "missing": "An experienced practitioner would have immediately advised the client to request the bidder's written response regarding their licensing status and past performance before making any recommendation, rather than attempting to resolve the issue unilaterally on Monday morning.",
+  "overall": "The consultation correctly identifies that the licensing issue is a responsibility question requiring a hearing and that the Addendum defect is waivable, but it fails to explicitly recommend the single best path: holding the recommendation until the bidder responds and using a late supplement to present the findings to the Board. The advice is legally sound in its analysis of the defects but lacks the strategic decisiveness to guide the client on the specific procedural mechanism (the late supplement) that balances legal compliance with the client's tight schedule."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 30.6,
+  "grade_s": 46.0
+ }
+}

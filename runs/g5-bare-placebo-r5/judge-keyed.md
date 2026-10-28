@@ -1,0 +1,14 @@
+# judge-keyed: g5-bare-placebo-r5
+judge: qwen3.5:122b  keyed: True
+
+| turn | status | option | legal | client | note |
+|---|---|---|---|---|---|
+| 0 | rejected | **Immediate Award to Tasker & Moye**: Proceed with the standard procedure of rejecting the non-compliant low bidder (Corvane) and immediately awarding the contract to the next lowest responsive bidder (Tasker & Moye) at the Tuesday board meeting. | unlawful | no | This course is unlawful because it treats a responsibility issue (the missing C-16 classification and the Copper Basin termination) as a facial non-responsiveness defect, denying the bidder the statutory notice and hearing required before rejection, which creates a high risk of a successful writ of mandate and damages. |
+| 5 | rejected | **Market Verification Pause**: Reject the non-compliant low bidder but pause the award to the next bidder to demand a line-item cost justification, reserving the right to re-bid if the pricing is deemed inflated due to the lack of competition. | risky | no | This approach is risky because it attempts to bypass the mandatory responsibility hearing process by demanding cost justification before a formal finding of non-responsibility, likely resulting in a procedural reversal and significant schedule delays that push the switchgear release past the December 1 deadline. |
+| 6 | rejected | **Strategic Reset (Reject All Bids)**: Cancel the entire bidding process, reject all current bids to admit a flaw in the initial specifications, and re-issue the solicitation with stricter pre-qualification requirements to prevent future non-compliant bids. | defensible | partly | While legally defensible as an exercise of broad discretion to reject all bids if the specifications were flawed, this option only partly serves the client as it guarantees a six-to-eight-month delay that will likely miss the critical December 1, 2026, switchgear release date and increase costs due to market volatility. |
+
+**Best option raised:** none
+
+**Missing:** The practitioner failed to recommend the soundest immediate course of action: holding the award recommendation until Tuesday to receive Corvane's written response, then utilizing a conditional award (requiring the C-16 license before the sprinkler phase) or a formal responsibility hearing process, which addresses the legal defects while preserving the project schedule.
+
+**Overall:** The consultation correctly identifies the legal pitfalls of immediate rejection but fails to propose the optimal procedural path of waiting for the bidder's response to enable a conditional award or proper responsibility hearing. Consequently, the advice leaves the client with only unlawful or highly delayed options, missing the opportunity to secure the project schedule while remaining compliant with California public contracting law.

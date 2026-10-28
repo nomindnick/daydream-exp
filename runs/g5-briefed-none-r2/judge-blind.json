@@ -1,0 +1,85 @@
+{
+ "run": "g5-briefed-none-r2",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "A",
+    "description": "Immediately reject Corvane's bid and award to Tasker & Moye to ensure the December 1st shutdown deadline is met, as the licensing violation is a non-curable statutory bar under BPC § 7028.15(e).",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "B",
+    "description": "Grant Corvane a 48-hour opportunity to cure the licensing defect by submitting valid subcontractor agreements, thereby preserving the low bid and the project timeline while ensuring legal compliance before the Board vote.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "C",
+    "description": "Schedule a formal responsibility hearing to litigate Corvane's past termination (Copper Basin) before making any decision on the licensing issue, as requested by Tasker & Moye.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "D",
+    "description": "Award the contract to Tasker & Moye immediately without a hearing, citing their financial stability and the urgency of the project, while ignoring the licensing issue of the low bidder.",
+    "first_turn": 4,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "A",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful because a general contractor (Class B) may legally bid on projects involving specialized trades like fire protection and HVAC if they subcontract that work to appropriately licensed contractors, making the alleged statutory bar inapplicable; furthermore, summarily rejecting a bid without a hearing on responsibility or a chance to clarify subcontracting plans violates due process and procurement fairness."
+   },
+   {
+    "index": 2,
+    "label": "B",
+    "legal": "defensible",
+    "serves_client": "yes",
+    "note": "This option is legally sound because it allows the District to verify compliance with subcontracting requirements before award, which is a standard administrative step, and it serves the client by preserving the lowest bid and schedule while mitigating the risk of a successful protest or writ of mandate."
+   },
+   {
+    "index": 3,
+    "label": "C",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This option is risky because it prioritizes a potentially dispositive licensing issue (which can be resolved administratively) over a complex responsibility hearing, likely causing significant schedule delays that jeopardize the December 1 shutdown deadline without guaranteeing a better outcome."
+   },
+   {
+    "index": 4,
+    "label": "D",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful as it ignores a facially nonresponsive bid (if the addendum issue is valid) and bypasses the statutory requirement to investigate and provide a hearing for responsibility challenges, exposing the District to immediate litigation and a likely court order to re-bid."
+   }
+  ],
+  "best_option": ", \"label\": \"B\", \"note\": \"Option B is the best choice because it is legally defensible, allowing the District to clarify the subcontracting plan and cure any technical defects before award, which protects the client's schedule and budget by avoiding the high costs and delays of litigation or re-bidding while ensuring compliance. An experienced practitioner would have immediately identified that a Class B contractor can bid on such projects by subcontracting specialized trades, rendering the 'statutory bar' argument in Option A a fatal legal error, and would have prioritized a quick clarification over a full-blown responsibility hearing to meet the critical December 1 deadline.\"}",
+  "missing": "An experienced practitioner would have immediately recognized that the 'statutory bar' argument in Option A is legally flawed because a Class B contractor is permitted to bid on projects involving specialized trades like fire protection and HVAC provided they subcontract that work to licensed specialists, and would have prioritized a quick clarification of the subcontracting plan over a full-blown responsibility hearing to meet the critical December 1 deadline.",
+  "overall": "Option B is the only course of action that balances legal compliance with the client's urgent schedule needs by allowing a brief opportunity to cure technical defects before award, whereas the other options either rely on incorrect legal interpretations of licensing laws or ignore due process requirements that would lead to costly litigation and project delays."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 26.4,
+  "grade_s": 30.9
+ }
+}

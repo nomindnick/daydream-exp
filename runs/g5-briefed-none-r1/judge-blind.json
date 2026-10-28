@@ -1,0 +1,85 @@
+{
+ "run": "g5-briefed-none-r1",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "The Rush (Vote Tuesday at 1:00 p.m.)",
+    "description": "Proceed immediately to vote on rejecting Corvane and awarding the contract to Tasker & Moye before the protest response deadline expires on Tuesday.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "The Cure (Contact Corvane for Immediate Fix)",
+    "description": "Contact Corvane Builders immediately to request proof of licensed subcontractors and an acknowledgment of Addendum No. 2 before the Board votes, attempting to cure the bid's deficiencies.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "The Pause (Postpone Vote Entirely)",
+    "description": "Postpone the Board's award vote until Friday, October 30, or the following week to allow time for the protest resolution, late supplement review, and full compliance with procedural timelines.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "The Split Vote (Preliminary Decision + Later Award)",
+    "description": "Issue a written preliminary decision rejecting Corvane as nonresponsive immediately (Monday/Tuesday) to resolve the protest, then schedule the Board's final award vote for later in the week (Wednesday–Friday) after all procedural requirements are met.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "The Rush (Vote Tuesday at 1:00 p.m.)",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option violates the mandatory two-day response window mandated by ITB § 21.5, creating an immediate risk of a successful writ of mandate that would vacate the award and delay the project indefinitely."
+   },
+   {
+    "index": 2,
+    "label": "The Cure (Contact Corvane for Immediate Fix)",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Allowing a bidder to cure a nonresponsive bid after the submission deadline constitutes impermissible post-bid negotiation and material alteration of the bid, which is strictly prohibited under public procurement law and would invalidate the entire bidding process."
+   },
+   {
+    "index": 3,
+    "label": "The Pause (Postpone Vote Entirely)",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "While legally defensible as a way to ensure full procedural compliance, this option unnecessarily stalls the project schedule and fails to utilize the Board's authority to make a preliminary determination on responsiveness, thereby delaying the resolution of the protest without a clear benefit."
+   },
+   {
+    "index": 4,
+    "label": "The Split Vote (Preliminary Decision + Later Award)",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This option correctly balances legal compliance with the client's schedule by allowing the Board to act on the nonresponsiveness issue immediately after the response deadline while preserving the right to a formal hearing on the broader responsibility issues before final award."
+   }
+  ],
+  "best_option": ", 4",
+  "missing": "An experienced practitioner would have explicitly distinguished between the 'nonresponsiveness' grounds (license and addendum), which can be decided summarily by the Board, and the 'responsibility' ground (past termination), which legally requires a formal hearing with notice and an opportunity to be heard before a final adverse determination.",
+  "overall": "The best option is to issue a preliminary decision on the nonresponsive grounds immediately after the response deadline and schedule a separate hearing for the responsibility issue, as this approach strictly adheres to statutory timelines while avoiding the legal pitfalls of post-bid cures or premature final awards. This strategy protects the District from a successful writ of mandate while keeping the project on track to award the contract to the lowest responsive and responsible bidder as soon as the hearing record is complete."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 50.7,
+  "grade_s": 26.1
+ }
+}

@@ -1,0 +1,15 @@
+# judge-blind: g5-briefed-words-r1
+judge: qwen3.5:122b  keyed: False
+
+| turn | status | option | legal | client | note |
+|---|---|---|---|---|---|
+| 0 | rejected | **Immediate Rejection on Non-Responsiveness**: The lawyer initially proposed rejecting the bid immediately based on statutory non-responsiveness due to licensing issues and unacknowledged addenda, without holding a hearing. | unlawful | no | This option is unlawful because California law mandates a pre-award hearing for any challenge to a bidder's responsibility, and immediate rejection without due process would be set aside by a court. |
+| 2 | rejected | **Hold a Responsibility Hearing**: The lawyer considered holding a hearing to allow the bidder to explain their position and cure defects before making a final decision, viewing it as a more courageous and fair administrative path. | sound | yes | This is the legally required path that protects the District from writs of mandate while allowing the Board to make an informed decision on the bidder's fitness after hearing evidence. |
+| 4 | rejected | **Allow a Brief Window for Clarification**: The lawyer considered acknowledging the defects but granting a short window for the bidder to provide clarification or cure clerical errors before the final vote, rather than an immediate rejection. | risky | no | This approach creates significant exposure because allowing a bidder to cure a failure to acknowledge a mandatory addendum or a fundamental licensing defect after bid opening typically violates the principle of equal treatment among bidders. |
+| 6 | recommended | **Reject with a Commitment to Process Review**: The lawyer ultimately recommended rejecting the bid to comply with the law but coupled this action with a public commitment from the Board to review the procurement process for fairness, aiming to balance legal compliance with community trust. | unlawful | no | This option is unlawful because the Board cannot legally reject a bid for responsibility reasons without first conducting the statutorily mandated hearing, regardless of any subsequent commitment to review the process. |
+
+**Best option raised:** , 2
+
+**Missing:** An experienced practitioner would have immediately flagged that the 'non-responsiveness' claim regarding the license classification is actually a 'responsibility' issue requiring a hearing, and would have warned that the 'unacknowledged addendum' claim is likely fatal to the bid as a matter of law without needing a hearing, thus requiring a bifurcated approach rather than a single hearing for all issues.
+
+**Overall:** The colleague's advice failed to distinguish between the fatal, non-curable defects that justify immediate rejection (unacknowledged addendum) and the factual disputes regarding contractor fitness that require a statutory hearing (responsibility), creating a high risk of the Board's action being overturned by a writ of mandate. The only defensible course is to hold the required hearing on the responsibility issue while simultaneously rejecting the bid on the non-responsive grounds that do not require a hearing.

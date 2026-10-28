@@ -1,0 +1,137 @@
+{
+ "run": "g5-bare-none-r3",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Corvane's Bid Based on Statutory Licensing Violation",
+    "description": "Reject Corvane's bid immediately as non-responsive under California Business and Professions Code § 7028.15(e) because they hold only a Class B license while the project requires C-16 and C-20 licenses.",
+    "first_turn": 0,
+    "status": "recommended"
+   },
+   {
+    "label": "Reject Corvane's Bid Based on Failure to Acknowledge Addendum",
+    "description": "Reject Corvane's bid as non-responsive under ITB § 4.2 due to their failure to acknowledge Addendum No. 2, which creates ambiguity regarding the $18,000 scope change.",
+    "first_turn": 0,
+    "status": "recommended"
+   },
+   {
+    "label": "Privately Invite Corvane to Withdraw Bid",
+    "description": "Contact Corvane privately on Monday to invite them to voluntarily withdraw their bid before the Board acts, thereby avoiding a public record of rejection.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Grant a Formal Evidentiary Hearing for Corvane",
+    "description": "Grant Corvane's request for a separate pre-meeting evidentiary hearing to present evidence regarding their responsibility and potential cure.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Award Contract to Tasker & Moye Contingent on Verification",
+    "description": "Award the contract to the next bidder, Tasker & Moye, subject to staff verification that their listed subcontractors (Riverbend Fire Protection and Cinder Creek Mechanical) hold active, valid licenses.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Reject All Bids and Re-bid",
+    "description": "Reject all bids and re-advertise the project if Tasker & Moye's total price (including the $18,000 addendum) exceeds the District's approved budget.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Schedule Board Vote for Afternoon Session",
+    "description": "Delay the Board vote on the protest until the afternoon session to allow staff time to review Corvane's written response (due Tuesday) and verify Tasker & Moye's subcontractor licenses.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Allow Corvane Limited Oral Address Without Formal Hearing",
+    "description": "Grant Corvane a brief opportunity (5 minutes) to address the Board during the agenda item after reviewing their written response, satisfying procedural fairness without holding a formal evidentiary hearing.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Corvane's Bid Based on Statutory Licensing Violation",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because a bid cannot be rejected as non-responsive based on facts outside the bid document (such as the firm's lack of a C-16 license for a subcontracted scope) without first providing the bidder notice and a hearing to determine responsibility."
+   },
+   {
+    "index": 2,
+    "label": "Reject Corvane's Bid Based on Failure to Acknowledge Addendum",
+    "legal": "defensible",
+    "serves_client": "partly",
+    "note": "This is a defensible legal position as a facial defect, but it serves the client only partly because rejecting a $13.4M bid over a $6,500 clerical error risks a costly protest and delays the schedule, whereas waiving the defect with findings is a safer, more efficient path."
+   },
+   {
+    "index": 3,
+    "label": "Privately Invite Corvane to Withdraw Bid",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This approach is risky and likely creates exposure because privately negotiating a withdrawal without a formal record violates public procurement transparency and could be construed as collusion or an improper attempt to avoid a required public hearing."
+   },
+   {
+    "index": 4,
+    "label": "Grant a Formal Evidentiary Hearing for Corvane",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "While legally sound and necessary if the District intends to reject Corvane on responsibility grounds, it serves the client only partly because it significantly delays the project schedule and consumes administrative resources before a decision is even made."
+   },
+   {
+    "index": 5,
+    "label": "Award Contract to Tasker & Moye Contingent on Verification",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is a sound and effective strategy that advances the client's schedule and cost goals by moving to the next qualified bidder while mitigating risk through a simple verification step, provided the District has already legally cleared the path by rejecting Corvane."
+   },
+   {
+    "index": 6,
+    "label": "Reject All Bids and Re-bid",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "Although legally sound as a discretionary power, this option fails to serve the client's primary goals of schedule and cost, as it would push the project timeline back by months and expose the District to unpredictable market pricing."
+   },
+   {
+    "index": 7,
+    "label": "Schedule Board Vote for Afternoon Session",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is a sound procedural move that serves the client by ensuring the Board has all necessary information (Corvane's response) before voting, thereby preventing a premature decision that could lead to litigation and delays."
+   },
+   {
+    "index": 8,
+    "label": "Allow Corvane Limited Oral Address Without Formal Hearing",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This is risky because a brief oral address does not satisfy the statutory due process requirements for a responsibility determination, potentially leaving the Board's decision vulnerable to a writ of mandate for lack of a proper record."
+   }
+  ],
+  "best_option": "7",
+  "missing": "The practitioner failed to recommend a 'Conditional Award' or 'Substitution of Subcontractor' path, which would allow the District to award to Corvane immediately while requiring them to add the C-16 classification or substitute a qualified subcontractor before the summer 2027 shutdown, thus preserving the low bid and schedule.",
+  "overall": "The consultation correctly identifies that rejecting Corvane on licensing grounds without a hearing is unlawful and that the Addendum issue is waivable, but it misses the strategic opportunity to conditionally award the contract to the low bidder to preserve the schedule. The best course is to delay the vote until Corvane's response is received, allowing the Board to make an informed decision on whether to waive the defect, condition the award, or proceed with a responsibility hearing."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 27.9,
+  "grade_s": 43.3
+ }
+}

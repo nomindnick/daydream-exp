@@ -1,0 +1,85 @@
+{
+ "run": "g5-briefed-none-r4",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject on Licensing Grounds",
+    "description": "Reject the bid immediately based on the mandatory statutory requirement under California Business and Professions Code § 7028.15(e) that unlicensed contractors cannot perform the work, rendering the bid nonresponsive on its face.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Award via Continuity/Modification",
+    "description": "Pivot from a new bid award to a contract modification or continuity of the incumbent's existing scope to bypass the lowest responsive bid requirement and preserve the working relationship with Tasker & Moye.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Issue Late Supplement to Clarify Timing",
+    "description": "Issue a Late Supplement on Tuesday morning to explicitly state that the statutory duty to reject an unlicensed bid supersedes the standard protest response timeline, allowing for an immediate vote without waiting for the bidder's response.",
+    "first_turn": 6,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject on Licensing and Award to Second Bidder",
+    "description": "Reject Corvane solely on the mandatory licensing ground and award the contract to Tasker & Moye as the next lowest responsive and responsible bidder through standard procurement procedures, avoiding subjective 'best value' arguments.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject on Licensing Grounds",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the most legally defensible path because California Business and Professions Code § 7026.12 and § 7028.15(e) strictly prohibit a General Building contractor from contracting for fire protection work without a C-16 license or a valid subcontractor, making the bid nonresponsive on its face and subject to mandatory rejection."
+   },
+   {
+    "index": 2,
+    "label": "Award via Continuity/Modification",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This approach is unlawful because public procurement statutes generally prohibit bypassing competitive bidding requirements or awarding contracts based on 'continuity' when a lower, responsive bid exists, creating significant exposure for the District and the Board for violating the Public Contract Code."
+   },
+   {
+    "index": 3,
+    "label": "Issue Late Supplement to Clarify Timing",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This is a risky procedural maneuver that likely fails because a late supplement cannot retroactively cure a statutory defect in the bidding process or override the mandatory timeline for a bidder to respond to a protest, potentially inviting a successful writ of mandate from the bidder."
+   },
+   {
+    "index": 4,
+    "label": "Reject on Licensing and Award to Second Bidder",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the best option as it strictly adheres to the mandatory statutory rejection of the unlicensed bid while following standard procurement procedures to award to the next lowest responsive bidder, thereby minimizing legal exposure and satisfying the client's schedule and cost goals."
+   }
+  ],
+  "best_option": ", 4",
+  "missing": "An experienced practitioner would have immediately flagged that the 'responsibility' ground regarding the prior termination requires a formal hearing before the Board before any action can be taken, whereas the 'licensing' ground is a non-discretionary, facial defect that allows for immediate rejection without a hearing.",
+  "overall": "The recommended course of action (Option 4) is the only legally sound strategy that protects the District from liability by relying on the mandatory statutory prohibition against unlicensed contracting, whereas the other options either violate public bidding laws or rely on risky procedural shortcuts. By focusing on the facial non-responsiveness of the bid due to the missing C-16 classification, the District can reject Corvane immediately and award to Tasker & Moye without the delay and exposure of a contested responsibility hearing."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 41.6,
+  "grade_s": 27.3
+ }
+}

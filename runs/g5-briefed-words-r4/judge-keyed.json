@@ -1,0 +1,85 @@
+{
+ "run": "g5-briefed-words-r4",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Immediate Award to Tasker & Moye",
+    "description": "The lawyer initially considered awarding the contract immediately to Tasker & Moye as the lowest responsive bidder to avoid delay, but rejected this as it would create an adversarial relationship and fail to address deeper responsibility concerns.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Conditional Vote with Delayed Final Award",
+    "description": "The lawyer proposed voting on Tuesday to reject Corvane but postponing the final award to Tasker & Moye until a full responsibility investigation and financial verification were completed later in the week.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Staggered Vote (Reject Tuesday, Award Wednesday)",
+    "description": "The lawyer suggested a two-step voting process: formally rejecting Corvane on Tuesday to clear the legal hurdle, then awarding the contract to Tasker & Moye on Wednesday after reviewing Corvane's response and verifying qualifications.",
+    "first_turn": 4,
+    "status": "rejected"
+   },
+   {
+    "label": "Immediate Award with 'Scope Lock' Directive",
+    "description": "The lawyer proposed voting to reject Corvane and immediately awarding to Tasker & Moye, but with a specific Board directive in the minutes mandating that the final contract explicitly codify Addendum No. 2 as a non-negotiable scope item to prevent future ambiguity.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Immediate Award to Tasker & Moye",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it ignores the statutory requirement for a notice-and-hearing process before rejecting a bidder on responsibility grounds (the Copper Basin termination) and mislabels a potential licensing issue as a facial non-responsiveness when facts outside the bid record are required."
+   },
+   {
+    "index": 2,
+    "label": "Conditional Vote with Delayed Final Award",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This approach is risky because a Board vote to 'reject' a bidder without the statutorily mandated notice and hearing on responsibility grounds creates immediate exposure to a writ of mandate, even if the final award is delayed."
+   },
+   {
+    "index": 3,
+    "label": "Staggered Vote (Reject Tuesday, Award Wednesday)",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This option is risky as it attempts to split a legally indivisible process, where a Tuesday rejection without a hearing is likely voidable regardless of a Wednesday award, potentially wasting the Board's time and inviting litigation."
+   },
+   {
+    "index": 4,
+    "label": "Immediate Award with 'Scope Lock' Directive",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it presumes the rejection of the low bidder is valid without addressing the mandatory hearing requirement for responsibility issues and fails to resolve the licensing defect on its own terms."
+   }
+  ],
+  "best_option": "none",
+  "missing": "An experienced practitioner would have recommended holding the recommendation until Corvane's written response is received on Tuesday, utilizing a late supplement to present a conditional award or a responsibility hearing path based on the new facts, rather than forcing a Monday decision on issues requiring a record.",
+  "overall": "The consultation failed to identify that the proposed courses of action were legally flawed because they attempted to reject a bidder on responsibility grounds without the mandatory notice and hearing, ignoring the critical distinction between facial non-responsiveness and responsibility questions that require a record. The best course of action, which was omitted, is to delay the recommendation until the bidder's response clarifies the licensing and termination issues, thereby avoiding unlawful rejection and preserving the District's ability to conditionally award or hold a proper hearing."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 15.4,
+  "grade_s": 25.7
+ }
+}

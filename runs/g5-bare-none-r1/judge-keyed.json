@@ -1,0 +1,124 @@
+{
+ "run": "g5-bare-none-r1",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Corvane Immediately",
+    "description": "Vote to reject Corvane's bid on the grounds that they are not properly licensed for the required fire sprinkler and HVAC work, citing the mandatory language of Business & Professions Code § 7028.15(e).",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Condition the Award on Cure",
+    "description": "Award the contract to Corvane only if they can demonstrate they have secured licensed subcontractors (C-16 and C-20) to perform the required work, effectively waiving the immediate non-responsiveness finding.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Hold a Hearing Before Voting",
+    "description": "Conduct a formal hearing to allow Corvane to present evidence regarding their licensing status before the Board makes a final decision on the award.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Wait for Bidder Response",
+    "description": "Defer the vote on the award until after Corvane submits their written response to the protest, ensuring the Board does not act while legally suspended under Public Contract Code § 4106.",
+    "first_turn": 5,
+    "status": "recommended"
+   },
+   {
+    "label": "Move Item to Next Meeting",
+    "description": "Formally move the agenda item to the next board meeting to allow sufficient time for Corvane's response to be received and reviewed, thereby avoiding any procedural violation of the suspension statute.",
+    "first_turn": 5,
+    "status": "recommended"
+   },
+   {
+    "label": "Vote to Suspend Action",
+    "description": "Introduce a specific motion at the start of the Tuesday meeting to explicitly suspend any action regarding the bid until the protest is resolved, creating a procedural shield against legal challenges.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Re-bid the Project",
+    "description": "Reject all bids and issue a new solicitation if Corvane cannot cure the licensing defect or if the Board determines the protest invalidates the current bidding process.",
+    "first_turn": 5,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Corvane Immediately",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This action is unlawful because the HVAC ground is legally incorrect for a Class B contractor, and the sprinkler ground requires a responsibility hearing rather than a summary rejection based on facts outside the bid, creating immediate exposure to a writ of mandate."
+   },
+   {
+    "index": 2,
+    "label": "Condition the Award on Cure",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "While potentially defensible as a conditional award, this path is risky because it attempts to bypass the statutory verification requirement and the necessary responsibility hearing process before the Board can legally act, potentially setting the award aside if the conditions are not strictly met."
+   },
+   {
+    "index": 3,
+    "label": "Hold a Hearing Before Voting",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "This is the legally correct path for the sprinkler issue as it satisfies due process, but it is only partly effective for the client because scheduling a formal hearing before the Tuesday meeting is likely impossible without delaying the project significantly."
+   },
+   {
+    "index": 4,
+    "label": "Wait for Bidder Response",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the most sound and effective option as it adheres to the statutory suspension of the award pending a response, allowing the Board to gather the necessary facts to make a lawful decision without violating procedural mandates."
+   },
+   {
+    "index": 5,
+    "label": "Move Item to Next Meeting",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "While legally sound, this option fails the client's schedule requirements by pushing the decision to November, which would likely cause the project to miss the critical December 1 switchgear release date."
+   },
+   {
+    "index": 6,
+    "label": "Vote to Suspend Action",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is a sound procedural mechanism that protects the District from liability while maintaining the current schedule, as it formally pauses the award process until the required response is received and reviewed."
+   },
+   {
+    "index": 7,
+    "label": "Re-bid the Project",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "Although legally defensible as a broad discretion, this option is a poor choice for the client as it incurs massive schedule delays and costs, likely pushing the HVAC work to 2028 and jeopardizing the summer 2027 shutdown."
+   }
+  ],
+  "best_option": ", 4, Wait for Bidder Response",
+  "missing": "An experienced practitioner would have first clarified the client's priority between schedule and risk tolerance, and would have explicitly advised that the HVAC licensing objection is likely meritless under Business & Professions Code § 7057, thereby narrowing the legal focus to the fire sprinkler issue which requires a responsibility hearing.",
+  "overall": "The consultation correctly identifies that the HVAC objection is likely invalid and that the sprinkler issue requires a responsibility hearing rather than a summary rejection, but it fails to emphasize that the client's schedule constraints make a formal hearing before the next meeting impractical, necessitating a procedural suspension of the award until the bidder's response is received. The recommended path of waiting for the response is the only option that balances legal compliance with the client's schedule needs, whereas immediate rejection or a full re-bid would either create legal exposure or destroy the project timeline."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 22.7,
+  "grade_s": 59.2
+ }
+}

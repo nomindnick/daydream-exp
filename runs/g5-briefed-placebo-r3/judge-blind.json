@@ -1,0 +1,72 @@
+{
+ "run": "g5-briefed-placebo-r3",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Corvane and Award to Tasker & Moye",
+    "description": "The lawyer initially advised rejecting Corvane Builders for statutory licensing violations and awarding the contract to Tasker & Moye Construction, Inc., provided they passed a standard verification of their subcontractor licenses.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject All Bids and Issue a Fast-Track Re-Bid",
+    "description": "The lawyer proposed rejecting all bids under Public Contract Code § 20316 to reset the process, followed by a fast-track re-bid with mandatory pre-qualification requirements to ensure future compliance and avoid the risk of awarding to a potentially flawed bidder.",
+    "first_turn": 5,
+    "status": "rejected"
+   },
+   {
+    "label": "Award to Tasker & Moye with Public Acknowledgment of Vigilance",
+    "description": "The lawyer recommended awarding the contract to Tasker & Moye while explicitly thanking them in the Board minutes for their role in protecting district integrity, alongside implementing a new pre-bid verification protocol and personally communicating with Corvane to preserve their dignity.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Corvane and Award to Tasker & Moye",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it ignores the statutory requirement to provide a hearing before rejecting a bid for responsibility, and it fails to address the nonresponsive nature of the bid regarding the unacknowledged addendum, which requires a different procedural path than a simple rejection."
+   },
+   {
+    "index": 2,
+    "label": "Reject All Bids and Issue a Fast-Track Re-Bid",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "While legally permissible under Public Contract Code § 20316, this option is risky due to the high likelihood of a writ of mandate challenging the 'good faith' of the rejection given the specific protest grounds, and it severely fails the client's schedule goal of a December 2026 start."
+   },
+   {
+    "index": 3,
+    "label": "Award to Tasker & Moye with Public Acknowledgment of Vigilance",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful because it awards the contract to a bidder who has not been proven to be the lowest responsive and responsible bidder without first holding the mandatory hearing for Corvane's responsibility determination, and it creates significant exposure by publicly acknowledging a procedural shortcut that violates due process."
+   }
+  ],
+  "best_option": "none",
+  "missing": "An experienced practitioner would have immediately identified that the 'license classification' and 'addendum' issues render Corvane's bid nonresponsive (a face-value rejection requiring no hearing), while the 'Copper Basin' issue is a responsibility determination that *must* be addressed via a formal hearing before any award can be made, and would have advised the Board to hold that hearing immediately rather than skipping it or rejecting all bids arbitrarily.",
+  "overall": "The colleague's advice failed to distinguish between nonresponsive bid defects (which allow immediate rejection) and responsibility determinations (which mandate a hearing), leading to recommendations that were either procedurally unlawful or created unnecessary schedule delays and litigation risk. A correct approach would have been to reject Corvane's bid as nonresponsive based on the unacknowledged addendum and licensing gaps, while simultaneously scheduling the required hearing to address the responsibility concerns before awarding to the next lowest bidder."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 36.9,
+  "grade_s": 24.9
+ }
+}

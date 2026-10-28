@@ -1,0 +1,137 @@
+{
+ "run": "g5-bare-none-r4",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Immediate Verification of Facts",
+    "description": "Verify the specific facts of the case, including the exact time of bid submission and the precise status of the contractor's license at that moment, before taking any further action.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Enforce Statutory Non-Responsiveness",
+    "description": "Reject the bid immediately based on the strict interpretation of Business and Professions Code § 7028.15(e) regarding the lack of a specific license classification or subcontractor at the time of submission.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Mandate a Hearing for Deficiency Cure",
+    "description": "Hold a formal hearing to determine if the contractor can cure the alleged deficiencies in their license or subcontractor status before making a final decision on the bid.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Condition the Award on Future Compliance",
+    "description": "Award the contract conditionally, requiring the contractor to obtain the necessary license or subcontractor within a specific timeframe, rather than rejecting them outright.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Wait for Bidder Response",
+    "description": "Delay the final decision and vote until the bidder (Corvane) has had an opportunity to respond to the allegations and provide evidence of their compliance.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Recuse Conflicted Board Member",
+    "description": "Require the recusal of Board President Bill Tasker from the vote and decision-making process due to his company's direct involvement in the protest to avoid conflicts of interest.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Audit the Protester's Compliance",
+    "description": "Conduct a full audit of the protesting bidder (Tasker & Moye) to verify their own license status, subcontractor lists, and addendum acknowledgments before awarding them the contract.",
+    "first_turn": 6,
+    "status": "rejected"
+   },
+   {
+    "label": "Void Solicitation and Re-bid",
+    "description": "Declare the entire solicitation void and issue a new bid if both the original winner and the protester are found to be non-responsive, thereby removing the conflict and political pressure.",
+    "first_turn": 6,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Immediate Verification of Facts",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "Verifying the exact license status and submission time is a necessary, low-cost first step to determine if the bid is facially non-responsive or merely a responsibility issue before committing to a legal posture."
+   },
+   {
+    "index": 2,
+    "label": "Enforce Statutory Non-Responsiveness",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Labeling the bid non-responsive without a hearing is likely to be set aside because the lack of a C-16 classification for sprinkler work often constitutes a responsibility question requiring due process, not a facial defect."
+   },
+   {
+    "index": 3,
+    "label": "Mandate a Hearing for Deficiency Cure",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "A formal hearing is the legally required path if the deficiency is a responsibility issue, but it creates significant schedule delays and costs that may jeopardize the December 1 switchgear deadline."
+   },
+   {
+    "index": 4,
+    "label": "Condition the Award on Future Compliance",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "Conditioning the award on obtaining the C-16 classification or a qualified subcontractor before the summer 2027 phase is a defensible, cost-effective solution that preserves the schedule while mitigating legal exposure."
+   },
+   {
+    "index": 5,
+    "label": "Wait for Bidder Response",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "Delaying the recommendation until the bidder responds is the most prudent course, as it allows the District to make an informed decision based on facts rather than assumptions, avoiding premature legal errors."
+   },
+   {
+    "index": 6,
+    "label": "Recuse Conflicted Board Member",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "Recusing the Board President whose firm is the protester is essential to avoid conflict of interest claims and ensure the validity of the Board's final vote."
+   },
+   {
+    "index": 7,
+    "label": "Audit the Protester's Compliance",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "Auditing the protester's own compliance with addendum and licensing rules ensures the District does not award to a non-compliant bidder if the original winner is rejected, protecting against bid protests from other parties."
+   },
+   {
+    "index": 8,
+    "label": "Void Solicitation and Re-bid",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "While legally defensible as a last resort, voiding the solicitation is the most expensive and schedule-disruptive option, likely pushing the project completion well beyond the 2027 shutdown target."
+   }
+  ],
+  "best_option": ", \"5. Wait for Bidder Response\", \"Wait for Bidder Response\"",
+  "missing": "The practitioner failed to explicitly recommend the 'Conditional Award' (Option 4) as a primary Monday strategy, which would have offered a more proactive solution to the schedule risk than simply waiting.",
+  "overall": "The consultation correctly identifies that the licensing issue is likely a responsibility question requiring due process rather than a simple non-responsiveness rejection, and wisely advises waiting for the bidder's response to gather facts before committing to a legal path. However, it misses the opportunity to proactively suggest a conditional award as a strategic middle ground that could save the schedule while mitigating legal risk."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 25.0,
+  "grade_s": 38.0
+ }
+}

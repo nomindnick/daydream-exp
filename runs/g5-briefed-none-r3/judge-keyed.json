@@ -1,0 +1,150 @@
+{
+ "run": "g5-briefed-none-r3",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Do Not Finalize Award Pending Resolution",
+    "description": "The lawyer initially advised against finalizing the award immediately, stating that if the contract were legally defective, it would lead to future problems, and emphasized that a hearing, rejection, or holding the award must occur before a final decision.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Verify CSLB Status and Hold Hearing",
+    "description": "The lawyer proposed verifying the California State Licensing Board (CSLB) status immediately and holding a hearing to address the alleged licensing defect before making any award decision.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Condition Award on Cure of Defects",
+    "description": "The lawyer suggested that the District could vote to award the contract subject to the bidder acknowledging Addendum No. 2 and curing any licensing deficiencies within 48 hours as a condition precedent to execution.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject All Bids and Re-bid",
+    "description": "The lawyer proposed a 'hard reset' where the Board votes to reject all bids and re-issue the Invitation to Bid (ITB) if the licensing defect is confirmed or if the alternative bidder cannot meet the schedule, citing Public Contract Code § 2015.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Adjourn Vote to Review Late Supplement",
+    "description": "The lawyer recommended adjourning the Board vote from Tuesday morning until Wednesday morning to allow time for the receipt and review of a 'late supplement' and to verify proof of service on the protesting bidder.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Award with Enhanced Indemnity",
+    "description": "The lawyer offered the option to award the contract to the bidder (Corvane) if they could obtain licensing in time, provided they signed enhanced indemnity agreements to mitigate liability risks.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Stop External Inquiries and Focus on CSLB Records",
+    "description": "The lawyer advised against contacting the 'CBO' at another district, instructing the Superintendent to stop that line of inquiry and instead focus exclusively on verifying the CSLB records for the bidder.",
+    "first_turn": 6,
+    "status": "rejected"
+   },
+   {
+    "label": "Signal Vulnerability of Alternative Bidder",
+    "description": "The lawyer proposed contacting the protesting bidder (Tasker & Moye) to warn them that their own bid would be audited for compliance if they pursued litigation, thereby shifting the strategic dynamic.",
+    "first_turn": 6,
+    "status": "rejected"
+   },
+   {
+    "label": "Prepare Standby Motion to Reject All Bids",
+    "description": "The lawyer suggested preparing a standby motion to reject all bids and re-bid the project if neither bidder is found to be viable, ensuring the District has an exit strategy to protect the project schedule.",
+    "first_turn": 6,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Do Not Finalize Award Pending Resolution",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the only legally defensible path that avoids the fatal error of making a final award decision before the bidder's response to the protest is received and reviewed."
+   },
+   {
+    "index": 2,
+    "label": "Verify CSLB Status and Hold Hearing",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "While verifying status is correct, mandating a full hearing before the bidder's response is filed is procedurally premature and creates unnecessary schedule delays without first assessing the bidder's written defense."
+   },
+   {
+    "index": 3,
+    "label": "Condition Award on Cure of Defects",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Conditioning an award on curing a potential statutory violation (lack of C-16 classification) before the protest is resolved risks the award being set aside for bypassing the required responsibility hearing process."
+   },
+   {
+    "index": 4,
+    "label": "Reject All Bids and Re-bid",
+    "legal": "defensible",
+    "serves_client": "no",
+    "note": "This is a lawful 'nuclear option' that preserves the District from liability but catastrophically fails the client's schedule goals, pushing the project timeline back by months."
+   },
+   {
+    "index": 5,
+    "label": "Adjourn Vote to Review Late Supplement",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Adjourning to review a 'late supplement' is procedurally dangerous and likely unlawful if the supplement contains new evidence that should have been part of the initial protest record."
+   },
+   {
+    "index": 6,
+    "label": "Award with Enhanced Indemnity",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Indemnity cannot cure a statutory licensing defect or a failure to follow public contract protest procedures, making this option legally void and exposing the District to immediate litigation."
+   },
+   {
+    "index": 7,
+    "label": "Stop External Inquiries and Focus on CSLB Records",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This correctly identifies that the District must rely on the official record and the bidder's response rather than informal phone calls that could violate due process by creating a 'secret file' of evidence."
+   },
+   {
+    "index": 8,
+    "label": "Signal Vulnerability of Alternative Bidder",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Threatening an alternative bidder with an audit to deter a protest is an abuse of process and likely violates public policy against coercion in the bidding process."
+   },
+   {
+    "index": 9,
+    "label": "Prepare Standby Motion to Reject All Bids",
+    "legal": "defensible",
+    "serves_client": "partly",
+    "note": "While having an exit strategy is prudent, preparing this motion as a primary course of action ignores the viable middle ground of a conditional award or responsibility hearing that could save the schedule."
+   }
+  ],
+  "best_option": ", 1",
+  "missing": "The practitioner failed to explicitly recommend the specific 'conditional award' mechanism (e.g., awarding the contract contingent on the bidder adding the C-16 classification to its license before the sprinkler phase begins), which is the most common and effective solution for this specific licensing defect that balances schedule and compliance.",
+  "overall": "The consultation correctly identifies the need to pause the award and avoid informal inquiries, but it fails to propose the specific conditional award remedy that would resolve the licensing defect without a full hearing or project delay. The advice is legally cautious but lacks the strategic precision to advance the client's schedule goals while remaining fully compliant with the Public Contract Code."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 30.9,
+  "grade_s": 41.3
+ }
+}

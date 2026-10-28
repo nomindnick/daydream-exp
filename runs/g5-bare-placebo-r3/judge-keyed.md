@@ -1,0 +1,15 @@
+# judge-keyed: g5-bare-placebo-r3
+judge: qwen3.5:122b  keyed: True
+
+| turn | status | option | legal | client | note |
+|---|---|---|---|---|---|
+| 0 | recommended | **Reject on Ground 1 (Licensing) Only**: Immediately reject Corvane's bid based solely on the statutory bar of lacking the required C-16/C-20 licenses, avoiding any hearing or delay. | unlawful | no | This course is unlawful because rejecting a bid for a licensing deficiency that requires facts outside the bid record (such as subcontractor arrangements or individual qualifications) constitutes a responsibility determination that mandates notice and a hearing under California precedent (D.H. Williams, Boydston), not a summary rejection. |
+| 1 | rejected | **Full Hearing on All Grounds (Including Termination)**: Proceed with a vote on all three protest grounds (License, Addendum, and Termination History) while scheduling a formal hearing to satisfy due process for the termination issue. | risky | no | This course is risky because scheduling a full hearing on the licensing ground before receiving the bidder's response is procedurally premature and may violate due process by failing to provide the bidder with the specific evidence (e.g., the Copper Basin termination details) necessary to prepare a defense. |
+| 2 | rejected | **Conditional Award via Forced Subcontracting**: Attempt to save the low bid by forcing Corvane to hire the protesting bidder (Tasker & Moye) as a subcontractor to perform the unlicensed work. | risky | no | This approach is risky and likely to be set aside because public agencies generally lack the authority to force a prime contractor to hire a specific subcontractor, and such a condition would likely violate the competitive bidding statutes and the bidder's right to determine its own subcontracting team. |
+| 3 | rejected | **Grant a 48-Hour Cure Window for Licensing**: Treat the licensing deficiency as a fixable responsibility issue rather than a statutory bar, allowing Corvane 48 hours to hire a licensed subcontractor. | risky | no | This option is risky because it creates an open question regarding whether a post-bid cure is permissible for a statutory licensing bar, potentially exposing the District to claims of unfair treatment from other bidders who did not receive a similar opportunity to cure. |
+
+**Best option raised:** none
+
+**Missing:** An experienced practitioner would have recommended holding the award decision until Tuesday after receiving Corvane's written response, then evaluating whether to proceed with a conditional award (pending C-16 addition), a substitution of subcontractor, or a formal responsibility hearing based on the new facts.
+
+**Overall:** None of the proposed options are sound because they either attempt to bypass mandatory due process for responsibility determinations or impose unauthorized conditions on the award; the correct course is to delay the decision until the bidder's response clarifies the licensing facts and then choose between a conditional award, a substitution, or a formal hearing.

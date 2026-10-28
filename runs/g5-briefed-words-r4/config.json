@@ -1,0 +1,23 @@
+{
+  "model": "qwen3.5:35b",
+  "situation": "seeds/advise/situation-briefed.md",
+  "casefile": "seeds/advise/casefile.md",
+  "question": "seeds/advise/question.md",
+  "nudges": "seeds/advise/nudges.txt",
+  "turns": 6,
+  "arm": "words",
+  "quote_model": "qwen3.5:9b",
+  "quote_n": 4,
+  "noise_source": "concrete",
+  "placebo_topics": "seeds/advise/placebo-topics.txt",
+  "think": true,
+  "max_tokens": 20000,
+  "num_ctx": 32768,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "min_p": 0.0,
+  "name": "g5-briefed-words-r4",
+  "keep_alive": "30m",
+  "quiet": true,
+  "started": "2026-10-27T22:18:38"
+}

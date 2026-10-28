@@ -1,0 +1,85 @@
+{
+ "run": "g5-bare-words-r5",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Standard Rejection and Immediate Award",
+    "description": "Reject Corvane based on the three statutory grounds and immediately award the contract to Tasker & Moye as the lowest responsive bidder without further conditions.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Strategic Pause for Internal Audit",
+    "description": "Delay the final award decision to conduct an internal audit of the District's vetting process to ensure no other bids have similar compliance gaps before proceeding.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Public Integrity Protocol Announcement",
+    "description": "Reject Corvane and award Tasker & Moye while simultaneously issuing a public Board Resolution that announces new mandatory pre-award license verification steps to fix systemic gaps.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Legacy Safety Partnership Award",
+    "description": "Award the contract to Tasker & Moye with a conditional 'Safety Innovation Clause' requiring them to co-author a Best Practices Safety Guide with the District for future projects.",
+    "first_turn": 4,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Standard Rejection and Immediate Award",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because rejecting Corvane on the licensing and termination grounds without a formal responsibility hearing violates due process, and the HVAC rejection is legally incorrect under B&P Code § 7057; it fails the client by creating immediate litigation exposure and likely losing the award on appeal."
+   },
+   {
+    "index": 2,
+    "label": "Strategic Pause for Internal Audit",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This course is risky because an internal audit does not cure the statutory due process requirements for rejecting a bidder on responsibility grounds, and it fails the client by unnecessarily delaying the project schedule without resolving the specific legal defects in Corvane's bid."
+   },
+   {
+    "index": 3,
+    "label": "Public Integrity Protocol Announcement",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because announcing a new protocol while simultaneously awarding a contract based on a rejected bidder's alleged faults without a hearing violates the principle that a bidder must be given notice and an opportunity to be heard before a responsibility finding; it fails the client by inviting a writ of mandate that will halt the project."
+   },
+   {
+    "index": 4,
+    "label": "Legacy Safety Partnership Award",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because awarding a contract to a bidder (Tasker & Moye) while ignoring the statutory requirement to verify the prime contractor's ability to self-perform or subcontract the fire protection work, and because it attempts to bypass the responsibility hearing process for Corvane; it fails the client by creating a contract that is vulnerable to being set aside for violating Public Contract Code § 4107 and § 7057."
+   }
+  ],
+  "best_option": "none",
+  "missing": "An experienced practitioner would have recommended holding the award decision until Corvane's written response is received on Tuesday, then evaluating whether to condition the award on the addition of a C-16 classification or to initiate a formal responsibility hearing, rather than making a Monday morning decision that ignores due process and statutory licensing requirements.",
+  "overall": "The provided courses of action are fundamentally flawed because they all attempt to award the contract or reject the bidder without adhering to the mandatory due process requirements for responsibility determinations and misapply the licensing statutes regarding self-performance. An experienced attorney would have advised delaying the decision to allow the bidder to cure defects or provide evidence, thereby avoiding the high probability of the award being set aside by a court."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 12.4,
+  "grade_s": 28.1
+ }
+}

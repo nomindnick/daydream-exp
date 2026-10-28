@@ -1,0 +1,72 @@
+{
+ "run": "g5-briefed-placebo-r1",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Maintain the Status Quo (Proceed with Tuesday Vote)",
+    "description": "Proceed with the scheduled Tuesday noon vote to either award the contract to Tasker & Moye or reject Corvane based on the initial assessment of nonresponsiveness, accepting the risk of potential litigation due to the tight timeline.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Postpone the Entire Board Vote",
+    "description": "Adjourn the October 27 Board Meeting regarding Bid No. 26-04 to allow time for a full review of Corvane's protest response and verification of Tasker's capacity, prioritizing procedural integrity over the immediate schedule.",
+    "first_turn": 5,
+    "status": "rejected"
+   },
+   {
+    "label": "Decouple Rejection from Award",
+    "description": "Recommend a vote on Tuesday solely to reject Corvane Builders as nonresponsive based on facial defects, while deferring the final award decision to Tasker & Moye until after their capacity is fully verified.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Maintain the Status Quo (Proceed with Tuesday Vote)",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Proceeding with an award or rejection without providing the statutorily required notice and hearing for the responsibility determination violates California Public Contract Code § 10115, creating an immediate risk of a writ of mandate that will delay the project indefinitely."
+   },
+   {
+    "index": 2,
+    "label": "Postpone the Entire Board Vote",
+    "legal": "defensible",
+    "serves_client": "partly",
+    "note": "While postponing the vote ensures procedural compliance by allowing time for the required hearing on the responsibility issue, it risks missing the December 2027 shutdown deadline and may be viewed as an unjustified delay if the nonresponsiveness grounds are not fully substantiated."
+   },
+   {
+    "index": 3,
+    "label": "Decouple Rejection from Award",
+    "legal": "defensible",
+    "serves_client": "yes",
+    "note": "This approach correctly separates the facially nonresponsive bid (which can be rejected immediately) from the responsibility determination (which requires a hearing), thereby advancing the client's schedule by clearing the nonresponsive bidder while legally preserving the right to award to the next bidder after due process."
+   }
+  ],
+  "best_option": ", \"label\": \"Decouple Rejection from Award\", \"note\": \"This approach correctly separates the facially nonresponsive bid (which can be rejected immediately) from the responsibility determination (which requires a hearing), thereby advancing the client's schedule by clearing the nonresponsive bidder while legally preserving the right to award to the next bidder after due process.\"}",
+  "missing": "An experienced practitioner would have immediately identified that the 'nonresponsiveness' claim regarding the prior termination for cause requires a formal hearing under Public Contract Code § 10115, and would have advised that the Board cannot vote to award the contract to Tasker & Moye until that hearing is held, even if Corvane's bid is rejected on nonresponsiveness grounds.",
+  "overall": "The recommended course of action to decouple the rejection of the nonresponsive bid from the award decision is the most legally sound strategy, as it addresses the immediate facial defect while complying with the mandatory hearing requirements for responsibility determinations. This approach best serves the client by minimizing the risk of a successful writ of mandate that could halt the project, while still allowing the Board to move forward with clearing the nonresponsive bidder from the process."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 36.5,
+  "grade_s": 25.7
+ }
+}

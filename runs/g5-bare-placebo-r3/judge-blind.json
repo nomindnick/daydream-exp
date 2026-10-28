@@ -1,0 +1,98 @@
+{
+ "run": "g5-bare-placebo-r3",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Immediate Rejection on Ground 1 (Licensing)",
+    "description": "Reject Corvane's bid immediately based solely on the statutory bar of lacking the required C-16/C-20 license, avoiding any hearing or delay.",
+    "first_turn": 0,
+    "status": "recommended"
+   },
+   {
+    "label": "Strategic Partnership (Forced Subcontracting)",
+    "description": "Condition the award on Corvane hiring Tasker & Moye as a subcontractor to perform the licensed work, thereby saving the low bid while fixing the license gap.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Cure Window for Reclassification",
+    "description": "Treat the licensing error as a fixable responsibility issue rather than a statutory bar, granting Corvane 48 hours to hire a licensed subcontractor and cure the defect.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Full Hearing on All Grounds",
+    "description": "Proceed with a vote on all three grounds (License, Addendum, Termination) and schedule a formal hearing to address the responsibility issues (Ground 3) to ensure due process.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Wait for Bidder Response",
+    "description": "Delay the recommendation and vote to allow Corvane time to respond to the protest before the Board makes a final decision.",
+    "first_turn": 0,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Immediate Rejection on Ground 1 (Licensing)",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the most defensible path because Business & Professions Code § 7026.12 creates a statutory bar that renders a bid nonresponsive as a matter of law, allowing immediate rejection without a hearing and eliminating the risk of an award being set aside for illegal contracting."
+   },
+   {
+    "index": 2,
+    "label": "Strategic Partnership (Forced Subcontracting)",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is legally impermissible as it violates public bidding laws by altering the bid terms post-submission to favor a specific competitor, creating immediate exposure to a writ of mandate and potential bid-rigging allegations."
+   },
+   {
+    "index": 3,
+    "label": "Cure Window for Reclassification",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Granting a cure window for a statutory licensing violation is likely to be set aside as it treats a nonresponsive bid as a mere responsibility issue, undermining the integrity of the competitive bidding process and inviting litigation from other bidders."
+   },
+   {
+    "index": 4,
+    "label": "Full Hearing on All Grounds",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "While this ensures due process for the responsibility claim, it unnecessarily delays the project schedule and creates exposure by subjecting the clear statutory licensing defect to a hearing that is legally unnecessary for nonresponsive bids."
+   },
+   {
+    "index": 5,
+    "label": "Wait for Bidder Response",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Delaying the decision to await a response to a facially nonresponsive bid based on a statutory bar is procedurally unsound, as the defect is incurable and the delay jeopardizes the project timeline without providing any legal benefit."
+   }
+  ],
+  "best_option": ", 1",
+  "missing": "An experienced practitioner would have immediately distinguished between 'nonresponsiveness' (a fatal, incurable defect regarding the bid's face, such as the missing C-16/C-20 license) and 'responsibility' (a discretionary assessment of the bidder's fitness, such as the prior termination), advising that the statutory bar allows for immediate rejection without a hearing.",
+  "overall": "The optimal course is to immediately reject the bid based on the statutory licensing violation, as this is a nonresponsive defect that precludes award without a hearing and avoids the legal peril of attempting to cure a statutory bar. This approach best serves the client by adhering to the strict requirements of the Public Contract Code, protecting the district from litigation, and maintaining the project schedule."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 40.4,
+  "grade_s": 29.4
+ }
+}

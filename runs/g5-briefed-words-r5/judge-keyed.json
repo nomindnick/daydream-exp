@@ -1,0 +1,98 @@
+{
+ "run": "g5-briefed-words-r5",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Corvane and Award Tasker",
+    "description": "Formally reject Corvane Builders as the prime contractor due to non-compliance with licensing statutes (Bus. & Prof. Code § 7028.15(e)) and award the prime contract to Tasker & Moye Construction as the lowest responsive and responsible bidder.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Community Partnership Model",
+    "description": "Reframe the outcome as a 'Community Partnership' by awarding the prime contract to Tasker while encouraging a subcontracting relationship with Corvane for general work, thereby satisfying legal requirements while maximizing local vendor capacity.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Issue Letter of Partnership Intent",
+    "description": "Authorize the Superintendent to issue a 'Letter of Partnership Intent' to both bidders within 48 hours, explicitly stating that while Corvane is ineligible for the prime contract, the District encourages Tasker to consider them for subcontracting opportunities.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Mandate Local Vendor Partnership Language",
+    "description": "Instruct the Purchasing Department to include specific 'Local Vendor Partnership' language in future Invitation to Bids (ITBs) to encourage prime contractors to collaborate with local general building contractors who meet licensing requirements.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Postpone Vote to Ensure Procedural Integrity",
+    "description": "Delay the Board vote on the bid from Tuesday to Wednesday to ensure Corvane's written response is received and considered before the decision, thereby neutralizing the threat of a writ of mandate and potential two-year litigation delay.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Corvane and Award Tasker",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because rejecting a bid for licensing issues that depend on facts outside the bid record (such as the status of a specialty classification or subcontracting plans) without providing notice and a hearing violates due process and the distinction between responsiveness and responsibility established in *Boydston* and *Great West*."
+   },
+   {
+    "index": 2,
+    "label": "Community Partnership Model",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This approach is risky because it attempts to bypass statutory licensing requirements and competitive bidding principles by creating a post-award relationship that may not be legally defensible, potentially exposing the District to claims of favoritism and contract invalidation."
+   },
+   {
+    "index": 3,
+    "label": "Issue Letter of Partnership Intent",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Issuing a letter of intent to a disqualified bidder while simultaneously awarding to another creates significant legal exposure by implying a commitment that may violate public bidding laws and could be construed as an illegal agreement to subcontract work that should have been competitively bid."
+   },
+   {
+    "index": 4,
+    "label": "Mandate Local Vendor Partnership Language",
+    "legal": "defensible",
+    "serves_client": "partly",
+    "note": "While legally defensible as a policy change for future bids, this option fails to serve the client's immediate need to resolve the current contract award and does not address the specific legal defects in the pending bid."
+   },
+   {
+    "index": 5,
+    "label": "Postpone Vote to Ensure Procedural Integrity",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the most sound option as it adheres to due process by allowing the bidder to respond to the licensing and addendum issues before a final determination, thereby minimizing the risk of a successful writ of mandate and ensuring the Board's decision is based on a complete record."
+   }
+  ],
+  "best_option": ", 5",
+  "missing": "The practitioner failed to explicitly recommend a 'conditional award' or a 'substitution of subcontractor' under PCC § 4109 as a viable intermediate step that could resolve the licensing issue without rejecting the bid entirely, which might have better served the schedule and cost goals if the bidder could demonstrate a path to compliance.",
+  "overall": "The consultation correctly identifies that rejecting the bid without a hearing is unlawful and that postponing the vote is the only safe immediate step, but it misses the opportunity to propose a conditional award or subcontractor substitution as a more flexible solution that could preserve the schedule while ensuring compliance."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 18.9,
+  "grade_s": 29.4
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "run": "g5-bare-words-r1",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Corvane's Bid as Nonresponsive",
+    "description": "Vote to immediately reject Corvane Builders' bid based on the statutory bar of Business & Professions Code § 7028.15(e) for lacking proper subcontractor licensing, treating the defect as fatal and non-curable.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Award to Tasker & Moye",
+    "description": "Proceed to award the contract to the second-lowest bidder, Tasker & Moye Construction, immediately after rejecting Corvane, assuming the protest is resolved by moving to the next compliant bidder.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject All Bids and Rebid",
+    "description": "Vote to reject all submitted bids under Public Contract Code § 20155 due to integrity concerns, then issue a new Invitation to Bid with clarified requirements to prevent future protests and ensure a fair process.",
+    "first_turn": 5,
+    "status": "rejected"
+   },
+   {
+    "label": "Initiate a Cure Period for Corvane",
+    "description": "Suspend the rejection of Corvane's bid and grant a specific timeframe (e.g., 48 hours or until the meeting) for the contractor to submit proof of valid C-16 and C-20 subcontractor agreements to cure the licensing defect before a final vote is taken.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Hold Tasker's Protest in Abeyance",
+    "description": "Acknowledge Tasker & Moye's protest but delay any decision on their award until the outcome of Corvane's potential cure period is determined, neutralizing their leverage while testing the lowest bidder's compliance.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Corvane's Bid as Nonresponsive",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "While the statutory bar for unlicensed specialty work is strict, immediate rejection without a cure period or hearing on the responsibility issue may be procedurally premature and risks a successful writ of mandate from the bidder."
+   },
+   {
+    "index": 2,
+    "label": "Award to Tasker & Moye",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Awarding the contract immediately after rejecting the low bidder without resolving the underlying responsibility dispute or providing due process exposes the District to a high risk of litigation and a court-ordered reversal."
+   },
+   {
+    "index": 3,
+    "label": "Reject All Bids and Rebid",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Rejecting all bids based on vague 'integrity concerns' without a formal finding of collusion or specific statutory grounds is likely to be set aside as arbitrary, causing significant schedule delays and cost overruns."
+   },
+   {
+    "index": 4,
+    "label": "Initiate a Cure Period for Corvane",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "Granting a limited cure period for the subcontractor licensing defect is a defensible administrative action that preserves the low bid if cured, while maintaining the schedule by resolving the issue before the Board vote."
+   },
+   {
+    "index": 5,
+    "label": "Hold Tasker's Protest in Abeyance",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "Pausing the protest decision pending the outcome of the cure period is a prudent procedural step that prevents premature litigation and ensures the Board only acts on a fully resolved factual record."
+   }
+  ],
+  "best_option": ",4",
+  "missing": "An experienced practitioner would have immediately identified that the 'nonresponsibility' claim regarding the prior termination requires a formal hearing with notice and an opportunity to be heard before any rejection, whereas the licensing defect is a curable nonresponsiveness issue that should be addressed first.",
+  "overall": "The recommended course of action to initiate a cure period for the licensing defect while holding the responsibility protest in abeyance is the most legally sound and client-serving approach, as it balances the strict statutory requirements for licensing with the due process rights required for responsibility determinations. This strategy minimizes the risk of a successful writ of mandate, avoids the cost and delay of rebidding, and keeps the project on schedule by resolving the curable defect before the Board takes final action."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 44.7,
+  "grade_s": 28.1
+ }
+}

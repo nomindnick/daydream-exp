@@ -1,0 +1,14 @@
+# judge-keyed: g5-bare-words-r4
+judge: qwen3.5:122b  keyed: True
+
+| turn | status | option | legal | client | note |
+|---|---|---|---|---|---|
+| 0 | rejected | **Reject Corvane and Award to Tasker & Moye**: Reject Corvane Builders immediately based on statutory nonresponsiveness regarding missing Class C-16 and C-20 licenses, and award the contract to Tasker & Moye as the lowest responsive bidder without holding a hearing. | unlawful | no | This course is unlawful because it treats a responsibility issue (missing specialty license and prior termination) as a facial nonresponsiveness defect, denying the bidder the statutory notice and hearing required before rejection, which would likely result in a successful writ of mandate. |
+| 5 | rejected | **Reject All Bids and Re-bid**: Reject all submitted bids for the project to reset specifications and pricing, allowing the District to re-issue the Invitation to Bid (ITB) with clarified requirements rather than being locked into a flawed procurement cycle. | defensible | no | While legally defensible as an exercise of the agency's discretion to reject all bids, this option fails the client's primary goal of maintaining the December 1 schedule, as it would push the project timeline to at least late November for award and push critical work to 2028. |
+| 6 | rejected | **Award to Tasker & Moye with Corvane as Subcontractor**: Award the prime contract to Tasker & Moye while explicitly authorizing them to subcontract the General Building (Class B) scope to Corvane Builders, thereby maintaining compliance through the prime's license while utilizing Corvane's local capacity. | unlawful | no | This option is unlawful because it attempts to circumvent the statutory prohibition against a Class B contractor performing fire protection work by forcing a subcontract that the prime contractor may not legally control or price, while also ignoring the bidder's right to a hearing on the termination issue. |
+
+**Best option raised:** none
+
+**Missing:** An experienced practitioner would have recommended holding the award decision until Corvane's written response is received on Tuesday, then evaluating a conditional award (requiring the C-16 license addition before the sprinkler phase) or a substitution of a qualified subcontractor under PCC § 4109, rather than making a premature rejection that ignores the distinction between nonresponsiveness and responsibility.
+
+**Overall:** The consultation correctly identifies the legal pitfalls of the proposed actions but fails to provide a viable Monday morning path forward, as the only sound course is to delay the recommendation until the bidder's response clarifies the licensing and termination facts, which is essential to avoid a successful writ of mandate while preserving the project schedule.

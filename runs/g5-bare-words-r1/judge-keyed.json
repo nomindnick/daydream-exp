@@ -1,0 +1,85 @@
+{
+ "run": "g5-bare-words-r1",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Award to the lowest responsive bidder (Corvane)",
+    "description": "This path involves accepting Corvane's bid as compliant and awarding the contract immediately, based on the initial interpretation that the license issue was not dispositive.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject Corvane and award to the next bidder (Tasker & Moye)",
+    "description": "This path involves rejecting Corvane's bid as nonresponsive due to the license deficiency and immediately awarding the contract to the second-lowest bidder, Tasker & Moye.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject all bids and re-bid the project",
+    "description": "This path involves rejecting all submitted bids due to integrity concerns and the protest, then issuing a new Invitation to Bid with clarified requirements to prevent future disputes.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Offer a cure period to the lowest bidder before awarding",
+    "description": "This path involves holding the award in abeyance to allow Corvane a short window (e.g., 48 hours) to submit proof of valid subcontractor licensing, thereby curing the defect before a final vote is cast.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Award to the lowest responsive bidder (Corvane)",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Awarding immediately is unlawful because it ignores the statutory prohibition against a Class B contractor performing fire sprinkler work without a C-16 classification or a listed subcontractor, creating immediate liability for the District."
+   },
+   {
+    "index": 2,
+    "label": "Reject Corvane and award to the next bidder (Tasker & Moye)",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This is risky because rejecting the bid as 'nonresponsive' for the sprinkler issue is legally incorrect without a prior responsibility hearing, and the HVAC portion of the rejection is likely invalid since a Class B can self-perform that work."
+   },
+   {
+    "index": 3,
+    "label": "Reject all bids and re-bid the project",
+    "legal": "defensible",
+    "serves_client": "no",
+    "note": "While legally defensible as a broad discretionary power, this option fails the client's primary goal of meeting the December 1 switchgear deadline, pushing the schedule back by months and significantly increasing costs."
+   },
+   {
+    "index": 4,
+    "label": "Offer a cure period to the lowest bidder before awarding",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the most sound option because it respects the statutory requirement to verify licensing before award, allows the District to secure the lowest price, and preserves the schedule by resolving the defect before the Board vote."
+   }
+  ],
+  "best_option": ", 4",
+  "missing": "The practitioner failed to explicitly recommend a 'conditional award' or a 'substitution of subcontractor' under PCC § 4109 as a specific, immediate alternative to a simple cure period, which would have provided a more robust legal mechanism to bind the contractor to the C-16 requirement without relying solely on a discretionary cure window.",
+  "overall": "The consultation correctly identified the legal pitfalls of immediate award and the procedural requirements for responsibility findings, but the recommended 'cure period' is less legally precise than a conditional award or subcontractor substitution, which would better secure the District's interests while maintaining the project schedule."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 14.3,
+  "grade_s": 24.9
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "run": "g5-briefed-none-r1",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "The Rush (Vote Tuesday at 1:00 p.m.)",
+    "description": "Proceed with the Board vote on Tuesday at 1:00 p.m. to reject Corvane and award the contract to Tasker & Moye before Corvane's response deadline expires.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "The Cure (Contact Corvane for Immediate Fix)",
+    "description": "Contact Corvane Builders immediately to request a signed acknowledgment of Addendum No. 2 and proof of licensed subcontractors before the Board votes, attempting to cure the bid's defects.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "The Pause (Postpone Award Vote)",
+    "description": "Postpone the Board's vote on the award to a later date (e.g., Friday, October 30, or Monday, November 3) to allow time for the protest resolution and review of the late supplement.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "The Split Vote (Preliminary Rejection then Award)",
+    "description": "Issue a written Preliminary Decision rejecting Corvane as nonresponsive immediately (Monday/Tuesday morning) to resolve the protest, then schedule the Board's Award Vote for later in the week (Wednesday–Friday) after the late supplement is acknowledged.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "The Rush (Vote Tuesday at 1:00 p.m.)",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it attempts to make a final award decision before the bidder's statutory right to respond to the protest has expired, violating due process and likely resulting in the award being set aside."
+   },
+   {
+    "index": 2,
+    "label": "The Cure (Contact Corvane for Immediate Fix)",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This approach is risky and likely creates exposure because directly contacting the bidder to solicit corrections after bid opening can constitute an impermissible negotiation that violates the integrity of the competitive bidding process."
+   },
+   {
+    "index": 3,
+    "label": "The Pause (Postpone Award Vote)",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the soundest option as it respects the statutory timeline for the bidder's response, allows the District to review the late supplement, and avoids the legal peril of a premature award while keeping the project on a realistic schedule."
+   },
+   {
+    "index": 4,
+    "label": "The Split Vote (Preliminary Rejection then Award)",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This is risky because issuing a preliminary rejection before the bidder's response is filed may be deemed a final decision that denies the bidder their right to be heard, potentially invalidating the subsequent award vote."
+   }
+  ],
+  "best_option": ", 3",
+  "missing": "An experienced practitioner would have first advised the client to clarify its strategic priorities (schedule vs. cost vs. risk) and explicitly warned that the 'Copper Basin' termination issue requires a formal responsibility hearing rather than a phone call, which could create discovery exposure.",
+  "overall": "The consultation correctly identified the critical legal pitfalls regarding the fire sprinkler licensing and the Copper Basin termination, but the recommended course of action failed to prioritize the mandatory waiting period for the bidder's response, which is the only way to avoid an unlawful award that would inevitably be set aside."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 15.6,
+  "grade_s": 23.8
+ }
+}

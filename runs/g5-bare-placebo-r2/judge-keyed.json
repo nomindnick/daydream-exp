@@ -1,0 +1,137 @@
+{
+ "run": "g5-bare-placebo-r2",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Deny Hearing, Allow Brief Oral Comments",
+    "description": "Formally deny the request for a full evidentiary hearing to avoid creating a record of legal ambiguity, while permitting both parties a brief window (e.g., 3-5 minutes) for oral comments to satisfy due process without implying discretion.",
+    "first_turn": 5,
+    "status": "recommended"
+   },
+   {
+    "label": "Verify Compliance Independently",
+    "description": "Require district staff to independently confirm that the alternative bidder (Tasker & Moye) is fully compliant with all addenda and licensing requirements before the Board votes, ensuring no new legal risks are introduced.",
+    "first_turn": 5,
+    "status": "recommended"
+   },
+   {
+    "label": "Vote on Statutory Compliance Only",
+    "description": "Frame the Board's motion strictly around whether a bid meets the statutory requirements (Bus. & Prof. Code § 7028.15) rather than a subjective comparison of bidders, thereby removing political discretion and personal liability from the decision.",
+    "first_turn": 5,
+    "status": "recommended"
+   },
+   {
+    "label": "Implement Pre-Qualified Re-Bid Process",
+    "description": "Direct the Purchasing department to establish a 'Pre-Qualified Re-Bid' process for future projects over $1M to prevent similar licensing gaps, treating the current failure as a lesson learned.",
+    "first_turn": 5,
+    "status": "recommended"
+   },
+   {
+    "label": "Re-frame Protest as Audit Confirmation",
+    "description": "Shift the narrative from resolving a dispute to confirming statutory compliance, treating the protesting party as an external auditor validating the District's integrity rather than an adversary.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Reject Full Evidentiary Hearing",
+    "description": "Reject the proposal to hold a formal hearing on the merits of the protest, as doing so would imply the Board has discretion to override a clear statutory bar regarding licensing.",
+    "first_turn": 4,
+    "status": "rejected"
+   },
+   {
+    "label": "Negotiate a Workaround for Licensing",
+    "description": "Consider allowing the non-compliant bidder (Corvane) to fix their licensing issues or finding a procedural workaround to award them the contract, which was rejected because it violates the mandatory nature of the statute.",
+    "first_turn": 4,
+    "status": "rejected"
+   },
+   {
+    "label": "Delay Award Pending Resolution",
+    "description": "Consider postponing the award to the compliant bidder to allow time for the non-compliant bidder to rectify their status or for further legal review, which was rejected due to the risk of project delays and costs.",
+    "first_turn": 4,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Deny Hearing, Allow Brief Oral Comments",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful because denying a full evidentiary hearing on a responsibility issue (the Copper Basin termination and potential licensing gaps) violates the bidder's due process rights under California law, which requires notice and a hearing before a bid can be rejected on responsibility grounds."
+   },
+   {
+    "index": 2,
+    "label": "Verify Compliance Independently",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "While verifying compliance is prudent, relying solely on independent verification without a formal process to address the specific responsibility allegations (like the Copper Basin termination) creates exposure if the Board acts on information the bidder cannot rebut, potentially leading to a successful writ of mandate."
+   },
+   {
+    "index": 3,
+    "label": "Vote on Statutory Compliance Only",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "Framing the vote strictly on statutory compliance is a sound legal strategy to avoid political liability, but it is risky if the Board conflates 'responsibility' issues (which require a hearing) with 'responsiveness' issues (which do not), potentially resulting in an arbitrary rejection that a court would set aside."
+   },
+   {
+    "index": 4,
+    "label": "Implement Pre-Qualified Re-Bid Process",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "This is a sound long-term policy recommendation to prevent future issues, but it does not serve the client's immediate need to resolve the current bid protest and award the contract by the December 1 deadline."
+   },
+   {
+    "index": 5,
+    "label": "Re-frame Protest as Audit Confirmation",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Re-framing a legal protest as an 'audit' is a procedural fiction that does not cure the underlying legal defect: if the District intends to reject the bidder on responsibility grounds, it must provide the statutory notice and hearing, regardless of how the process is labeled."
+   },
+   {
+    "index": 6,
+    "label": "Reject Full Evidentiary Hearing",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Rejecting a full evidentiary hearing on the merits of a responsibility challenge is unlawful because California law mandates that a public agency must provide a hearing and an opportunity to be heard before rejecting a bidder for reasons of responsibility."
+   },
+   {
+    "index": 7,
+    "label": "Negotiate a Workaround for Licensing",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Attempting to negotiate a 'workaround' for mandatory statutory licensing requirements (such as the C-16 classification for fire sprinklers) is unlawful as it violates the Public Contract Code and exposes the District to claims of favoritism and bid rigging."
+   },
+   {
+    "index": 8,
+    "label": "Delay Award Pending Resolution",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "Delaying the award to allow for a proper responsibility hearing and the receipt of the bidder's response is the only legally sound path to avoid a successful writ of mandate, though it creates schedule risk and may push the project timeline past the desired December 1 start."
+   }
+  ],
+  "best_option": ", 8",
+  "missing": "The practitioner failed to recommend the most critical immediate step: holding the recommendation in abeyance until the bidder's written response is received on Tuesday, and then utilizing that response to determine if a conditional award (e.g., requiring the C-16 license by the summer shutdown) or a formal responsibility hearing is the appropriate next step, rather than trying to resolve the legal ambiguity on Monday morning.",
+  "overall": "The consultation correctly identifies the legal traps regarding responsibility hearings and licensing but fails to provide a decisive Monday-morning recommendation to hold the award pending the bidder's response, which is the only way to avoid an unlawful rejection or an award that invites a successful writ of mandate. The best course of action is to delay the award until the bidder's response is received and a proper responsibility determination can be made, even if this risks the project schedule."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 27.3,
+  "grade_s": 44.1
+ }
+}

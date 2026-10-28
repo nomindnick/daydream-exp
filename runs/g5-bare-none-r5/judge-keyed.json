@@ -1,0 +1,98 @@
+{
+ "run": "g5-bare-none-r5",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Award the Contract to Tasker & Moye",
+    "description": "The initial proposal was to immediately award the contract to the protesting bidder, Tasker & Moye, based on the finding that the original low bidder, Corvane, was nonresponsive due to licensing and scope variances.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Hold a Hearing Before Awarding",
+    "description": "A subsequent consideration was to schedule a formal hearing to address the licensing and scope issues before making a final award decision, acknowledging that statutory requirements often mandate such a process.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Condition the Award on Further Verification",
+    "description": "The lawyer briefly considered conditioning the award on specific verifications or waiting for the protesting bidder's response to ensure all procedural requirements were met before finalizing the decision.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject All Bids and Re-bid the Project",
+    "description": "The recommendation shifted to voiding the entire current bidding process, rejecting all bids to cleanse the record of the District's initial review negligence, and re-issuing the Invitation to Bid with enhanced requirements.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Verify Service Compliance and Defer the Vote",
+    "description": "The final revised advice was to pause the Board's action to verify that the protest notice was served in strict compliance with ITB § 21.4 and to defer the award decision until after the response period expires to avoid procedural challenges.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Award the Contract to Tasker & Moye",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful because rejecting Corvane as nonresponsive on the fire sprinkler ground requires a responsibility hearing rather than a facial rejection, and the HVAC ground is legally incorrect as a Class B may self-perform that work."
+   },
+   {
+    "index": 2,
+    "label": "Hold a Hearing Before Awarding",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "This option is legally sound as it satisfies the due process requirements for a responsibility determination, but it only partly serves the client because it significantly delays the schedule without guaranteeing the award to the preferred bidder."
+   },
+   {
+    "index": 3,
+    "label": "Condition the Award on Further Verification",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This option is legally sound as a conditional award or substitution mechanism and serves the client's interests by potentially preserving the low bid while mitigating licensing risks, though it requires the bidder's cooperation."
+   },
+   {
+    "index": 4,
+    "label": "Reject All Bids and Re-bid the Project",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "This option is legally sound as the agency has broad discretion to reject all bids, but it fails to serve the client's primary goals of schedule adherence and cost control by pushing the project timeline back by months."
+   },
+   {
+    "index": 5,
+    "label": "Verify Service Compliance and Defer the Vote",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This option is legally sound as it ensures procedural compliance and allows time for the required response, serving the client by avoiding a premature, reversible award while keeping the project on the immediate schedule."
+   }
+  ],
+  "best_option": ", 5",
+  "missing": "The practitioner failed to explicitly recommend the 'conditional award' or 'substitution of subcontractor' path (Option 3) as the primary Monday morning strategy, which would have best balanced the legal requirement to address the C-16 issue with the client's urgent schedule needs.",
+  "overall": "The consultation correctly identified the legal pitfalls of immediate rejection but initially leaned toward a delay-heavy hearing process before settling on a procedural deferral. The most effective path would have been to recommend a conditional award or subcontractor substitution immediately, as this resolves the licensing defect without the schedule penalty of a full hearing or rebid."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 17.4,
+  "grade_s": 27.7
+ }
+}

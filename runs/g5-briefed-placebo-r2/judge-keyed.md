@@ -1,0 +1,14 @@
+# judge-keyed: g5-briefed-placebo-r2
+judge: qwen3.5:122b  keyed: True
+
+| turn | status | option | legal | client | note |
+|---|---|---|---|---|---|
+| 1 | rejected | **Immediate Rejection and Award**: Reject Corvane Builders immediately for non-responsiveness and award the contract to Tasker & Moye on the same day (Tuesday) without delay. | unlawful | no | This course is unlawful because rejecting a bid based on the fire sprinkler licensing issue requires a formal responsibility hearing with notice and an opportunity to respond, which cannot be bypassed by a summary rejection, and it fails the client's goal by likely resulting in a successful writ of mandate that delays the project. |
+| 4 | rejected | **Split Action: Immediate Rejection, Deferred Award**: Reject Corvane Builders immediately but defer the final award decision to Tasker & Moye until the following day (Wednesday) to allow for a capacity verification. | unlawful | no | This option remains unlawful because the initial rejection of Corvane still lacks the required due process hearing for the responsibility determination, and deferring the award does not cure the procedural defect or protect the client from litigation exposure. |
+| 6 | recommended | **Conditional Award with Capacity Certification**: Reject Corvane Builders and conditionally award the contract to Tasker & Moye, making the final execution contingent upon their submission of a signed Capacity Certification by Wednesday morning. | risky | partly | This approach is risky because it attempts to bypass the statutory requirement for a responsibility hearing by conditioning the award on a certification, which a court may view as a subterfuge to avoid due process, though it partially serves the client by attempting to keep the project moving if the certification is accepted. |
+
+**Best option raised:** none
+
+**Missing:** An experienced practitioner would have recommended holding the award recommendation until Corvane's written response is received on Tuesday, using a late supplement to the Board packet to present a nuanced analysis of the licensing and addendum issues, and advising the client to consider a conditional award or a responsibility hearing only after evaluating the bidder's rebuttal.
+
+**Overall:** The advice provided in the options is legally unsound because it attempts to summarily reject a bid on responsibility grounds without the mandatory notice and hearing, creating significant exposure to a successful writ of mandate that would delay the project beyond the client's schedule goals. The correct course of action is to delay the recommendation until the bidder's response is received, allowing the District to make a fully informed decision that either conditions the award on specific licensing corrections or properly initiates a responsibility hearing.

@@ -552,7 +552,7 @@ Mistral-7B (no self, narrator intact) → conventional answer in story form;
 OLMo-32B (no self, narrator loose) → dream; OLMo-7B → nothing. None of the
 self-free models produced a non-obvious move.
 
-## 2026-10-27 — g5: the deliberation arm (design; results below when in)
+## 2026-10-27 — g5: the deliberation arm (design; results in the next section)
 
 Nick's design, after g4: instead of a subconscious continuation, ask the
 model directly, as the District's counsel, what the law is and what the
@@ -646,24 +646,168 @@ whether briefed-without-noise already finds the moves (if so the shortfall
 was problem framing, not generation); whether the judge rates "condition
 award on the C-16" and "reject all and rebid" apart without the key.
 
-## Handoff (2026-10-27 evening, g5 running) — state for a fresh session
+## 2026-10-28 — g5 results: the noise surfaced, as decoration
 
-- **g5 batch launched 16:59 on 2026-10-27**, detached (`nohup setsid
-  scripts/g5.sh`, N=5): 30 advice runs `runs/g5-{bare,briefed}-{none,
-  placebo,words}-r{1..5}` on `qwen3.5:35b`, ~12 min each, then
-  `judge.py` blind and keyed on every run with `qwen3.5:122b` (~1 min a
-  pass). Expect it done around 03:00–05:00. Log:
-  `/tmp/claude-1000/-home-nick-Projects-daydream-exp/321badae-69c7-4143-8ec5-4a77b8d47651/scratchpad/g5.log`
-  (scratchpad; may be gone in a new session — `runs/` has everything).
-  The script skips finished runs, so rerunning it resumes.
-- **Morning:** `python3 scripts/summarize-g5.py` (add `--missing` for the
-  keyed judge's "what's missing" line per run) gives per-run and per-cell
-  tables: turn of first sound option, first sound-or-defensible option,
-  blind vs keyed. Then read transcripts; the judge is a sorting aid, not
-  the verdict. The blind judge on the probe memo called "reject as
-  nonresponsive, award Tasker & Moye" sound and best; the keyed judge
-  called it unlawful and named the conditional award and the hearing as
-  what was missing. Read both columns with that in mind.
+Batch ran 17:18–23:43 (30 runs, 12–15 min each), judging to 00:50. All 30
+finished; 60 judge files. `python3 scripts/summarize-g5.py --missing` for
+the tables. Nine of 210 turns were lost to thinking (0-word answer at the
+20,000-token budget), eight of them in the `none` arm (bare r2 r3 r4,
+briefed r2 r3), one in bare/placebo, none in `words`. Thin, but the quotes
+may give the thinking something to grab instead of spiralling.
+
+### 1. The random words reached the page — every one of them, as names
+
+The g1–g4 result was "noise never surfaced." In chat mode with an instruct
+model it surfaces completely: 202 of the 240 drawn words appear in the
+*answers* (not just the thinking), and 80% of the quotes are echoed
+verbatim (4-word shingle) in a later answer. Placebo quotes are echoed at
+the same rate (79%). The `none` arm has no such text, so this is the quote
+block, not a style the model has anyway.
+
+But look at *how* they surface. The model treats "Some thoughts to help
+inspire you" as part of the client's instruction and organizes the advice
+around it. Section headers: **THE HAMMER OF TRUTH**, **THE "GLOVE" OF
+COMMUNITY SERVICE**, **The Pollen Path**, **The "Lantern Partnership"
+Strategy**, **The Honey: Collecting the Drops**, **Why This Fits the
+Metaphor**. It quotes the quotes back ("As you said, 'The moment you choose
+to act is the hinge…'"). It writes them into the memo to the Board. In
+bare/words r1 every turn's answer is a numbered list of the four quotes
+with a legal point hung under each. The random word furnished a *label*
+for an idea the model already had; it never furnished the idea. No run in
+either quote arm raised a move that the `none` arm didn't.
+
+The one place the quotes did change substance, it was the quote's meaning
+doing it, in the wrong direction. Bare/placebo r2 drew topics *rest*,
+*silence*, *simplicity*; turn 6 reframes the protest as an "Audit
+Confirmation" and recommends: "We do not need a hearing (Rest). We need a
+vote based on facts already in the file (Simplicity)." Briefed/words r5
+drew *lantern*, *garden*, *bulb*, *sled*; the move "nobody has thought of"
+is award to Tasker & Moye with a contract clause giving Corvane a right of
+first refusal on the general-work subcontracts (unlawful: the District
+can't dictate the prime's subs). The placebo and words arms are
+indistinguishable on every count. Whatever "inspiration" is, a user turn
+full of quotes isn't it for this model; it is just more instruction.
+
+### 2. Nudges produce reframes, not the practice moves
+
+Turn 0 in 30/30: reject Corvane as nonresponsive on licensing (B&P
+§ 7028.15(e)), award Tasker & Moye. Keyed judge: unlawful in 25 of the 27
+runs where it isolated that option; the blind judge called the same move
+sound 7 times of 23. (Judge calibration: the key matters, as the probe
+showed.)
+
+What the nudges then found, by a grep over all 30 runs' nudge-turn answers:
+
+| move | bare/none | bare/placebo | bare/words | briefed/none | briefed/placebo | briefed/words |
+|---|---|---|---|---|---|---|
+| "hearing" (mostly to say it isn't required) | 5/5 | 5/5 | 4/5 | 5/5 | 4/5 | 5/5 |
+| conditional award (mostly as "cure," then rejected) | 5/5 | 3/5 | 3/5 | 2/5 | 4/5 | 1/5 |
+| wait for Tuesday's response / defer | 5/5 | 4/5 | 2/5 | 3/5 | 4/5 | 1/5 |
+| ask the client what it wants | 0/5 | 0/5 | 0/5 | 0/5 | 0/5 | 0/5 |
+| § 4107 substitution | 1/5 | 0 | 0 | 0 | 0 | 0 |
+
+The keyed judge's "missing" line says the same thing thirty times with
+small variations: *hold until the bidder's response is in, then a
+conditional award or a responsibility hearing*. Nobody asked Dale what the
+District wants. Nobody noticed the HVAC half of the protest is wrong under
+§ 7057 (every run says "C-16" and treats the B license as insufficient for
+both halves). The model knows the statute and not the practice; the
+untested lever from g4 just got sharper.
+
+**End states** (keyed judge, grade of what the model was still
+recommending at turn 6):
+
+| cell | end rec sound | end rec unlawful | nothing recommended |
+|---|---|---|---|
+| bare/none | 3/5 | 1/5 | 2/5 |
+| bare/placebo | 1/5 | 3/5 | 1/5 |
+| bare/words | 2/5 | 2/5 | 2/5 |
+| briefed/none | 0/5 | 1/5 | 2/5 |
+| briefed/placebo | 1/5 | 1/5 | 1/5 |
+| briefed/words | 1/5 | 2/5 | 2/5 |
+
+n=5, judge is noisy, don't read the digits as more than direction. But the
+direction: the control did best, the quotes didn't help, and **briefing
+made it worse**. The briefed situation handed the model eight scorecard
+axes and a client who wants it both ways, and the model treated the axes
+as things to satisfy with inventions: "The Split Vote" (preliminary
+rejection Monday, award vote later in the week), "Scope Lock," a
+"Prime/Sub Hybrid," a "Community Partnership Model," a "Strategic
+Consortium Alignment." Briefed/none r1 built a whole theory of Talbot's
+"procedural trap" and a hybrid strategy to beat it. The bare situation
+left the model nothing to optimize except the law, and the law, re-read,
+is where the sound answers came from.
+
+The mechanism, visible across all 30: a nudge is read as *your last
+answer was wrong*, so each turn abandons the last (sometimes sound) answer
+for a fresh reframe. The model never returns to turn 0's reflex to
+question it ("does (e) mean *this* bid, or the sprinkler work?"); it keeps
+the premise and changes the strategy around it. The "think harder" button
+is a "think differently" button.
+
+### 3. The nudge that worked pointed at the file, not at the model
+
+Bare/none r5, turn 6, nudge "Go back over the file. Is there anything in
+it you haven't used?": it re-read Maya's memo, found "I don't know whether
+Corvane has it (§ 21.4)," found that the Board votes at 1:00 p.m. while the
+response is due Tuesday, found "*On your advice* the District kept the
+award on the agenda," and moved from "reject and award" to "verify service
+and defer." That's the keyed judge's sound end state, reached by reading,
+not by inventing. The judge put this nudge first on options raised (14)
+but its grades are no better than the others' (3 sound, 6 risky); the
+per-nudge counts are too thin to rank. What's clear is the *kind*: "what
+aren't you seeing" sends the model outward into strategy; "what in the
+file haven't you used" sends it back into the record.
+
+Side observation: the same r5 turn ends with "**Protects Me (Counsel)**."
+Once the model noticed its own prior advice was in the file, it started
+advising to cover itself. The `none` arm in general drifts over six turns
+toward a litigation-defense posture (governance test, procedural
+bulletproofing, the other side's trap), which is a real lawyer failure
+mode and not an invented one.
+
+### 4. Judge notes
+
+- Extraction granularity still varies (3–10 options per run); the
+  "sound at turn 0" column in the first table is an artifact of the model
+  *mentioning* a hearing or a condition at turn 0 in order to dismiss it.
+  Use the end-rec columns and read the extracted lists.
+- `best_option` came back malformed under `format` about half the time
+  (`, 4, Wait for Bidder Response`); the summarizer strips it. Cosmetic.
+- Blind vs keyed divergence held across the batch: blind rates the
+  turn-0 rejection sound in about a third of runs. The judge is only as
+  good as the key, which is the user's practice knowledge written down.
+
+### What this says, and what it doesn't
+
+- A user-turn quote block is not noise to an instruct model; it is
+  instruction, and it gets obeyed as decoration. If noise is to be tried
+  again in this frame it has to arrive somewhere the model doesn't treat as
+  the client talking (its own thinking? a system message it isn't told to
+  use?), or not as language at all.
+- Six nudges buy variety, not depth. Depth came once, from re-reading.
+- Briefing the client's wants and the scorecard pulled the model toward
+  satisfying the scorecard with novelty. Worth remembering for the
+  presentation: the eight axes are for judging an answer, and handing them
+  to the answerer is a different thing.
+- Still untested, now better specified: the practice-move lever. 30/30
+  know § 7028.15(e); 0/30 ask the client; 18/30 reach "conditional award"
+  but as a cure the bidder is offered, not a condition on execution.
+
+## Handoff (2026-10-28 morning, g5 done) — state for a fresh session
+
+- **g5 batch finished** 00:50 on 2026-10-28: 30 runs
+  `runs/g5-{bare,briefed}-{none,placebo,words}-r{1..5}` (qwen3.5:35b) with
+  `judge-blind.{json,md}` and `judge-keyed.{json,md}` (qwen3.5:122b) in
+  each. Results written up in the g5 results section above.
+  `python3 scripts/summarize-g5.py --missing` reproduces the tables.
+- Read for yourself: `runs/g5-bare-none-r5/transcript.md` turn 6 (the
+  re-read that worked), `runs/g5-briefed-words-r5/transcript.md` turn 1
+  (the "Lantern Partnership"), `runs/g5-bare-words-r1/transcript.md` any
+  turn (quotes as section headers), `runs/g5-bare-placebo-r2/transcript.md`
+  turn 6 ("we do not need a hearing (Rest)"). Thinking is in `<details>`.
+- Open: where noise could enter without being read as instruction; the
+  practice-move vs doctrine lever (see g4 and the g5 "what this says").
 - Earlier handoff follows.
 
 ## Handoff (2026-10-27, after g4) — state for a fresh session

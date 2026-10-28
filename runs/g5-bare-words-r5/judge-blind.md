@@ -1,0 +1,15 @@
+# judge-blind: g5-bare-words-r5
+judge: qwen3.5:122b  keyed: False
+
+| turn | status | option | legal | client | note |
+|---|---|---|---|---|---|
+| 1 | rejected | **Standard Rejection and Immediate Award**: Reject Corvane based on statutory grounds and immediately award the contract to Tasker & Moye as the lowest responsive bidder without further conditions. | unlawful | no | This option is unlawful because California law requires a pre-award hearing and notice for any challenge to a bidder's responsibility, which this course of action bypasses entirely, creating immediate exposure to a writ of mandate. |
+| 2 | rejected | **Strategic Pause for Internal Review**: Delay the final award decision to conduct a comprehensive internal audit of the procurement process before making a final determination on the protest. | defensible | yes | This is the best option because it lawfully pauses the award to allow the District to verify the license classification and responsibility issues while preserving the schedule by conducting the review within the statutory protest window. |
+| 3 | rejected | **Public Integrity Protocol Announcement**: Reject Corvane and award Tasker & Moye while simultaneously issuing a public Board Resolution that announces new mandatory pre-award license verification protocols to fix systemic gaps. | risky | no | This option is risky because announcing new protocols while simultaneously rejecting a bidder creates an appearance of bias and pre-judgment that could invalidate the award in court, failing to serve the client's need for a clean, defensible result. |
+| 4 | rejected | **Legacy Safety Partnership Award**: Award the contract to Tasker & Moye with a conditional 'Safety Innovation Clause' requiring them to co-author a Best Practices Safety Guide with the District as a pilot program for future projects. | unlawful | no | This option is unlawful as it attempts to award a contract to a bidder who has not yet been determined to be responsive or responsible, violating the fundamental requirement that the lowest responsive and responsible bidder must be awarded the contract. |
+
+**Best option raised:** , 
+
+**Missing:** An experienced practitioner would have immediately identified that the 'responsibility' challenge regarding the prior termination requires a formal hearing under California Public Contract Code § 10295.5 before any rejection can occur, and would have advised that the license classification issue (Class B vs. C-16/C-20) is a threshold responsiveness issue that must be resolved before addressing responsibility.
+
+**Overall:** The consultation failed to distinguish between responsiveness challenges, which can be decided on the face of the bid, and responsibility challenges, which mandate a pre-award hearing, leading to recommendations that either violate due process or fail to protect the District from a successful writ of mandate. The only viable path was a strategic pause to conduct the legally required investigation and hearing before making any award decision.

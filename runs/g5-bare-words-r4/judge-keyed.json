@@ -1,0 +1,72 @@
+{
+ "run": "g5-bare-words-r4",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Corvane and Award to Tasker & Moye",
+    "description": "Reject Corvane Builders immediately based on statutory nonresponsiveness regarding missing Class C-16 and C-20 licenses, and award the contract to Tasker & Moye as the lowest responsive bidder without holding a hearing.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject All Bids and Re-bid",
+    "description": "Reject all submitted bids for the project to reset specifications and pricing, allowing the District to re-issue the Invitation to Bid (ITB) with clarified requirements rather than being locked into a flawed procurement cycle.",
+    "first_turn": 5,
+    "status": "rejected"
+   },
+   {
+    "label": "Award to Tasker & Moye with Corvane as Subcontractor",
+    "description": "Award the prime contract to Tasker & Moye while explicitly authorizing them to subcontract the General Building (Class B) scope to Corvane Builders, thereby maintaining compliance through the prime's license while utilizing Corvane's local capacity.",
+    "first_turn": 6,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Corvane and Award to Tasker & Moye",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it treats a responsibility issue (missing specialty license and prior termination) as a facial nonresponsiveness defect, denying the bidder the statutory notice and hearing required before rejection, which would likely result in a successful writ of mandate."
+   },
+   {
+    "index": 2,
+    "label": "Reject All Bids and Re-bid",
+    "legal": "defensible",
+    "serves_client": "no",
+    "note": "While legally defensible as an exercise of the agency's discretion to reject all bids, this option fails the client's primary goal of maintaining the December 1 schedule, as it would push the project timeline to at least late November for award and push critical work to 2028."
+   },
+   {
+    "index": 3,
+    "label": "Award to Tasker & Moye with Corvane as Subcontractor",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful because it attempts to circumvent the statutory prohibition against a Class B contractor performing fire protection work by forcing a subcontract that the prime contractor may not legally control or price, while also ignoring the bidder's right to a hearing on the termination issue."
+   }
+  ],
+  "best_option": "none",
+  "missing": "An experienced practitioner would have recommended holding the award decision until Corvane's written response is received on Tuesday, then evaluating a conditional award (requiring the C-16 license addition before the sprinkler phase) or a substitution of a qualified subcontractor under PCC § 4109, rather than making a premature rejection that ignores the distinction between nonresponsiveness and responsibility.",
+  "overall": "The consultation correctly identifies the legal pitfalls of the proposed actions but fails to provide a viable Monday morning path forward, as the only sound course is to delay the recommendation until the bidder's response clarifies the licensing and termination facts, which is essential to avoid a successful writ of mandate while preserving the project schedule."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 12.1,
+  "grade_s": 22.7
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "run": "g5-briefed-none-r3",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Do Not Finalize Award Pending Resolution",
+    "description": "The lawyer initially advised that the District must not finalize the award to Corvane until the protest is resolved to avoid future legal defects.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Condition Award on Cure of Addendum",
+    "description": "The lawyer proposed that the Board could vote to award the contract subject to the bidder acknowledging Addendum No. 2 within 48 hours as a condition precedent.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject All Bids and Re-bid",
+    "description": "The lawyer suggested the District could reject all bids and re-issue the Invitation to Bid if the licensing defect was confirmed or if no bidder was deemed responsive.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Adjourn Vote to Review Late Supplement",
+    "description": "The lawyer recommended adjourning the vote until after noon on Tuesday (or to Wednesday) to allow time for the receipt and review of a potential 'late supplement' from the bidder.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Hold a Hearing on Responsibility",
+    "description": "The lawyer initially suggested holding a hearing to determine the responsibility of the bidder before making an award decision.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Call the 'CBO' at Another District",
+    "description": "The lawyer initially considered the Superintendent's idea of calling the 'CBO' at another district to verify information but later explicitly advised against it as a dead end.",
+    "first_turn": 6,
+    "status": "rejected"
+   },
+   {
+    "label": "Delay Vote Until Wednesday Morning",
+    "description": "The lawyer ultimately advised recommending that the Board adjourn the vote until Wednesday morning to ensure the 'late supplement' is received and proof of service is verified.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Audit Tasker & Moye's Compliance",
+    "description": "The lawyer proposed signaling to the protesting bidder (Tasker & Moye) that their own bid would be audited for compliance if they pursued litigation.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Prepare a 'Reject All' Motion",
+    "description": "The lawyer advised drafting a standby motion to reject all bids and re-bid if neither bidder was found to be viable.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Do Not Finalize Award Pending Resolution",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the only legally defensible path; awarding before resolving a facially nonresponsive bid or a responsibility challenge creates immediate exposure to a writ of mandate and contract rescission."
+   },
+   {
+    "index": 2,
+    "label": "Condition Award on Cure of Addendum",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This violates the fundamental principle of competitive bidding by allowing a bidder to materially alter its bid after the deadline, which would almost certainly be set aside by a court as favoritism."
+   },
+   {
+    "index": 3,
+    "label": "Reject All Bids and Re-bid",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "While legally permissible if no bids are responsive, this option fails the client's primary goal of maintaining the schedule and incurs significant cost and delay without a guarantee of a better outcome."
+   },
+   {
+    "index": 4,
+    "label": "Adjourn Vote to Review Late Supplement",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This creates a dangerous precedent of accepting late documents and may be viewed as collusion if the 'supplement' is merely a cure for a fatal defect, potentially invalidating the entire process."
+   },
+   {
+    "index": 5,
+    "label": "Hold a Hearing on Responsibility",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "This is the correct procedural step for the responsibility challenge, but it does not address the immediate, fatal nonresponsiveness of the bid regarding the license classification and addendum."
+   },
+   {
+    "index": 6,
+    "label": "Call the 'CBO' at Another District",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Ex parte communication with a third party to gather evidence for a contested bid decision violates due process and public contract transparency requirements, creating severe legal exposure."
+   },
+   {
+    "index": 7,
+    "label": "Delay Vote Until Wednesday Morning",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "While it buys time, this delay is only defensible if strictly limited to verifying service of process; using it to wait for a 'late supplement' to cure a fatal defect is likely to be challenged as an improper extension of the bid window."
+   },
+   {
+    "index": 8,
+    "label": "Audit Tasker & Moye's Compliance",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This serves as a strategic deterrent to frivolous litigation but carries the risk of appearing retaliatory or biased if not conducted with strict neutrality and documented impartiality."
+   },
+   {
+    "index": 9,
+    "label": "Prepare a 'Reject All' Motion",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "This is a prudent contingency plan if the primary bidder is disqualified, but it fails the client's schedule and cost objectives by restarting the entire procurement process."
+   }
+  ],
+  "best_option": ", 1",
+  "missing": "An experienced practitioner would have immediately distinguished between the fatal, non-curable nonresponsiveness of the license/addendum defects (which require automatic rejection) and the procedural responsibility challenge (which requires a hearing), rather than conflating them into a single delay strategy.",
+  "overall": "The colleague's advice was fundamentally flawed because it treated a facially nonresponsive bid as a negotiable issue and suggested procedural delays that risked violating competitive bidding laws. The only sound course was to reject the bid immediately based on the unacknowledged addendum and missing license classification, as these defects cannot be cured post-deadline without invalidating the entire award."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 54.2,
+  "grade_s": 40.8
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "run": "g5-bare-words-r2",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Immediate Rejection of Corvane",
+    "description": "Reject Corvane Builders' bid immediately based on the statutory bar of Business & Professions Code § 7028.15(e) for lacking a proper subcontractor license, without offering a cure period.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Procedural Adjournment with Conditional Cure Period",
+    "description": "Defer the board vote to allow Corvane a specific window (e.g., 48 hours) to provide proof of a licensed subcontractor, treating the licensing defect as a curable responsibility issue rather than a fatal nonresponsiveness error.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Conditional Award with Escrow and Bond Requirements",
+    "description": "Award the contract to the second-lowest bidder, Tasker & Moye, but mandate a 150% performance bond and an escrow account for subcontractor verification to mitigate financial risk before contract execution.",
+    "first_turn": 6,
+    "status": "rejected"
+   },
+   {
+    "label": "Dual-Ground Rejection and Immediate Award",
+    "description": "Reject Corvane on two independent grounds (statutory licensing bar and discretionary responsibility based on prior termination) and immediately award the contract to Tasker & Moye without waiting for a cure period.",
+    "first_turn": 6,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Immediate Rejection of Corvane",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it treats a factual dispute regarding licensing and subcontracting as a facial non-responsiveness issue, bypassing the mandatory notice and hearing requirements for responsibility determinations under California law."
+   },
+   {
+    "index": 2,
+    "label": "Procedural Adjournment with Conditional Cure Period",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This option is legally sound as it respects the distinction between non-responsiveness and responsibility by allowing the bidder to cure or explain the defect before a final determination, thereby protecting the District from procedural challenges while keeping the project on schedule."
+   },
+   {
+    "index": 3,
+    "label": "Conditional Award with Escrow and Bond Requirements",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This approach is risky because awarding a contract to the second-lowest bidder while simultaneously attempting to cure the first bidder's statutory licensing defects creates a contradictory legal posture that could be set aside for violating bid fairness and statutory compliance."
+   },
+   {
+    "index": 4,
+    "label": "Dual-Ground Rejection and Immediate Award",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it attempts to bypass the statutory right to a hearing for the 'Copper Basin' termination issue and mischaracterizes the licensing defect as a facial non-responsiveness, exposing the District to immediate mandamus relief."
+   }
+  ],
+  "best_option": ", 2",
+  "missing": "An experienced practitioner would have first requested the full bid file to verify the specific scope of the fire protection work and the status of the bidder's qualifying individual before recommending a rejection, and would have advised that the 'Copper Basin' termination is a responsibility issue requiring a formal hearing rather than a basis for immediate rejection.",
+  "overall": "The consultation correctly identifies that the licensing issue involves facts outside the bid record requiring a responsibility hearing, but the recommended course of action fails to explicitly advise the client to hold the award until the bidder's response is received and to avoid making a final rejection decision on Monday without that information."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 15.0,
+  "grade_s": 24.8
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "run": "g5-bare-words-r5",
+ "judge_model": "qwen3.5:122b",
+ "keyed": false,
+ "tag": "blind",
+ "extract": {
+  "options": [
+   {
+    "label": "Standard Rejection and Immediate Award",
+    "description": "Reject Corvane based on statutory grounds and immediately award the contract to Tasker & Moye as the lowest responsive bidder without further conditions.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Strategic Pause for Internal Review",
+    "description": "Delay the final award decision to conduct a comprehensive internal audit of the procurement process before making a final determination on the protest.",
+    "first_turn": 2,
+    "status": "rejected"
+   },
+   {
+    "label": "Public Integrity Protocol Announcement",
+    "description": "Reject Corvane and award Tasker & Moye while simultaneously issuing a public Board Resolution that announces new mandatory pre-award license verification protocols to fix systemic gaps.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Legacy Safety Partnership Award",
+    "description": "Award the contract to Tasker & Moye with a conditional 'Safety Innovation Clause' requiring them to co-author a Best Practices Safety Guide with the District as a pilot program for future projects.",
+    "first_turn": 4,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Standard Rejection and Immediate Award",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful because California law requires a pre-award hearing and notice for any challenge to a bidder's responsibility, which this course of action bypasses entirely, creating immediate exposure to a writ of mandate."
+   },
+   {
+    "index": 2,
+    "label": "Strategic Pause for Internal Review",
+    "legal": "defensible",
+    "serves_client": "yes",
+    "note": "This is the best option because it lawfully pauses the award to allow the District to verify the license classification and responsibility issues while preserving the schedule by conducting the review within the statutory protest window."
+   },
+   {
+    "index": 3,
+    "label": "Public Integrity Protocol Announcement",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This option is risky because announcing new protocols while simultaneously rejecting a bidder creates an appearance of bias and pre-judgment that could invalidate the award in court, failing to serve the client's need for a clean, defensible result."
+   },
+   {
+    "index": 4,
+    "label": "Legacy Safety Partnership Award",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful as it attempts to award a contract to a bidder who has not yet been determined to be responsive or responsible, violating the fundamental requirement that the lowest responsive and responsible bidder must be awarded the contract."
+   }
+  ],
+  "best_option": ", ",
+  "missing": "An experienced practitioner would have immediately identified that the 'responsibility' challenge regarding the prior termination requires a formal hearing under California Public Contract Code § 10295.5 before any rejection can occur, and would have advised that the license classification issue (Class B vs. C-16/C-20) is a threshold responsiveness issue that must be resolved before addressing responsibility.",
+  "overall": "The consultation failed to distinguish between responsiveness challenges, which can be decided on the face of the bid, and responsibility challenges, which mandate a pre-award hearing, leading to recommendations that either violate due process or fail to protect the District from a successful writ of mandate. The only viable path was a strategic pause to conduct the legally required investigation and hearing before making any award decision."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 30.9,
+  "grade_s": 24.8
+ }
+}

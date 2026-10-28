@@ -1,0 +1,124 @@
+{
+ "run": "g5-briefed-words-r2",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Immediate Rejection of Corvane",
+    "description": "Reject Corvane Builders, Inc.'s bid immediately based on the lack of proof of licensing or subcontractor agreements, treating the bid as nonresponsive on its face.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Vote to Award Tasker & Moye",
+    "description": "Proceed immediately to award the contract to Tasker & Moye Construction, Inc. as the next lowest bidder without further verification of their capacity or licensing status.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Hold a Hearing on the Protest",
+    "description": "Conduct a formal hearing to resolve the ambiguity regarding whether Corvane received the protest notice and to determine the validity of the protest before making a decision.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Condition the Award on Verification",
+    "description": "Make the award to Tasker & Moye conditional upon the immediate independent verification of their license status and their capacity to meet the December 1 deadline.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Grant a Cure Period to Corvane",
+    "description": "Allow Corvane Builders, Inc. a short period (e.g., 24 hours) to submit proof of their licensing or subcontractor agreements to cure the nonresponsiveness before the Board votes on rejection.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Defer Final Award Action",
+    "description": "Postpone the final vote to award the contract to any bidder until the District has independently verified the licensing and operational capacity of the remaining bidders.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject Corvane and Verify Tasker & Moye",
+    "description": "Vote to reject Corvane's bid as nonresponsive while simultaneously requiring staff to verify Tasker & Moye's capacity and licensing before authorizing any award to them.",
+    "first_turn": 6,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Immediate Rejection of Corvane",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because rejecting a bid for facts outside the bid record (licensing status of a specific trade) without notice and a hearing violates due process and mislabels a responsibility issue as nonresponsiveness, creating immediate liability for the District."
+   },
+   {
+    "index": 2,
+    "label": "Vote to Award Tasker & Moye",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This is risky and fails the client because awarding to the second bidder without verifying their own capacity to meet the critical December 1 deadline or their licensing status invites a new protest and potential schedule failure."
+   },
+   {
+    "index": 3,
+    "label": "Hold a Hearing on the Protest",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This is risky and does not serve the client because holding a formal hearing before receiving the bidder's written response wastes time, delays the schedule, and fails to address the substantive licensing questions that require the bidder's input first."
+   },
+   {
+    "index": 4,
+    "label": "Condition the Award on Verification",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This is risky and does not serve the client because conditioning an award on unverified future events without a formal responsibility determination process creates an open legal question regarding the validity of the contract award."
+   },
+   {
+    "index": 5,
+    "label": "Grant a Cure Period to Corvane",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This is risky and does not serve the client because a 24-hour cure period is legally insufficient for a responsibility determination involving licensing and prior contract history, and it fails to address the Addendum 2 defect which may be non-waivable."
+   },
+   {
+    "index": 6,
+    "label": "Defer Final Award Action",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the best option as it is legally sound by allowing the District to wait for the bidder's response and conduct a proper responsibility hearing if needed, while serving the client by preserving the schedule integrity and avoiding unlawful rejection."
+   },
+   {
+    "index": 7,
+    "label": "Reject Corvane and Verify Tasker & Moye",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "This is risky and does not serve the client because it repeats the error of rejecting Corvane without a hearing while simultaneously failing to secure the award to the next bidder, leaving the project in limbo."
+   }
+  ],
+  "best_option": ", 6",
+  "missing": "The practitioner failed to explicitly recommend deferring the recommendation until the bidder's response is received and utilizing a late supplement to present a fully developed plan to the Board, which is the only path that avoids unlawful rejection and protects the schedule.",
+  "overall": "The consultation correctly identifies the legal pitfalls of immediate rejection but fails to provide a definitive Monday recommendation to defer the decision, leaving the client without a clear path to avoid exposure while preserving the project schedule. An experienced practitioner would have immediately advised holding the recommendation until the bidder's response is received to ensure a lawful responsibility determination or a valid waiver of the immaterial defect."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 22.4,
+  "grade_s": 35.9
+ }
+}

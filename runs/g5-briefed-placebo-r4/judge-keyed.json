@@ -1,0 +1,111 @@
+{
+ "run": "g5-briefed-placebo-r4",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Immediate Verification and Conditional Award",
+    "description": "Verify Corvane's license status immediately and, if the subcontractor plan is valid, proceed with a conditional award requiring a 150% performance bond to mitigate risk while maintaining the schedule.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Rejection Based on Statutory Non-Compliance",
+    "description": "Reject the bid immediately because Corvane lacks the specific C-16 license, citing Bus. & Prof. Code § 7028.15(e) as a mandatory statutory bar that voids the contract.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Passive Delay for Verification",
+    "description": "Postpone the board vote solely to verify facts without taking active steps to negotiate a compliance bridge or secure additional bonds during the waiting period.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Active Cultivation of Compliance",
+    "description": "Use the time before the vote to actively negotiate with Corvane to secure the missing license or bond, turning the waiting period into a strategic asset to build capacity for acceptance.",
+    "first_turn": 4,
+    "status": "rejected"
+   },
+   {
+    "label": "Statutory Challenge and Waiver Argument",
+    "description": "Challenge the absolute rigidity of the statute by arguing for a waiver based on public safety urgency and the intent of the law, despite the technical license deficiency.",
+    "first_turn": 4,
+    "status": "rejected"
+   },
+   {
+    "label": "Strategic Consortium Alignment",
+    "description": "Invite both bidders to form a consortium or partnership where the licensed firm handles specialized work and the general contractor handles the rest, aligning them with the district's mission.",
+    "first_turn": 4,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Immediate Verification and Conditional Award",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This option correctly identifies that the licensing issue requires factual verification outside the bid documents and proposes a conditional award to protect the schedule while mitigating risk, aligning with the practitioner's advice to wait for the bidder's response before making a final determination."
+   },
+   {
+    "index": 2,
+    "label": "Rejection Based on Statutory Non-Compliance",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is legally unsound because it mislabels a potential responsibility issue (missing specialty classification) as a facial non-responsiveness defect, thereby denying the bidder the required notice and hearing under California law, which would likely result in the award being set aside."
+   },
+   {
+    "index": 3,
+    "label": "Passive Delay for Verification",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "While legally defensible to delay the vote until facts are verified, this option fails to serve the client's schedule interests because it lacks the proactive steps (like conditioning the award or securing bonds) necessary to mitigate risk during the waiting period."
+   },
+   {
+    "index": 4,
+    "label": "Active Cultivation of Compliance",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This approach risks violating procurement fairness principles by negotiating compliance terms with a single bidder before the formal response process is complete, potentially creating an appearance of favoritism or an improper 'tailored' award that could be challenged by other bidders."
+   },
+   {
+    "index": 5,
+    "label": "Statutory Challenge and Waiver Argument",
+    "legal": "risky",
+    "serves_client": "no",
+    "note": "Arguing for a waiver of a specific statutory licensing requirement based on 'urgency' is legally precarious and likely to be set aside, as public safety statutes generally do not permit agencies to waive mandatory licensing classifications for specialized work like fire protection."
+   },
+   {
+    "index": 6,
+    "label": "Strategic Consortium Alignment",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "Inviting bidders to form a consortium after bids are opened fundamentally alters the bidding process and likely violates the requirement for competitive bidding, as it effectively creates a new bid entity that was not part of the original solicitation."
+   }
+  ],
+  "best_option": ", 1",
+  "missing": "The practitioner did not raise the specific mechanism of a 'conditional award' tied to the bidder's response, which is the most precise legal tool to balance the need for schedule adherence with the statutory requirement to verify licensing before final execution.",
+  "overall": "The most effective course of action is to hold the recommendation until the bidder's response is received and then consider a conditional award, as this approach respects the legal requirement for a hearing on responsibility issues while actively protecting the project schedule and the district's financial interests. Immediate rejection is legally dangerous due to procedural errors, while passive delay fails to mitigate risk, making the conditional path the only option that is both legally defensible and strategically sound."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 19.2,
+  "grade_s": 33.3
+ }
+}

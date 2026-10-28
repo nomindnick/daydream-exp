@@ -1,0 +1,111 @@
+{
+ "run": "g5-briefed-words-r3",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Corvane and Award to Tasker & Moye",
+    "description": "Immediately withdraw the recommendation to award to Corvane, formally find their bid nonresponsive due to licensing deficiencies, and award the contract to the next lowest responsive bidder, Tasker & Moye.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Conditional Award with Cure Period",
+    "description": "Award the contract to Corvane Builders contingent upon them obtaining the required Fire Protection (C-16) and HVAC (C-20) licenses within a specified timeframe before commencing work.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Hold a Hearing Before Recommendation",
+    "description": "Delay the final award decision to conduct a formal hearing where Corvane Builders can present evidence or arguments regarding their licensing status or the validity of the protest before the Board votes.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Wait for Bidder Response",
+    "description": "Suspend the award process to allow Corvane Builders a specific window to respond to the protest allegations and potentially cure the licensing defects before the District makes a final determination.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Rebid the Project",
+    "description": "Cancel the current bidding process entirely and issue a new solicitation to ensure all future bidders meet strict licensing requirements from the outset, avoiding the current impasse.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Prime/Sub Hybrid Award Structure",
+    "description": "Award the contract to Tasker & Moye as the Prime Contractor with a mandatory contractual condition requiring them to subcontract the General Building scope to Corvane Builders, thereby satisfying licensing requirements while retaining the lowest bidder's capacity.",
+    "first_turn": 6,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Corvane and Award to Tasker & Moye",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it mislabels a responsibility issue (licensing for sprinklers) as a facial nonresponsiveness defect, denying the bidder the statutory right to notice and a hearing before rejection, while also incorrectly rejecting the HVAC scope which a Class B contractor may self-perform."
+   },
+   {
+    "index": 2,
+    "label": "Conditional Award with Cure Period",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "While this option advances the client's schedule and cost goals by keeping the low bidder, it is legally risky because conditioning a prime contract on a future license addition may violate strict statutory licensing requirements for the specific work scope at the time of award, potentially voiding the contract."
+   },
+   {
+    "index": 3,
+    "label": "Hold a Hearing Before Recommendation",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "This is the most legally defensible path as it satisfies due process requirements for responsibility determinations, but it creates significant schedule risk by delaying the award beyond the promised December 1 deadline for the switchgear release."
+   },
+   {
+    "index": 4,
+    "label": "Wait for Bidder Response",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the best option because it is legally sound by allowing the bidder to cure or explain the licensing defects before a final determination is made, while serving the client's interests by preserving the low bid and schedule without committing to an irreversible, potentially unlawful rejection."
+   },
+   {
+    "index": 5,
+    "label": "Rebid the Project",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "Although legally safe, this option fails the client's primary objectives by causing a massive schedule delay (pushing HVAC to 2028) and incurring significant costs, with no guarantee that the same low bidder or a better price will be found."
+   },
+   {
+    "index": 6,
+    "label": "Prime/Sub Hybrid Award Structure",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This option is unlawful because it attempts to circumvent statutory licensing requirements by forcing a prime contractor to subcontract work they are legally permitted to self-perform, creating a high risk of the contract being set aside for violating public bidding laws."
+   }
+  ],
+  "best_option": ", 4",
+  "missing": "An experienced practitioner would have first clarified the client's specific priorities regarding the trade-off between the $287,000 savings and the December 1 deadline before recommending a path, and would have explicitly advised against the 'unlawful' phone call to the other district's CBO to avoid creating a record of ex parte communication that could invalidate the process.",
+  "overall": "The consultation correctly identifies the critical legal distinction between facial nonresponsiveness and responsibility issues but fails to prioritize the client's schedule constraints before recommending a course of action. The best path is to wait for the bidder's response to determine if the licensing defects can be cured, as this balances legal compliance with the client's desire to maintain the project schedule and cost savings."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 19.9,
+  "grade_s": 34.4
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "run": "g5-bare-words-r3",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject on License Grounds (Ground 1)",
+    "description": "Reject the bid immediately based on the mandatory requirement that contractors must hold specific licenses (C-16/C-20) to perform the work, as the bidder failed to demonstrate this.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Reject on Responsibility Grounds (Ground 3)",
+    "description": "Reject the bid based on the bidder's prior termination for cause, framing the decision as a matter of trust and safety rather than just technical paperwork to better protect the district's future.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Verify the Next Bidder's Compliance",
+    "description": "Before awarding the contract to the next lowest bidder (Tasker & Moye), independently verify that they acknowledged all required addendums to ensure they are truly responsive.",
+    "first_turn": 6,
+    "status": "recommended"
+   },
+   {
+    "label": "Hold a Hearing for the Bidder",
+    "description": "Conduct a formal hearing to allow the bidder to explain their non-responsiveness or prior termination history before making a final decision.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Wait for the Bidder's Response",
+    "description": "Delay the board's decision to allow the bidder time to respond to the protest or provide additional information regarding their qualifications.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Condition the Award",
+    "description": "Award the contract to the bidder contingent upon them fixing the license or addendum issues after the fact, rather than rejecting them outright.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Offer a Cure Period",
+    "description": "Allow the bidder a specific window of time to obtain the missing license classification or correct the addendum acknowledgment before the bid is declared non-responsive.",
+    "first_turn": 6,
+    "status": "rejected"
+   },
+   {
+    "label": "Rebid the Project",
+    "description": "Cancel the current bidding process and issue a new solicitation if the next lowest bidder is also found to be non-responsive.",
+    "first_turn": 6,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject on License Grounds (Ground 1)",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it mischaracterizes a responsibility issue (missing specialty classification) as a facial non-responsiveness defect, violating the statutory requirement for notice and a hearing before rejection based on facts outside the bid documents."
+   },
+   {
+    "index": 2,
+    "label": "Reject on Responsibility Grounds (Ground 3)",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because rejecting a bidder based on prior termination history without providing the statutory notice and opportunity for a hearing constitutes a violation of due process and the Public Contract Code."
+   },
+   {
+    "index": 3,
+    "label": "Verify the Next Bidder's Compliance",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This course is sound and serves the client by ensuring the second-lowest bidder is truly responsive before award, thereby avoiding a subsequent protest or legal challenge that would delay the project schedule."
+   },
+   {
+    "index": 4,
+    "label": "Hold a Hearing for the Bidder",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "This course is legally sound as it satisfies due process requirements for responsibility determinations, but it only partly serves the client because it introduces significant schedule delays and costs associated with the hearing process."
+   },
+   {
+    "index": 5,
+    "label": "Wait for the Bidder's Response",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This course is sound and serves the client best by allowing the bidder to clarify the licensing and addendum issues, potentially resolving the dispute without the need for a costly hearing or a full rebid."
+   },
+   {
+    "index": 6,
+    "label": "Condition the Award",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This course is risky because conditioning an award on post-bid license acquisition or addendum correction may be challenged as an impermissible material alteration of the bid, potentially exposing the district to litigation from other bidders."
+   },
+   {
+    "index": 7,
+    "label": "Offer a Cure Period",
+    "legal": "risky",
+    "serves_client": "partly",
+    "note": "This course is risky as it may violate the principle of fair competition by allowing a bidder to cure a material defect after the bid opening, which could be grounds for a protest by other bidders claiming unequal treatment."
+   },
+   {
+    "index": 8,
+    "label": "Rebid the Project",
+    "legal": "sound",
+    "serves_client": "no",
+    "note": "This course is legally sound as a last resort but does not serve the client's interests due to the severe schedule delays and increased costs associated with restarting the entire bidding process."
+   }
+  ],
+  "best_option": ", 5",
+  "missing": "An experienced practitioner would have raised the specific legal distinction that the missing C-16 classification is a responsibility issue requiring a hearing, not a facial non-responsiveness defect, and would have advised that the 'Copper Basin' termination was likely rescinded or recharacterized as a convenience termination, rendering the immediate rejection on that ground legally fatal.",
+  "overall": "The consultation correctly identifies the need to pause and gather more information but fails to explicitly articulate the critical legal distinction between facial non-responsiveness and responsibility defects, which is the pivot point for avoiding an unlawful rejection. The best course of action is to wait for the bidder's response to clarify the licensing status and addendum acknowledgment before making a final determination."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 23.5,
+  "grade_s": 38.8
+ }
+}

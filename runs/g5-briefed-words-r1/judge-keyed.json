@@ -1,0 +1,85 @@
+{
+ "run": "g5-briefed-words-r1",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject on Non-Responsiveness",
+    "description": "The initial recommendation was to immediately reject the bid from Tasker & Moye Construction Inc. based on a facial defect regarding licensing and unacknowledged addenda, citing California Business & Professions Code § 7028.15(e) as the statutory basis for non-responsiveness.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Hold a Responsibility Hearing",
+    "description": "An alternative path considered was to hold a formal responsibility hearing to allow the bidder to explain their position, clarify the alleged defects, and determine if the termination was truly for cause before making a final decision.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Allow a Window for Clarification or Cure",
+    "description": "A middle-ground approach was proposed to acknowledge the defects but grant a brief window for the bidder to provide clarification or cure the clerical errors (such as proof of licensed subcontractors) before the Board votes, rather than an immediate rejection.",
+    "first_turn": 3,
+    "status": "rejected"
+   },
+   {
+    "label": "Vote to Reject with a Commitment to Review Procurement",
+    "description": "The final revised stance recommended voting to reject the bid to comply with the law, but coupling that action with a public commitment from the Board to review and improve the procurement process for fairness, thereby treating the rejection as a step toward healing rather than just a legal shield.",
+    "first_turn": 6,
+    "status": "rejected"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject on Non-Responsiveness",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because it mislabels a responsibility issue (licensing for sprinklers and prior termination) as a facial non-responsiveness defect, which would likely be set aside for denying the bidder statutory notice and a hearing."
+   },
+   {
+    "index": 2,
+    "label": "Hold a Responsibility Hearing",
+    "legal": "sound",
+    "serves_client": "partly",
+    "note": "This is a legally sound path that satisfies due process requirements, but it is only partly effective for the client because it significantly delays the schedule and incurs administrative costs without guaranteeing the desired outcome."
+   },
+   {
+    "index": 3,
+    "label": "Allow a Window for Clarification or Cure",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This is the most sound and client-serving option as it allows the District to verify licensing facts and address the addendum issue through a conditional award or cure period, preserving the schedule while mitigating legal exposure."
+   },
+   {
+    "index": 4,
+    "label": "Vote to Reject with a Commitment to Review Procurement",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because the underlying rejection lacks a valid legal basis (confusing responsibility with responsiveness), and the political commitment to review procurement does not cure the procedural defect or protect the District from a successful writ."
+   }
+  ],
+  "best_option": ", 3, \"Allow a Window for Clarification or Cure\"",
+  "missing": "An experienced practitioner would have first requested the bidder's written response to clarify the specific licensing status of the qualifying individual and the nature of the prior termination before recommending any rejection, and would have explicitly advised that the HVAC work is permissible under a Class B license while only the sprinkler work requires a C-16 classification or subcontractor.",
+  "overall": "The consultation correctly identifies the critical distinction between non-responsiveness and responsibility issues but fails to advise the client to wait for the bidder's written response before making a recommendation, which is the only way to avoid an unlawful rejection based on facts outside the bid record. The best path is to allow a window for clarification or cure, which balances the client's schedule concerns with the legal necessity of due process."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 15.8,
+  "grade_s": 25.6
+ }
+}

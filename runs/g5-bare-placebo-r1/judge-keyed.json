@@ -1,0 +1,72 @@
+{
+ "run": "g5-bare-placebo-r1",
+ "judge_model": "qwen3.5:122b",
+ "keyed": true,
+ "tag": "keyed",
+ "extract": {
+  "options": [
+   {
+    "label": "Reject Immediately on Tuesday",
+    "description": "Vote on Tuesday, October 27, 2026, to reject Corvane's bid based on the license defect and award the contract to Tasker & Moye without further delay.",
+    "first_turn": 0,
+    "status": "rejected"
+   },
+   {
+    "label": "Defer Vote Until Tuesday Afternoon",
+    "description": "Delay the final vote on the award until the conclusion of the Tuesday, October 27, 2026, board meeting to allow Corvane's written response period to run its course.",
+    "first_turn": 1,
+    "status": "rejected"
+   },
+   {
+    "label": "Adjourn Item to Next Meeting",
+    "description": "Postpone the agenda item regarding the award until the next regular board meeting on Wednesday, October 28, 2026, to ensure procedural perfection and de-escalate litigation risks.",
+    "first_turn": 5,
+    "status": "recommended"
+   }
+  ]
+ },
+ "grade": {
+  "options": [
+   {
+    "index": 1,
+    "label": "Reject Immediately on Tuesday",
+    "legal": "unlawful",
+    "serves_client": "no",
+    "note": "This course is unlawful because rejecting the bid on the sprinkler licensing ground without a hearing violates due process requirements for responsibility determinations, and it fails the client's goal by ignoring the bidder's right to cure or explain facts outside the bid record."
+   },
+   {
+    "index": 2,
+    "label": "Defer Vote Until Tuesday Afternoon",
+    "legal": "sound",
+    "serves_client": "yes",
+    "note": "This option is legally sound as it respects the statutory response period and allows the agency to gather necessary facts before making a responsibility determination, directly serving the client by minimizing litigation exposure while keeping the project on schedule for the December 1 deadline."
+   },
+   {
+    "index": 3,
+    "label": "Adjourn Item to Next Meeting",
+    "legal": "defensible",
+    "serves_client": "partly",
+    "note": "While legally defensible as a procedural safeguard, this option only partly serves the client because pushing the decision to the next month risks missing the critical December 1 switchgear release window, potentially delaying the entire 2027 shutdown schedule."
+   }
+  ],
+  "best_option": ", \"label\": \"Defer Vote Until Tuesday Afternoon\"",
+  "missing": "An experienced practitioner would have explicitly recommended conditioning the award on Corvane adding the C-16 classification to its license or subcontracting the sprinkler work before contract execution, rather than simply deferring the decision, as this resolves the licensing defect without triggering a full responsibility hearing.",
+  "overall": "The consultation correctly identifies that immediate rejection is unlawful due to due process concerns regarding the sprinkler licensing issue, but it fails to propose the most efficient solution: a conditional award that resolves the defect while maintaining the project schedule. The best course is to defer the vote until the bidder's response is received, allowing the District to make a fact-based decision that balances legal compliance with the urgent need to meet the December 1 deadline."
+ },
+ "extract_thinking": "",
+ "grade_thinking": "",
+ "attempts": {
+  "extract": {
+   "think": false,
+   "temperature": 0.3
+  },
+  "grade": {
+   "think": false,
+   "temperature": 0.3
+  }
+ },
+ "timing": {
+  "extract_s": 10.9,
+  "grade_s": 21.9
+ }
+}
